@@ -18,24 +18,24 @@
   backgroundColor = "#111111";
 
   patterns = (
-    { name = "Keyword"; foregroundColor = "#CC7833"; match = "\\<(this|typeof|new|true|false|undefined|null|for|in|break|continue|while|do|function|return|if|else|case|switch|var)\\>"; },
-    { name = "Numeric Constant"; match = "\\<((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\>"; foregroundColor = "#3387CC"; },
+    { name = "keywords.js"; foregroundColor = "#CC7833"; match = "\\<(this|typeof|new|true|false|undefined|null|for|in|break|continue|while|do|function|return|if|else|case|switch|var)\\>"; },
+    { name = "constants.numeric.js"; match = "\\<((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\>"; foregroundColor = "#3387CC"; },
 
-    { name = "method or function"; match = "(\\<|\\.)([a-zA-Z_]\\w*(?=\s*\\())";
+    { name = "keywords.functions.js"; match = "(\\<|\\.)([a-zA-Z_]\\w*(?=\s*\\())";
       "foregroundColor[2]" = "#CC3833";
     },
 
-    { name = "Single String"; begin = "'"; end = "'"; swallow = "\\\\."; foregroundColor = "#66CC33"; },
-    { name = "Double Quoted String"; begin = "\""; end = "\"";   swallow = "\\\\."; foregroundColor = "#66CC33"; },
+    { name = "strings.single-quoted.js"; begin = "'"; end = "'"; swallow = "\\\\."; foregroundColor = "#66CC33"; },
+    { name = "strings.double-quoted.js"; begin = "\""; end = "\"";   swallow = "\\\\."; foregroundColor = "#66CC33"; },
 
-    { name = "Regular Expression"; begin = "/"; end = "/([igm]+)?";  foregroundColor = "#CCCC33";
+    { name = "strings.regex.js"; begin = "/"; end = "/([igm]+)?";  foregroundColor = "#CCCC33";
       patterns = (
-        { name = "Escaped slash"; match = "\\\\/"; foregroundColor = "#CCCC33"; }
+        { name = "strings.escaped-slash.js"; match = "\\\\/"; foregroundColor = "#CCCC33"; }
       );
     },
 
-    { name = "Multiline Comment"; begin = "\\/\\*"; end = "\\*\\/"; swallow = "\\\\."; foregroundColor = "#9933CC"; },
-    { name = "Comment"; match = "\\/\\/.*$"; "fontStyle" = ( italic ); foregroundColor = "#9933CC"; },
+    { name = "comments.block.js"; begin = "\\/\\*"; end = "\\*\\/"; swallow = "\\\\."; foregroundColor = "#9933CC"; },
+    { name = "comments.line.js"; match = "\\/\\/.*$"; "fontStyle" = ( italic ); foregroundColor = "#9933CC"; },
   );
 }
 
