@@ -1,0 +1,41 @@
+{
+  name = "JavaScript";
+  uuid = "93E017CC-6F27-11D9-90EB-000D93589AF6";
+  fileTypes = ( js, htc );
+
+  foldingStartMarker = "^\\s*([A-Za-z0-9.]+?\\s*=\\s*)?(function)\\>";
+  foldingStopMarker = "(^\\s*\\}";
+  increaseIndentPattern = "^\\s*(function\\s*\\w*\\s*\\([^)]*\)\s*{.*$";
+  smartTypingPairs = (
+      ( "(", ")" ), ( "[", "]" ), ( "{", "}" ),
+      ( "\"", "\"" ), ( "'", "'" )
+  );
+  highlightPairs = (
+      ( "(", ")" ), ( "[", "]" ), ( "{", "}" )
+  );
+
+  foregroundColor = "#dddddd";
+  backgroundColor = "#111111";
+
+  patterns = (
+    { name = "Keyword"; foregroundColor = "#CC7833"; match = "\\<(this|typeof|new|true|false|undefined|null|for|in|break|continue|while|do|function|return|if|else|case|switch|var)\\>"; },
+    { name = "Numeric Constant"; match = "\\<((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\>"; foregroundColor = "#3387CC"; },
+
+    { name = "method or function"; match = "(\\<|\\.)([a-zA-Z_]\\w*(?=\s*\\())";
+      "foregroundColor[2]" = "#CC3833";
+    },
+
+    { name = "Single String"; begin = "'"; end = "'"; swallow = "\\\\."; foregroundColor = "#66CC33"; },
+    { name = "Double Quoted String"; begin = "\""; end = "\"";   swallow = "\\\\."; foregroundColor = "#66CC33"; },
+
+    { name = "Regular Expression"; begin = "/"; end = "/([igm]+)?";  foregroundColor = "#CCCC33";
+      patterns = (
+        { name = "Escaped slash"; match = "\\\\/"; foregroundColor = "#CCCC33"; }
+      );
+    },
+
+    { name = "Multiline Comment"; begin = "\\/\\*"; end = "\\*\\/"; swallow = "\\\\."; foregroundColor = "#9933CC"; },
+    { name = "Comment"; match = "\\/\\/.*$"; "fontStyle" = ( italic ); foregroundColor = "#9933CC"; },
+  );
+}
+
