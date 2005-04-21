@@ -1,5 +1,6 @@
 {
   name = "JavaScript";
+  scopeName = "source.javascript";
   uuid = "93E017CC-6F27-11D9-90EB-000D93589AF6";
   fileTypes = ( js, htc );
 
