@@ -19,15 +19,15 @@
   backgroundColor = "#111111";
 
   patterns = (
-    { name = "keywords.js"; foregroundColor = "#CC7833"; match = "\\<(this|typeof|new|true|false|undefined|null|for|in|break|continue|while|do|function|return|if|else|case|switch|var)\\>"; },
-    { name = "constants.numeric.js"; match = "\\<((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\>"; foregroundColor = "#3387CC"; },
+    { name = "keyword.js"; foregroundColor = "#CC7833"; match = "\\<(this|typeof|new|true|false|undefined|null|for|in|break|continue|while|do|function|return|if|else|case|switch|var)\\>"; },
+    { name = "constant.numeric.js"; match = "\\<((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\>"; foregroundColor = "#3387CC"; },
 
     {   
 		/*
 		Methods:
 		obj.method(arguments)
 		*/
-		name = "keywords.functions.js"; 
+		name = "keyword.function.js"; 
 		match = "(\\<|\\.)([a-zA-Z_]\\w*(?=\\s*\\())";
     	"foregroundColor[2]" = "#CC3833";
     },
@@ -38,22 +38,22 @@
 		RegExp.$3
 		ary.lengh
 		*/
-		name = "keywords.instance-variables.js"; 
+		name = "keyword.instance-variables.js"; 
 		match = "\\.([a-zA-Z_]\\w*|\\$\\d{1,2})(?!\\s*\\()";
     	"foregroundColor[1]" = "#779938";
     },
 
-    { name = "strings.single-quoted.js"; begin = "'"; end = "'"; swallow = "\\\\."; foregroundColor = "#66CC33"; },
-    { name = "strings.double-quoted.js"; begin = "\""; end = "\"";   swallow = "\\\\."; foregroundColor = "#66CC33"; },
+    { name = "string.single-quoted.js"; begin = "'"; end = "'"; swallow = "\\\\."; foregroundColor = "#66CC33"; },
+    { name = "string.double-quoted.js"; begin = "\""; end = "\"";   swallow = "\\\\."; foregroundColor = "#66CC33"; },
 
-    { name = "strings.regex.js"; begin = "/"; end = "/([igm]+)?";  foregroundColor = "#CCCC33";
+    { name = "string.regex.js"; begin = "/"; end = "/([igm]+)?";  foregroundColor = "#CCCC33";
       patterns = (
-        { name = "strings.escaped-slash.js"; match = "\\\\/"; foregroundColor = "#CCCC33"; }
+        { name = "string.escaped-slash.js"; match = "\\\\/"; foregroundColor = "#CCCC33"; }
       );
     },
 
-    { name = "comments.block.js"; begin = "\\/\\*"; end = "\\*\\/"; swallow = "\\\\."; foregroundColor = "#9933CC"; },
-    { name = "comments.line.js"; match = "\\/\\/.*$"; "fontStyle" = ( italic ); foregroundColor = "#9933CC"; },
+    { name = "comment.block.js"; begin = "\\/\\*"; end = "\\*\\/"; swallow = "\\\\."; foregroundColor = "#9933CC"; },
+    { name = "comment.line.js"; match = "\\/\\/.*$"; "fontStyle" = ( italic ); foregroundColor = "#9933CC"; },
   );
 }
 
