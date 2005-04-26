@@ -10,7 +10,7 @@
     ----------------- */
         
     name = "JavaScript";
-    scopeName = "source.javascript";
+    scopeName = "source.js";
     uuid = "93E017CC-6F27-11D9-90EB-000D93589AF6";
     fileTypes = ( js, htc );
 
@@ -26,8 +26,11 @@
                 3 = { name = "function-argument"; };
             };
         },
-
-        { name = "constant.numeric.js"; match = "\\<((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\>"; },
+        
+        /* CONSTANTS:: Numeric */
+        {   name = "constant.numeric.js"; 
+            match = "\\<((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\>"; 
+        },
 
         /*{ // This is useless - why match called methods?
             /*
@@ -50,22 +53,36 @@
             "foregroundColor[1]" = "#779938";
         },*/
 
-        { name = "string.single-quoted.js"; begin = "'"; end = "'"; swallow = "\\\\."; },
-        { name = "string.double-quoted.js"; begin = "\""; end = "\"";   swallow = "\\\\."; },
-
-        { name = "comment.block.js"; begin = "/\\*"; end = "\\*/"; swallow = "\\\\."; },
-        { name = "comment.line.js"; match = "//.*"; },
-        
+        /* STRINGS: Single */
+        {   name = "string.single-quoted.js"; 
+            begin = "'";
+            end = "'";
+            swallow = "\\\\."; 
+        },
+		/* STRINGS: Double */        
+        {   name = "string.double-quoted.js";
+            begin = "\""; 
+            end = "\"";
+            swallow = "\\\\.";
+        },
+        /* COMMENTS: Block */	
+        {   name = "comment.block.js";
+            begin = "/\\*";
+            end = "\\*/";
+            swallow = "\\\\."; 
+        },
+        /* COMMENTS: Single Line */		
+        {   name = "comment.line.js"; 
+            match = "//.*";
+        },
         /* HTML COMMENTS: inside <script></script> embedded in a HTML page */
   		{	name = "comment.html.js";
   			match = "(<!--|-->)";
-		},
-		
+		},		
 		/* KEYWORDS: */
 		{   name = "keyword.declaration.js";
 		    match = "\\<(function)\\>";
-		},
-		
+		},		
 		/* KEYWORDS: Reserved */
 		{	name = "keyword.reserved.js";
 			match = "\\<(boolean|break|byte|case|catch|char|class|const|continue|debugger|default|delete|do|double|else|enum|export|extends|false|final|finally|float|for|goto|if|implements|import|in|instanceof|int|interface|long|native|new|null|package|private|protected|public|return|short|static|super|switch|synchronized|this|throw|throws|transient|true|try|typeof|var|void|volatile|while|with)\\>";	
@@ -107,8 +124,10 @@
 		{ 	name = "constant.js";
 			match = "\\<(Infinity|NaN|Undefined)\\>";
 		},
-
-        {   begin = "(([=(]|^)\\s*)(/)(?![*/])"; end = "(/([igm]+)?)";
+		
+		/* STRINGS REGEX:: */
+        {   begin = "(([=(]|^)\\s*)(/)(?![*/])"; 
+            end = "(/([igm]+)?)";
             beginCaptures = {
                 1 = { name = "dummy.regexp-start"; };
                 3 = { name = "string.regexp.js"; };
