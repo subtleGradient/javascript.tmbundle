@@ -47,7 +47,7 @@
         { name = "comment.block.js"; begin = "/\\*"; end = "\\*/"; swallow = "\\\\."; },
         { name = "comment.line.js"; match = "//.*"; },
 
-        { begin = "(([=(]|^)\\s*)(/)(?!/)"; end = "(/([igm]+)?)";
+        { begin = "(([=(]|^)\\s*)(/)(?![*/])"; end = "(/([igm]+)?)";
             beginCaptures = {
                 1 = { name = "dummy.regexp-start"; };
                 3 = { name = "string.regexp.js"; };
