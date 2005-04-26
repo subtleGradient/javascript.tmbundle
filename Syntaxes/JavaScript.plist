@@ -1,59 +1,64 @@
 {
-  name = "JavaScript";
-  scopeName = "source.javascript";
-  uuid = "93E017CC-6F27-11D9-90EB-000D93589AF6";
-  fileTypes = ( js, htc );
+    name = "JavaScript";
+    scopeName = "source.javascript";
+    uuid = "93E017CC-6F27-11D9-90EB-000D93589AF6";
+    fileTypes = ( js, htc );
 
-  foldingStartMarker = "^\\s*([A-Za-z0-9.]+?\\s*=\\s*)?(function)\\>";
-  foldingStopMarker = "(^\\s*\\}";
-  increaseIndentPattern = "^\\s*(function\\s*\\w*\\s*\\([^)]*\)\s*{.*$";
-  smartTypingPairs = (
-      ( "(", ")" ), ( "[", "]" ), ( "{", "}" ),
-      ( "\"", "\"" ), ( "'", "'" )
-  );
-  highlightPairs = (
-      ( "(", ")" ), ( "[", "]" ), ( "{", "}" )
-  );
+    foldingStartMarker = "^\\s*([A-Za-z0-9.]+\s*=\\s*)?(function)\\>";
+    foldingStopMarker = "^\\s*\\}";
 
-  foregroundColor = "#dddddd";
-  backgroundColor = "#111111";
+    patterns = (
+        { name = "declaration.function.js";
+            match = "^\\s*(function)\\s*([a-zA-Z_]\\w*)\\s*\\(([^)]*)\\)";
+            captures = {
+                1 = { name = "keyword.js"; };
+                2 = { name = "function-name"; };
+                3 = { name = "function-argument"; };
+            };
+        },
 
-  patterns = (
-    { name = "keyword.js"; foregroundColor = "#CC7833"; match = "\\<(this|typeof|new|true|false|undefined|null|for|in|break|continue|while|do|function|return|if|else|case|switch|var)\\>"; },
-    { name = "constant.numeric.js"; match = "\\<((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\>"; foregroundColor = "#3387CC"; },
+        { name = "keyword.js"; match = "\\<(this|typeof|new|true|false|undefined|null|for|in|break|continue|while|do|return|if|else|case|switch|var)\\>"; },
+        { name = "constant.numeric.js"; match = "\\<((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\>"; },
 
-    {   
-		/*
-		Methods:
-		obj.method(arguments)
-		*/
-		name = "keyword.function.js"; 
-		match = "(\\<|\\.)([a-zA-Z_]\\w*(?=\\s*\\())";
-    	"foregroundColor[2]" = "#CC3833";
-    },
+        /*{ // This is useless - why match called methods?
+            /*
+            Methods:
+            obj.method(arguments)
+            * /
+            name = "keyword.function.js"; 
+            match = "(\\<|\\.)([a-zA-Z_]\\w*(?=\\s*\\())";
+            "foregroundColor[2]" = "#CC3833";
+        },
 
-    {   
-		/*       
-		Instance Variables:
-		RegExp.$3
-		ary.lengh
-		*/
-		name = "keyword.instance-variables.js"; 
-		match = "\\.([a-zA-Z_]\\w*|\\$\\d{1,2})(?!\\s*\\()";
-    	"foregroundColor[1]" = "#779938";
-    },
+        { // This is also useless - why match used instance vars?
+            /*       
+            Instance Variables:
+            RegExp.$3
+            ary.length
+            * /
+            name = "keyword.instance-variables.js"; 
+            match = "\\.([a-zA-Z_]\\w*|\\$\\d{1,2})(?!\\s*\\()";
+            "foregroundColor[1]" = "#779938";
+        },*/
 
-    { name = "string.single-quoted.js"; begin = "'"; end = "'"; swallow = "\\\\."; foregroundColor = "#66CC33"; },
-    { name = "string.double-quoted.js"; begin = "\""; end = "\"";   swallow = "\\\\."; foregroundColor = "#66CC33"; },
+        { name = "string.single-quoted.js"; begin = "'"; end = "'"; swallow = "\\\\."; },
+        { name = "string.double-quoted.js"; begin = "\""; end = "\"";   swallow = "\\\\."; },
 
-    { name = "string.regex.js"; begin = "/"; end = "/([igm]+)?";  foregroundColor = "#CCCC33";
-      patterns = (
-        { name = "string.escaped-slash.js"; match = "\\\\/"; foregroundColor = "#CCCC33"; }
-      );
-    },
+        { name = "comment.block.js"; begin = "/\\*"; end = "\\*/"; swallow = "\\\\."; },
+        { name = "comment.line.js"; match = "//.*"; },
 
-    { name = "comment.block.js"; begin = "\\/\\*"; end = "\\*\\/"; swallow = "\\\\."; foregroundColor = "#9933CC"; },
-    { name = "comment.line.js"; match = "\\/\\/.*$"; "fontStyle" = ( italic ); foregroundColor = "#9933CC"; },
-  );
+        { begin = "(([=(]|^)\\s*)(/)(?!/)"; end = "(/([igm]+)?)";
+            beginCaptures = {
+                1 = { name = "dummy.regexp-start"; };
+                3 = { name = "string.regexp.js"; };
+            };
+            endCaptures = {
+                1 = { name = "string.regexp.js"; };
+            };
+            patterns = (
+                { name = "string.regexp.js"; match = "[^/]*"; },
+                { name = "string.regexp.js"; match = "\\\\/"; }
+            );
+        },
+    );
 }
-
