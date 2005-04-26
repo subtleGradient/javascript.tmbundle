@@ -73,10 +73,10 @@
 		
 		/* OBJECTS::	*/
 		{ 	name = "keyword.object.js";
-			/* CASE Sensitive Objects * /
+			/* CASE Sensitive Objects */
 			 match = "\\<(Anchor|Applet|Area|Array|Boolean|Button|Checkbox|Date|document|event|FileUpload|Form|Frame|Function|Hidden|History|Image|JavaArray|JavaClass|JavaObject|JavaPackage|java|Layer|Link|Location|Math|MimeType|Number|navigator|netscape|Object|Option|Packages|Password|Plugin|Radio|RegExp|Reset|Select|String|Style|Submit|screen|sun|Text|Textarea|window|XMLHttpRequest)\\>";
 			/* */
-			/* CASE InSensitive Objects */
+			/* CASE InSensitive Objects * /
 			match = "\\<((?i:Anchor|Applet|Area|Array|Boolean|Button|Checkbox|Date|document|event|FileUpload|Form|Frame|Function|Hidden|History|Image|JavaArray|JavaClass|JavaObject|JavaPackage|java|Layer|Link|Location|Math|MimeType|Number|navigator|netscape|Object|Option|Packages|Password|Plugin|Radio|RegExp|Reset|Select|String|Style|Submit|screen|sun|Text|Textarea|window|XMLHttpRequest))\\>";
 			/* */ 
 		},
