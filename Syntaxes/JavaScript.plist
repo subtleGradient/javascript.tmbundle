@@ -22,8 +22,8 @@
             match = "^\\s*(function)\\s*([a-zA-Z_]\\w*)\\s*\\(([^)]*)\\)";
             captures = {
                 1 = { name = "keyword.declaration.js"; };
-                2 = { name = "function-name"; };
-                3 = { name = "function-argument"; };
+                2 = { name = "entity.name.function"; };
+                3 = { name = "entity.parameter.variable.function"; };
             };
         },
         
