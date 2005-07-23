@@ -1,147 +1,220 @@
-{
-    /* -----------------
-    
-    JavaScript
-    ==========
-    
-    Created by god knows who, but extensively modified by Kevin Ballard
-    Modifications based in part on the JavaScript (PHP) syntax by Mats Persson (mats@imediatec.co.uk)
-    
-    ----------------- */
-        
-    name = "JavaScript";
-    scopeName = "source.js";
-    uuid = "93E017CC-6F27-11D9-90EB-000D93589AF6";
-    fileTypes = ( js, htc );
-    keyEquivalent = "~^J";
-
-    foldingStartMarker = "^\\s*([A-Za-z0-9.]+\s*=\\s*)?(function)\\b";
-    foldingStopMarker = "^\\s*\\}";
-
-    patterns = (
-        {   name = "declaration.function.js";
-            match = "^\\s*(function)\\s*([a-zA-Z_]\\w*)\\s*\\(([^)]*)\\)";
-            captures = {
-                1 = { name = "storage.type.function.js"; };
-                2 = { name = "entity.name.function.js"; };
-                3 = { name = "variable.parameter.function.js"; };
-            };
-        },
-        
-        /* CONSTANTS:: Numeric */
-        {   name = "constant.numeric.js"; 
-            match = "\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b"; 
-        },
-
-        /*{ // This is useless - why match called methods?
-            /*
-            Methods:
-            obj.method(arguments)
-            * /
-            name = "keyword.function.js"; 
-            match = "(\\b|\\.)([a-zA-Z_]\\w*(?=\\s*\\())";
-            "foregroundColor[2]" = "#CC3833";
-        },
-
-        { // This is also useless - why match used instance vars?
-            /*       
-            Instance Variables:
-            RegExp.$3
-            ary.length
-            * /
-            name = "keyword.instance-variables.js"; 
-            match = "\\.([a-zA-Z_]\\w*|\\$\\d{1,2})(?!\\s*\\()";
-            "foregroundColor[1]" = "#779938";
-        },*/
-
-        /* STRINGS: Single */
-        {   name = "string.quoted.single.js"; 
-            begin = "'"; end = "'"; swallow = "\\\\."; 
-        },
-		/* STRINGS: Double */        
-        {   name = "string.quoted.double.js";
-            begin = "\""; end = "\""; swallow = "\\\\.";
-        },
-        /* COMMENTS: Block */	
-        {   name = "comment.block.js";
-            begin = "/\\*"; end = "\\*/";
-            swallow = "\\\\."; 
-        },
-        /* COMMENTS: Single Line */		
-        {   name = "comment.line.double-slash.js"; 
-            match = "//.*";
-        },
-        /* HTML COMMENTS: inside <script></script> embedded in a HTML page */
-  		{	name = "comment.block.html.js";
-  			match = "(<!--|-->)";
-		},		
-
-		{	name = "storage.type.js";
-			match = "\\b(boolean|byte|char|class|double|enum|float|function|int|interface|long|short|var|void)\\b";	
-		},
-		{	name = "storage.modifier.js";
-			match = "\\b(const|export|extends|final|implements|native|private|protected|public|static|synchronized|throws|transient|volatile)\\b";	
-		},
-		{	name = "keyword.control.js";
-			match = "\\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|package|return|switch|throw|try|while)\\b";	
-		},
-		{	name = "keyword.operator.js";
-			match = "\\b(delete|in|instanceof|new|typeof|with)\\b";	
-		},
-		{	name = "constant.language.js";
-			match = "\\b(false|null|super|this|true)\\b";	
-		},
-		{	name = "keyword.other.js";
-			match = "\\b(debugger)\\b";	
-		},
-
-		/* OBJECTS::	*/
-		{ 	name = "support.class.js";
-			/* CASE Sensitive Objects */
-			 match = "\\b(Anchor|Applet|Area|Array|Boolean|Button|Checkbox|Date|document|event|FileUpload|Form|Frame|Function|Hidden|History|Image|JavaArray|JavaClass|JavaObject|JavaPackage|java|Layer|Link|Location|Math|MimeType|Number|navigator|netscape|Object|Option|Packages|Password|Plugin|Radio|RegExp|Reset|Select|String|Style|Submit|screen|sun|Text|Textarea|window|XMLHttpRequest)\\b";
-		},
-		
-		/* OBJECTS:: Methods */
-		{	name = "support.function.js";
-			match = "\\b(abort|abs|acos|alert|anchor|apply|asin|atan|atan2|atob|attachEvent|back|big|blink|blur|bold|borderWidths|btoa|call|captureEvents|ceil|charAt|charCodeAt|clear|clearInterval|clearTimeout|click|close|compile|concat|confirm|contextual|cos|createElement|createEventObject|createPopup|createStyleSheet|createTextNode|detachEvent|disableExternalCapture|dump|elementFromPoint|enableExternalCapture|escape|eval|exec|execCommand|execScript|exp|fileCreatedDate|fileModifiedDate|fileSize|fileUpdatedDate|find|firstChild|fixed|floor|focus|fontcolor|fontsize|fromCharCode|forward|getAllResponseHeaders|getAttention|getDate|getDay|getElementById|getElementsByName|getElementsByTagName|getFullYear|getHours|getMilliseconds|getMinutes|getMonth|getResponseHeader|getSeconds|getSelection|getTime|getTimezoneOffset|getUTCDate|getUTCDay|getUTCFullYear|getUTCHours|getUTCMilliseconds|getUTCMinutes|getUTCMonth|getUTCSeconds|getYear|go|handleEvent|home|indexOf|isFinite|isNaN|italics|javaEnabled|join|lastIndexOf|link|load|log|margins|match|max|mergeAttributes|min|moveAbove|moveBelow|moveBy|moveTo|moveToAbsolute|navigate|open|paddings|parse|parseFloat|parseInt|plugins.refresh|pop|pow|preference|print|prompt|push|queryCommandEnabled|queryCommandIndeterm|queryCommandState|queryCommandValue|random|recalc|releaseCapture|releaseEvents|reload|replace|reset|resizeBy|resizeTo|returnValue|reverse|round|routeEvents|savePreferences|scroll|scrollBy|scrollByLines|scrollByPages|scrollTo|scrollX|scrollY|search|select|send|setDate|setFullYear|setActive|setCursor|setHotKeys|setHours|setInterval|setMilliseconds|setMinutes|setMonth|setResizable|setRequestHeader|setSeconds|setTime|setTimeout|setUTCDate|setUTCFullYear|setUTCHours|setUTCMilliseconds|setUTCMinutes|setUTCMonth|setUTCSeconds|setYear|setZOptions|shift|showHelp|showModalDialog|showModelessDialog|sidebar|sin|signText|sizeToContent|slice|small|sort|splice|split|sqrt|strike|stop|sub|submit|substr|substring|sup|taint|taintEnabled|tan|test|toGMTString|toLocaleString|toLowerCase|toSource|toString|toUpperCase|toUTCString|UTC|unescape|unshift|untaint|updateCommands|unwatch|valueOf|watch|write|writeln)\\b(?=\\()";
-		},
-		
-		/* OBJECTS:: Properties */
-		{ 	match = "\\.\\b(_content|above|action|align|aLinkcolor|all|anchors|appCodeName|appCore|appMinorVersion|appName|applets|appVersion|arguments|arguments.callee|arguments.caller|arguments.length|arity|attributes|availHeight|availLeft|availTop|availWidth|background|backgroundColor|backgroundImage|below|bgColor|body|border|borderBottomWidth|borderColor|borderLeftWidth|borderRightWidth|borderStyle|borderTopWidth|bottom|bufferDepth|characterSet|checked|childNodes|classes|className|clientInformation|clip|clipboardData|closed|colorDepth|complete|components|constructor|controllers|cookie|cookieEnabled|cpuClass|crypto|current|data|defaultCharset|defaultChecked|defaultStatus|defaultValue|defaultView|description|dialogArguments|dialogHeight|dialogLeft|dialogTop|dialogWidth|dir|directories|display|doctype|documentElement|domain|E|elements|embeds|enabledPlugin|encoding|expando|external|fgColor|filename|fontFamily|fontSize|fontWeight|form|formName|forms|frameElement|frames|global|hasFocus|hash|height|history|host|hostname|href|hspace|ids|ignoreCase|images|implementation|input|innerHeight|innerWidth|index|LN10|LN2|LOG10E|LOG2E|language|lastChild|lastIndex|lastMatch|lastModified|lastParen|layers|layerX|left|leftContext|length|lineHeight|linkColor|links|listStyleType|localName|location|locationbar|lowsrc|MAX_VALUE|MIN_VALUE|marginBottom|marginLeft|marginRight|marginTop|media|method|menubar|mimeTypes|multiline|NEGATIVE_INFINITY|name|nameProp|namespaces|namespaceURI|next|nextSibling|nodeName|nodeType|nodeValue|offscreenBuffering|onLine|onreadystatechange|opener|opsProfile|oscpu|options|outerHeight|outerWidth|ownerDocument|POSITIVE_INFINITY|PI|paddingBottom|paddingLeft|paddingRight|paddingTop|pageX|pageY|pageXOffset|pageYOffset|parent|parentLayer|parentNode|parentWindow|pathname|personalbar|pixelDepth|platform|plugins|pkcs11|port|prefix|previous|previousSibling|product|productSub|prompter|protocol|prototype|readyState|referrer|responseText|responseXML|right|rightContext|SQRT1_2|SQRT2|screenLeft|screenTop|screenX|screenY|scripts|scrollbars|security|securityPolicy|selected|selection|selectedIndex|self|siblingAbove|siblingBelow|src|source|status|statusbar|statusText|styleSheets|suffixes|systemLanguage|tags|target|text|textAlign|textDecoration|textIndent|textTransform|title|toolbar|top|type|URL|URLUnencoded|undefined|uniqueID|updateInterval|userAgent|userLanguage|userProfile|value|vendor|vendorSub|visibility|vLinkcolor|vspace|whiteSpace|width|XMLDocument|XSLDocument|x|y|zIndex)\\b";
-			captures = {
-			    1 = { name = "support.constant.js"; };
-			};
-		},
-		
-		/* OBJECTS:: Event Handlers:: */
-		{ 	name = "support.function.event-handler.js";
-			match = "\\b(onAbort|onActivate|onAfterprint|onAfterupdate|onBeforeactivate|onBeforecut|onBeforedeactivate|onBeforeeditfocus|onBeforepaste|onBeforeprint|onBeforeunload|onBeforeupdate|onBlur|onCellchange|onChange|onClick|onClose|onContextmenu|onControlselect|onCut|onDataavailable|onDatasetchanged|onDatasetcomplete|onDblclick|onDeactivate|onDrag|onDragdrop|onDragend|onDragenter|onDragleave|onDragover|onDragstart|onDrop|onError|onErrorupdate|onFocus|onHelp|onKeydown|onKeypress|onKeyup|onLoad|onMousedown|onMousemove|onMouseout|onMouseover|onMouseup|onPaste|onPropertychange|onReadystatechange|onReset|onResize|onResizeend|onResizestart|onRowenter|onRowexit|onRowsdelete|onRowsinserted|onScroll|onSelect|onSelectionchange|onSelectstart|onStop|onSubmit|onUnload)\\b";
-		},
-		
-		/* OPERATORS::  */
-		{	name = "keyword.operator.js";
-			match = "!|\\$|%|&|\\*|\\+|\\-|\\-\\-|\\+\\+|~|===|==|=|!=|!==|<=|>=|<<=|>>=|>>>=|<>|<|>|!|&&|\\|\\||\\?\\:|\\*=|/=|%=|\\+=|\\-=|&=|\\^=|\\b(in|instanceof|new|delete|typeof|void)\\b";		
-		},
-				
-		/* CONSTANTS:: */
-		{ 	name = "constant.language.js";
-			match = "\\b(Infinity|NaN|Undefined)\\b";
-		},
-		
-		/* STRINGS REGEX:: */
-        {   begin = "(([=(]|^)\\s*)(/)(?![*/])"; 
-            end = "(/([igm]+)?)";
-            beginCaptures = {
-                1 = { name = "dummy.regexp-start"; };
-                3 = { name = "string.regexp.js"; };
-            };
-            endCaptures = {
-                1 = { name = "string.regexp.js"; };
-            };
-            patterns = (
-                { name = "string.regexp.js"; match = "[^/]*"; },
-                { name = "string.regexp.js"; match = "\\\\/"; }
-            );
-        },
-    );
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>comment</key>
+	<string>JavaScript Syntax: version 2.0</string>
+	<key>fileTypes</key>
+	<array>
+		<string>js</string>
+		<string>htc</string>
+	</array>
+	<key>foldingStartMarker</key>
+	<string>^\s*([A-Za-z0-9.]+s*=\s*)?(function)\b</string>
+	<key>foldingStopMarker</key>
+	<string>^\s*\}</string>
+	<key>keyEquivalent</key>
+	<string>~^J</string>
+	<key>name</key>
+	<string>JavaScript</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.function.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.js</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.function.js</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^\s*(function)\s*([a-zA-Z_]\w*)\s*\(([^)]*)\)</string>
+			<key>name</key>
+			<string>meta.function.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b</string>
+			<key>name</key>
+			<string>constant.numeric.js</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>'</string>
+			<key>end</key>
+			<string>'</string>
+			<key>name</key>
+			<string>string.quoted.single.js</string>
+			<key>swallow</key>
+			<string>\\.</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>"</string>
+			<key>end</key>
+			<string>"</string>
+			<key>name</key>
+			<string>string.quoted.double.js</string>
+			<key>swallow</key>
+			<string>\\.</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.js</string>
+			<key>swallow</key>
+			<string>\\.</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>//.*</string>
+			<key>name</key>
+			<string>comment.line.double-slash.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(&lt;!--|--&gt;)</string>
+			<key>name</key>
+			<string>comment.block.html.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(boolean|byte|char|class|double|enum|float|function|int|interface|long|short|var|void)\b</string>
+			<key>name</key>
+			<string>storage.type.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(const|export|extends|final|implements|native|private|protected|public|static|synchronized|throws|transient|volatile)\b</string>
+			<key>name</key>
+			<string>storage.modifier.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|package|return|switch|throw|try|while)\b</string>
+			<key>name</key>
+			<string>keyword.control.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(delete|in|instanceof|new|typeof|with)\b</string>
+			<key>name</key>
+			<string>keyword.operator.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(false|null|super|this|true)\b</string>
+			<key>name</key>
+			<string>constant.language.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(debugger)\b</string>
+			<key>name</key>
+			<string>keyword.other.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(Anchor|Applet|Area|Array|Boolean|Button|Checkbox|Date|document|event|FileUpload|Form|Frame|Function|Hidden|History|Image|JavaArray|JavaClass|JavaObject|JavaPackage|java|Layer|Link|Location|Math|MimeType|Number|navigator|netscape|Object|Option|Packages|Password|Plugin|Radio|RegExp|Reset|Select|String|Style|Submit|screen|sun|Text|Textarea|window|XMLHttpRequest)\b</string>
+			<key>name</key>
+			<string>support.class.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(abort|abs|acos|alert|anchor|apply|asin|atan|atan2|atob|attachEvent|back|big|blink|blur|bold|borderWidths|btoa|call|captureEvents|ceil|charAt|charCodeAt|clear|clearInterval|clearTimeout|click|close|compile|concat|confirm|contextual|cos|createElement|createEventObject|createPopup|createStyleSheet|createTextNode|detachEvent|disableExternalCapture|dump|elementFromPoint|enableExternalCapture|escape|eval|exec|execCommand|execScript|exp|fileCreatedDate|fileModifiedDate|fileSize|fileUpdatedDate|find|firstChild|fixed|floor|focus|fontcolor|fontsize|fromCharCode|forward|getAllResponseHeaders|getAttention|getDate|getDay|getElementById|getElementsByName|getElementsByTagName|getFullYear|getHours|getMilliseconds|getMinutes|getMonth|getResponseHeader|getSeconds|getSelection|getTime|getTimezoneOffset|getUTCDate|getUTCDay|getUTCFullYear|getUTCHours|getUTCMilliseconds|getUTCMinutes|getUTCMonth|getUTCSeconds|getYear|go|handleEvent|home|indexOf|isFinite|isNaN|italics|javaEnabled|join|lastIndexOf|link|load|log|margins|match|max|mergeAttributes|min|moveAbove|moveBelow|moveBy|moveTo|moveToAbsolute|navigate|open|paddings|parse|parseFloat|parseInt|plugins.refresh|pop|pow|preference|print|prompt|push|queryCommandEnabled|queryCommandIndeterm|queryCommandState|queryCommandValue|random|recalc|releaseCapture|releaseEvents|reload|replace|reset|resizeBy|resizeTo|returnValue|reverse|round|routeEvents|savePreferences|scroll|scrollBy|scrollByLines|scrollByPages|scrollTo|scrollX|scrollY|search|select|send|setDate|setFullYear|setActive|setCursor|setHotKeys|setHours|setInterval|setMilliseconds|setMinutes|setMonth|setResizable|setRequestHeader|setSeconds|setTime|setTimeout|setUTCDate|setUTCFullYear|setUTCHours|setUTCMilliseconds|setUTCMinutes|setUTCMonth|setUTCSeconds|setYear|setZOptions|shift|showHelp|showModalDialog|showModelessDialog|sidebar|sin|signText|sizeToContent|slice|small|sort|splice|split|sqrt|strike|stop|sub|submit|substr|substring|sup|taint|taintEnabled|tan|test|toGMTString|toLocaleString|toLowerCase|toSource|toString|toUpperCase|toUTCString|UTC|unescape|unshift|untaint|updateCommands|unwatch|valueOf|watch|write|writeln)\b(?=\()</string>
+			<key>name</key>
+			<string>support.function.js</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.js</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\.\b(_content|above|action|align|aLinkcolor|all|anchors|appCodeName|appCore|appMinorVersion|appName|applets|appVersion|arguments.callee|arguments.caller|arguments.length|arguments|arity|attributes|availHeight|availLeft|availTop|availWidth|backgroundColor|backgroundImage|background|below|bgColor|body|borderBottomWidth|borderColor|borderLeftWidth|borderRightWidth|borderStyle|borderTopWidth|border|bottom|bufferDepth|characterSet|checked|childNodes|classes|className|clientInformation|clipboardData|clip|closed|colorDepth|complete|components|constructor|controllers|cookieEnabled|cookie|cpuClass|crypto|current|data|defaultCharset|defaultChecked|defaultStatus|defaultValue|defaultView|description|dialogArguments|dialogHeight|dialogLeft|dialogTop|dialogWidth|directories|dir|display|doctype|documentElement|domain|E|elements|embeds|enabledPlugin|encoding|expando|external|fgColor|filename|fontFamily|fontSize|fontWeight|formName|forms|form|frameElement|frames|global|hasFocus|hash|height|history|hostname|host|href|hspace|ids|ignoreCase|images|implementation|input|innerHeight|innerWidth|index|LN10|LN2|LOG10E|LOG2E|language|lastChild|lastIndex|lastMatch|lastModified|lastParen|layers|layerX|leftContext|left|length|lineHeight|linkColor|links|listStyleType|localName|locationbar|location|lowsrc|MAX_VALUE|MIN_VALUE|marginBottom|marginLeft|marginRight|marginTop|media|method|menubar|mimeTypes|multiline|NEGATIVE_INFINITY|nameProp|namespaces|namespaceURI|name|nextSibling|next|nodeName|nodeType|nodeValue|offscreenBuffering|onLine|onreadystatechange|opener|opsProfile|oscpu|options|outerHeight|outerWidth|ownerDocument|POSITIVE_INFINITY|PI|paddingBottom|paddingLeft|paddingRight|paddingTop|pageXOffset|pageYOffset|pageX|pageY|parentLayer|parentNode|parentWindow|parent|pathname|personalbar|pixelDepth|platform|plugins|pkcs11|port|prefix|previousSibling|previous|productSub|product|prompter|protocol|prototype|readyState|referrer|responseText|responseXML|rightContext|right|SQRT1_2|SQRT2|screenLeft|screenTop|screenX|screenY|scripts|scrollbars|securityPolicy|security|selectedIndex|selected|selection|self|siblingAbove|siblingBelow|src|source|statusbar|statusText|status|styleSheets|suffixes|systemLanguage|tags|target|textAlign|textDecoration|textIndent|textTransform|text|title|toolbar|top|type|URLUnencoded|URL|undefined|uniqueID|updateInterval|userAgent|userLanguage|userProfile|value|vendorSub|vendor|visibility|vLinkcolor|vspace|whiteSpace|width|XMLDocument|XSLDocument|x|y|zIndex)\b</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(onAbort|onActivate|onAfterprint|onAfterupdate|onBeforeactivate|onBeforecut|onBeforedeactivate|onBeforeeditfocus|onBeforepaste|onBeforeprint|onBeforeunload|onBeforeupdate|onBlur|onCellchange|onChange|onClick|onClose|onContextmenu|onControlselect|onCut|onDataavailable|onDatasetchanged|onDatasetcomplete|onDblclick|onDeactivate|onDrag|onDragdrop|onDragend|onDragenter|onDragleave|onDragover|onDragstart|onDrop|onError|onErrorupdate|onFocus|onHelp|onKeydown|onKeypress|onKeyup|onLoad|onMousedown|onMousemove|onMouseout|onMouseover|onMouseup|onPaste|onPropertychange|onReadystatechange|onReset|onResize|onResizeend|onResizestart|onRowenter|onRowexit|onRowsdelete|onRowsinserted|onScroll|onSelect|onSelectionchange|onSelectstart|onStop|onSubmit|onUnload)\b</string>
+			<key>name</key>
+			<string>support.function.event-handler.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>!|\$|%|&amp;|\*|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\*=|/=|%=|\+=|\-=|&amp;=|\^=|\b(in|instanceof|new|delete|typeof|void)\b</string>
+			<key>name</key>
+			<string>keyword.operator.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(Infinity|NaN|Undefined)\b</string>
+			<key>name</key>
+			<string>constant.language.js</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(([=(]|^)\s*)(/)(?![*/])</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>dummy.regexp-start</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>string.regexp.js</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(/([igm]+)?)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>string.regexp.js</string>
+				</dict>
+			</dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>[^/]*</string>
+					<key>name</key>
+					<string>string.regexp.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\/</string>
+					<key>name</key>
+					<string>string.regexp.js</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.js</string>
+	<key>uuid</key>
+	<string>93E017CC-6F27-11D9-90EB-000D93589AF6</string>
+</dict>
+</plist>
