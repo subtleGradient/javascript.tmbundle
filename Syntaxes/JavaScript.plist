@@ -199,7 +199,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>[^/]*</string>
+					<string>[^/]+</string>
 					<key>name</key>
 					<string>string.regexp.js</string>
 				</dict>
