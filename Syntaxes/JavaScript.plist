@@ -39,7 +39,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(function)(\s+[a-zA-Z_]\w*)?\s*\((.*?)\)</string>
+			<string>\b(function)\s+([a-zA-Z_]\w*)?\s*\((.*?)\)</string>
 			<key>name</key>
 			<string>meta.function.js</string>
 		</dict>
