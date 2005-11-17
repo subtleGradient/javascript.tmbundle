@@ -39,7 +39,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(function)\s+([a-zA-Z_]\w*)?\s*\((.*?)\)</string>
+			<string>\b(function)\s+([a-zA-Z_$]\w*)?\s*\((.*?)\)</string>
 			<key>name</key>
 			<string>meta.function.js</string>
 		</dict>
@@ -65,7 +65,7 @@
 			<key>comment</key>
 			<string>match stuff like: Sound.prototype.play = function() { … }</string>
 			<key>match</key>
-			<string>\b([a-zA-Z_?\.]+\w*)\s+=\s+\b(function)?\s*\((.*?)\)</string>
+			<string>\b([a-zA-Z_?\.$]+\w*)\s+=\s+\b(function)?\s*\((.*?)\)</string>
 			<key>name</key>
 			<string>meta.function.js</string>
 		</dict>
