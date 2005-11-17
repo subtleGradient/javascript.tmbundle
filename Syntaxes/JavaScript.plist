@@ -44,6 +44,32 @@
 			<string>meta.function.js</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.function.js</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.function.js</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match stuff like: Sound.prototype.play = function() { … }</string>
+			<key>match</key>
+			<string>\b([a-zA-Z_?\.]+\w*)\s+=\s+\b(function)?\s*\((.*?)\)</string>
+			<key>name</key>
+			<string>meta.function.js</string>
+		</dict>
+		<dict>
 			<key>match</key>
 			<string>\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b</string>
 			<key>name</key>
