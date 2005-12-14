@@ -172,28 +172,16 @@
 			<string>support.function.dom.js</string>
 		</dict>
 		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.constant.js</string>
-				</dict>
-			</dict>
 			<key>match</key>
-			<string>\.\b(_content|above|action|align|aLinkcolor|all|appCodeName|appCore|appMinorVersion|appName|appVersion|arguments|arity|availHeight|availLeft|availTop|availWidth|backgroundColor|backgroundImage|below|borderBottomWidth|borderColor|borderLeftWidth|borderRightWidth|borderStyle|borderTopWidth|border|bottom|bufferDepth|callee|caller|characterSet|checked|classes|clientInformation|clipboardData|clip|closed|colorDepth|complete|components|constructor|controllers|cookieEnabled|cpuClass|crypto|current|defaultCharset|defaultChecked|defaultStatus|defaultValue|defaultView|description|dialogArguments|dialogHeight|dialogLeft|dialogTop|dialogWidth|directories|display|E|elements|embeds|enabledPlugin|encoding|expando|external|fgColor|filename|fontFamily|fontSize|fontWeight|formName|frameElement|frames|global|hasFocus|hash|height|history|hostname|host|hspace|ids|ignoreCase|input|innerHeight|innerWidth|index|LN10|LN2|LOG10E|LOG2E|language|lastIndex|lastMatch|lastModified|lastParen|layers|layerX|leftContext|left|length|lineHeight|linkColor|listStyleType|localName|locationbar|location|lowsrc|MAX_VALUE|MIN_VALUE|marginBottom|marginLeft|marginRight|marginTop|method|menubar|mimeTypes|multiline|NEGATIVE_INFINITY|nameProp|namespaces|namespaceURI|next|offscreenBuffering|onLine|onreadystatechange|opener|opsProfile|oscpu|options|outerHeight|outerWidth|POSITIVE_INFINITY|PI|paddingBottom|paddingLeft|paddingRight|paddingTop|pageXOffset|pageYOffset|pageX|pageY|parentLayer|parentWindow|parent|pathname|personalbar|pixelDepth|platform|plugins|pkcs11|port|prefix|previous|productSub|product|prompter|protocol|prototype|readyState|responseText|responseXML|rightContext|right|SQRT1_2|SQRT2|screenLeft|screenTop|screenX|screenY|scripts|scrollbars|securityPolicy|security|selectedIndex|selected|selection|self|siblingAbove|siblingBelow|src|source|statusbar|statusText|status|style|styleSheets|suffixes|systemLanguage|tags|textAlign|textDecoration|textIndent|textTransform|toolbar|top|URLUnencoded|undefined|uniqueID|updateInterval|userAgent|userLanguage|userProfile|vendorSub|vendor|visibility|vLinkcolor|vspace|whiteSpace|width|XMLDocument|XSLDocument|x|y|zIndex)\b</string>
+			<string>(?&lt;=\.)(_content|above|action|align|aLinkcolor|all|appCodeName|appCore|appMinorVersion|appName|appVersion|arguments|arity|availHeight|availLeft|availTop|availWidth|backgroundColor|backgroundImage|below|borderBottomWidth|borderColor|borderLeftWidth|borderRightWidth|borderStyle|borderTopWidth|border|bottom|bufferDepth|callee|caller|characterSet|checked|classes|clientInformation|clipboardData|clip|closed|colorDepth|complete|components|constructor|controllers|cookieEnabled|cpuClass|crypto|current|defaultCharset|defaultChecked|defaultStatus|defaultValue|defaultView|description|dialogArguments|dialogHeight|dialogLeft|dialogTop|dialogWidth|directories|display|E|elements|embeds|enabledPlugin|encoding|expando|external|fgColor|filename|fontFamily|fontSize|fontWeight|formName|frameElement|frames|global|hasFocus|hash|height|history|hostname|host|hspace|ids|ignoreCase|input|innerHeight|innerWidth|index|LN10|LN2|LOG10E|LOG2E|language|lastIndex|lastMatch|lastModified|lastParen|layers|layerX|leftContext|left|length|lineHeight|linkColor|listStyleType|localName|locationbar|location|lowsrc|MAX_VALUE|MIN_VALUE|marginBottom|marginLeft|marginRight|marginTop|method|menubar|mimeTypes|multiline|NEGATIVE_INFINITY|nameProp|namespaces|namespaceURI|next|offscreenBuffering|onLine|onreadystatechange|opener|opsProfile|oscpu|options|outerHeight|outerWidth|POSITIVE_INFINITY|PI|paddingBottom|paddingLeft|paddingRight|paddingTop|pageXOffset|pageYOffset|pageX|pageY|parentLayer|parentWindow|parent|pathname|personalbar|pixelDepth|platform|plugins|pkcs11|port|prefix|previous|productSub|product|prompter|protocol|prototype|readyState|responseText|responseXML|rightContext|right|SQRT1_2|SQRT2|screenLeft|screenTop|screenX|screenY|scripts|scrollbars|securityPolicy|security|selectedIndex|selected|selection|self|siblingAbove|siblingBelow|src|source|statusbar|statusText|status|style|styleSheets|suffixes|systemLanguage|tags|textAlign|textDecoration|textIndent|textTransform|toolbar|top|URLUnencoded|undefined|uniqueID|updateInterval|userAgent|userLanguage|userProfile|vendorSub|vendor|visibility|vLinkcolor|vspace|whiteSpace|width|XMLDocument|XSLDocument|x|y|zIndex)\b</string>
+			<key>name</key>
+			<string>support.constant.js</string>
 		</dict>
 		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.constant.dom.js</string>
-				</dict>
-			</dict>
 			<key>match</key>
-			<string>\.\b(aLink|anchors|applets|attributes|background|bgColor|body|charset|childNodes|className|content|cookie|data|dir|disabled|doctype|documentElement|domain|entities|firstChild|form|forms|href|hreflang|httpEquiv|id|images|implementation|lang|lastChild|links|media|name|nextSibling|nodeName|nodeType|nodeValue|notationName|notations|ownerDocument|parentNode|previousSibling|profile|publicId|rel|referrer|rev|scheme|specified|systemId|tagName|target|text|title|type|URL|value|version)\b</string>
+			<string>(?&lt;=\.)(aLink|anchors|applets|attributes|background|bgColor|body|charset|childNodes|className|content|cookie|data|dir|disabled|doctype|documentElement|domain|entities|firstChild|form|forms|href|hreflang|httpEquiv|id|images|implementation|lang|lastChild|link|links|media|name|nextSibling|nodeName|nodeType|nodeValue|notationName|notations|ownerDocument|parentNode|previousSibling|profile|prompt|publicId|rel|referrer|rev|scheme|specified|systemId|tagName|target|text|title|type|URL|value|version)\b</string>
+			<key>name</key>
+			<string>support.constant.dom.js</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -203,7 +191,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(onAbort|onActivate|onAfterprint|onAfterupdate|onBeforeactivate|onBeforecut|onBeforedeactivate|onBeforeeditfocus|onBeforepaste|onBeforeprint|onBeforeunload|onBeforeupdate|onBlur|onCellchange|onChange|onClick|onClose|onContextmenu|onControlselect|onCut|onDataavailable|onDatasetchanged|onDatasetcomplete|onDblclick|onDeactivate|onDrag|onDragdrop|onDragend|onDragenter|onDragleave|onDragover|onDragstart|onDrop|onError|onErrorupdate|onFocus|onHelp|onKeydown|onKeypress|onKeyup|onLoad|onMousedown|onMousemove|onMouseout|onMouseover|onMouseup|onPaste|onPropertychange|onReadystatechange|onReset|onResize|onResizeend|onResizestart|onRowenter|onRowexit|onRowsdelete|onRowsinserted|onScroll|onSelect|onSelectionchange|onSelectstart|onStop|onSubmit|onUnload)\b</string>
+			<string>\b(onAbort|onActivate|onAfterprint|onAfterupdate|onBeforeactivate|onBeforecut|onBeforedeactivate|onBeforeeditfocus|onBeforepaste|onBeforeprint|onBeforeunload|onBeforeupdate|onBlur|onCellchange|onChange|onClick|onClose|onContextmenu|onControlselect|onCut|onDataavailable|onDatasetchanged|onDatasetcomplete|onDblclick|onDeactivate|onDrag|onDragdrop|onDragend|onDragenter|onDragleave|onDragover|onDragstart|onDrop|onError|onErrorupdate|onFocus|onHelp|onHover|onKeydown|onKeypress|onKeyup|onLoad|onMousedown|onMousemove|onMouseout|onMouseover|onMouseup|onPaste|onPropertychange|onReadystatechange|onReset|onResize|onResizeend|onResizestart|onRowenter|onRowexit|onRowsdelete|onRowsinserted|onScroll|onSelect|onSelectionchange|onSelectstart|onStop|onSubmit|onUnload)\b</string>
 			<key>name</key>
 			<string>support.function.event-handler.js</string>
 		</dict>
