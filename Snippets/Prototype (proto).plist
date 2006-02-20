@@ -3,17 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>function ${1:function_name} (${2:first_argument})
+	<string>${1:class_name}.prototype.${2:method_name} = function(${3:first_argument})
 {
 	${0:// body...}
-}</string>
+};
+</string>
 	<key>name</key>
-	<string>Function (fun)</string>
+	<string>Prototype (proto)</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
-	<string>fun</string>
+	<string>proto</string>
 	<key>uuid</key>
-	<string>F0E4FB6A-4878-48C6-A777-62438DF1E14F</string>
+	<string>2F96136B-0193-42F5-90FC-B6F456A3AD77</string>
 </dict>
 </plist>
