@@ -14,7 +14,7 @@
 	<key>foldingStopMarker</key>
 	<string>^\s*\}</string>
 	<key>keyEquivalent</key>
-	<string>~^J</string>
+	<string>^~J</string>
 	<key>name</key>
 	<string>JavaScript</string>
 	<key>patterns</key>
@@ -40,6 +40,32 @@
 			</dict>
 			<key>match</key>
 			<string>\b(function)\s+([a-zA-Z_$]\w*)?\s*\((.*?)\)</string>
+			<key>name</key>
+			<string>meta.function.js</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.function.js</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.function.js</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match stuff like: foobar: function() { … }</string>
+			<key>match</key>
+			<string>^\s*\b([a-zA-Z_?\.$]+\w*):\s+\b(function)?\s*\((.*?)\)</string>
 			<key>name</key>
 			<string>meta.function.js</string>
 		</dict>
