@@ -2,10 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>mainMenu</key>
+	<dict>
+		<key>items</key>
+		<array>
+			<string>B4874A14-2491-465A-A349-61E4EBCF4700</string>
+			<string>------------------------------------</string>
+			<string>F0E4FB6A-4878-48C6-A777-62438DF1E14F</string>
+			<string>2F96136B-0193-42F5-90FC-B6F456A3AD77</string>
+		</array>
+		<key>submenus</key>
+		<dict/>
+	</dict>
 	<key>name</key>
 	<string>JavaScript</string>
 	<key>ordering</key>
 	<array>
+		<string>B4874A14-2491-465A-A349-61E4EBCF4700</string>
 		<string>F0E4FB6A-4878-48C6-A777-62438DF1E14F</string>
 		<string>2F96136B-0193-42F5-90FC-B6F456A3AD77</string>
 		<string>93E017CC-6F27-11D9-90EB-000D93589AF6</string>
