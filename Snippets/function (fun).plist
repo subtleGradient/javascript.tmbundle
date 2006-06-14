@@ -8,7 +8,7 @@
 	${0:// body...}
 }</string>
 	<key>name</key>
-	<string>Function (fun)</string>
+	<string>Function</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>

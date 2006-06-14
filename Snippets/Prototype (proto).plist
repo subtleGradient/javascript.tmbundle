@@ -9,7 +9,7 @@
 };
 </string>
 	<key>name</key>
-	<string>Prototype (proto)</string>
+	<string>Prototype</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
