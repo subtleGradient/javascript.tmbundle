@@ -128,8 +128,6 @@
 			<string>\*/</string>
 			<key>name</key>
 			<string>comment.block.js</string>
-			<key>swallow</key>
-			<string>\\.</string>
 		</dict>
 		<dict>
 			<key>match</key>
