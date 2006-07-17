@@ -65,7 +65,7 @@
 			<key>comment</key>
 			<string>match stuff like: foobar: function() { … }</string>
 			<key>match</key>
-			<string>^\s*\b([a-zA-Z_?\.$]+\w*):\s+\b(function)?\s*\((.*?)\)</string>
+			<string>\b([a-zA-Z_?\.$]+\w*):\s+\b(function)?\s*\((.*?)\)</string>
 			<key>name</key>
 			<string>meta.function.js</string>
 		</dict>
@@ -104,26 +104,50 @@
 		<dict>
 			<key>begin</key>
 			<string>'</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.single.brace.js</string>
+				</dict>
+			</dict>
+			<key>contentName</key>
+			<string>string.quoted.single.js</string>
 			<key>end</key>
 			<string>'</string>
-			<key>name</key>
-			<string>string.quoted.single.js</string>
 			<key>swallow</key>
 			<string>\\.</string>
 		</dict>
 		<dict>
 			<key>begin</key>
 			<string>"</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.double.brace.js</string>
+				</dict>
+			</dict>
+			<key>contentName</key>
+			<string>string.quoted.double.js</string>
 			<key>end</key>
 			<string>"</string>
-			<key>name</key>
-			<string>string.quoted.double.js</string>
 			<key>swallow</key>
 			<string>\\.</string>
 		</dict>
 		<dict>
 			<key>begin</key>
 			<string>/\*</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>meta.brace.comment.block.js</string>
+				</dict>
+			</dict>
 			<key>end</key>
 			<string>\*/</string>
 			<key>name</key>
@@ -247,6 +271,42 @@
 					<string>constant.character.escape.js</string>
 				</dict>
 			</array>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\;</string>
+			<key>name</key>
+			<string>meta.delimiter.statement.semicolon.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>,[ |\t]*</string>
+			<key>name</key>
+			<string>meta.delimiter.object.comma.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\.</string>
+			<key>name</key>
+			<string>meta.delimiter.method.period.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\{|\}</string>
+			<key>name</key>
+			<string>meta.brace.curly.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\(|\)</string>
+			<key>name</key>
+			<string>meta.brace.round.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\[|\]</string>
+			<key>name</key>
+			<string>meta.brace.square.js</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
