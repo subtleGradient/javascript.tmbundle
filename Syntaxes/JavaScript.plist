@@ -116,8 +116,15 @@
 			<string>string.quoted.single.js</string>
 			<key>end</key>
 			<string>'</string>
-			<key>swallow</key>
-			<string>\\.</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\.</string>
+					<key>name</key>
+					<string>constant.character.escape.js</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -134,8 +141,15 @@
 			<string>string.quoted.double.js</string>
 			<key>end</key>
 			<string>"</string>
-			<key>swallow</key>
-			<string>\\.</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\.</string>
+					<key>name</key>
+					<string>constant.character.escape.js</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
