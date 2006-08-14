@@ -205,9 +205,15 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(false|null|super|this|true)\b</string>
+			<string>\b(false|null|true)\b</string>
 			<key>name</key>
 			<string>constant.language.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(super|this)\b</string>
+			<key>name</key>
+			<string>variable.language.js</string>
 		</dict>
 		<dict>
 			<key>match</key>
