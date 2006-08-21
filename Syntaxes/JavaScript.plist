@@ -65,7 +65,7 @@
 			<key>comment</key>
 			<string>match stuff like: foobar: function() { … }</string>
 			<key>match</key>
-			<string>\b([a-zA-Z_?\.$]+\w*):\s+\b(function)?\s*\((.*?)\)</string>
+			<string>\b([a-zA-Z_?\.$]+\w*)\s*:\s+\b(function)?\s*\((.*?)\)</string>
 			<key>name</key>
 			<string>meta.function.js</string>
 		</dict>
