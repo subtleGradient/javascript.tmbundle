@@ -120,7 +120,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\\.</string>
+					<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|.)</string>
 					<key>name</key>
 					<string>constant.character.escape.js</string>
 				</dict>
@@ -145,7 +145,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\\.</string>
+					<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|.)</string>
 					<key>name</key>
 					<string>constant.character.escape.js</string>
 				</dict>
