@@ -25,6 +25,141 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
+					<string>support.class.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.js</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match stuff like: Sound.prototype = { … } when extending an object</string>
+			<key>match</key>
+			<string>([a-zA-Z_?\.$]+\w*)\.(prototype)\s*=\s*</string>
+			<key>name</key>
+			<string>meta.class.js</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.class.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.js</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.js</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.function.js</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.function.js</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match stuff like: Sound.prototype.play = function() { … }</string>
+			<key>match</key>
+			<string>([a-zA-Z_?\.$]+\w*)\.(prototype)\.([a-zA-Z_?\.$]+\w*)\s*=\s*(function)?\s*\((.*?)\)</string>
+			<key>name</key>
+			<string>meta.function.prototype.js</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.class.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.js</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.js</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match stuff like: Sound.prototype.play = myfunc</string>
+			<key>match</key>
+			<string>([a-zA-Z_?\.\$]+\w*)\.(prototype)\.([a-zA-Z_?\.$]+\w*)\s*=\s*</string>
+			<key>name</key>
+			<string>meta.function.js</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.class.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.js</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match stuff like: Sound.play = { … }</string>
+			<key>match</key>
+			<string>([a-zA-Z_?\.$]+\w*)?\.([a-zA-Z_?\.$]+\w*)\s*=\s*</string>
+			<key>name</key>
+			<string>meta.function.js</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.class.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.js</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.function.js</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.function.js</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match stuff like: Sound.play = function() { … } or play = function() { … }</string>
+			<key>match</key>
+			<string>([a-zA-Z_?\.\$]+\w*)(\.([a-zA-Z_?\.\$]+\w*))?\s*=\s*(function)?\s*\((.*?)\)</string>
+			<key>name</key>
+			<string>meta.function.js</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
 					<string>storage.type.function.js</string>
 				</dict>
 				<key>2</key>
@@ -38,6 +173,8 @@
 					<string>variable.parameter.function.js</string>
 				</dict>
 			</dict>
+			<key>comment</key>
+			<string>match regular function like: function myFunc(arg) { … }</string>
 			<key>match</key>
 			<string>\b(function)\s+([a-zA-Z_$]\w*)?\s*\((.*?)\)</string>
 			<key>name</key>
@@ -65,9 +202,9 @@
 			<key>comment</key>
 			<string>match stuff like: foobar: function() { … }</string>
 			<key>match</key>
-			<string>\b([a-zA-Z_?\.$]+\w*)\s*:\s+\b(function)?\s*\((.*?)\)</string>
+			<string>\b([a-zA-Z_?\.$]+\w*)\s*:\s*\b(function)?\s*\((.*?)\)</string>
 			<key>name</key>
-			<string>meta.function.js</string>
+			<string>meta.function.json.js</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -75,25 +212,61 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.js</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.function.js</string>
+					<string>string.quoted.js</string>
 				</dict>
 				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>object.property.function.js</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.js</string>
+				</dict>
+				<key>6</key>
 				<dict>
 					<key>name</key>
 					<string>variable.parameter.function.js</string>
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>match stuff like: Sound.prototype.play = function() { … }</string>
+			<string>Attempt to match "foo": function</string>
 			<key>match</key>
-			<string>\b([a-zA-Z_?\.$]+\w*)\s+=\s+\b(function)?\s*\((.*?)\)</string>
+			<string>(('|")(.*?)(\2))\s*:\s*\b(function)?\s*\((.*?)\)</string>
 			<key>name</key>
-			<string>meta.function.js</string>
+			<string>meta.function.json.js</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.new.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.instance.js</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(new)\s+(\w+\.?\w*)</string>
+			<key>name</key>
+			<string>meta.class.instance.constructor</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(console)\b</string>
+			<key>name</key>
+			<string>entity.name.object.js.firebug</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\.(warn|info|log|error|time|timeEnd|assert)\b</string>
+			<key>name</key>
+			<string>support.function.js.firebug</string>
 		</dict>
 		<dict>
 			<key>match</key>
