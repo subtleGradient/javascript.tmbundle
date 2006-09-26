@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>function ${1:function_name} (${2:argument}) {
-	${0:// body...}
-}</string>
+	<string>${1:key}: ${2:"${3:value}"}${4:, }</string>
 	<key>name</key>
-	<string>Function</string>
+	<string>Object key — key: "value"</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
-	<string>fun</string>
+	<string>:</string>
 	<key>uuid</key>
-	<string>F0E4FB6A-4878-48C6-A777-62438DF1E14F</string>
+	<string>DC8B46FB-8ADA-45EA-8F36-94C807A0D302</string>
 </dict>
 </plist>

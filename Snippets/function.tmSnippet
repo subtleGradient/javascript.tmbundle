@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>function($1){${0:$TM_SELECTED_TEXT}};</string>
+	<string>function($1) {${0:$TM_SELECTED_TEXT}};</string>
 	<key>name</key>
 	<string>function(){};</string>
 	<key>scope</key>

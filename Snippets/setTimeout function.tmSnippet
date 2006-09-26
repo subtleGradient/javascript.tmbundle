@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>setTimeout((function() {$0})${2:}, ${1:10});</string>
+	<string>setTimeout(function() {$0}${2:}, ${1:10});</string>
 	<key>name</key>
 	<string>setTimeout function</string>
 	<key>scope</key>
