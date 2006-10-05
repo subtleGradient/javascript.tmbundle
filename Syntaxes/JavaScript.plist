@@ -66,13 +66,23 @@
 				<key>5</key>
 				<dict>
 					<key>name</key>
+					<string>punctuation.definition.parameters.begin.js</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>name</key>
 					<string>variable.parameter.function.js</string>
+				</dict>
+				<key>7</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.end.js</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>match stuff like: Sound.prototype.play = function() { … }</string>
 			<key>match</key>
-			<string>([a-zA-Z_?\.$]+\w*)\.(prototype)\.([a-zA-Z_?\.$]+\w*)\s*=\s*(function)?\s*\((.*?)\)</string>
+			<string>([a-zA-Z_?\.$]+\w*)\.(prototype)\.([a-zA-Z_?\.$]+\w*)\s*=\s*(function)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.prototype.js</string>
 		</dict>
@@ -144,13 +154,23 @@
 				<key>5</key>
 				<dict>
 					<key>name</key>
+					<string>punctuation.definition.parameters.begin.js</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>name</key>
 					<string>variable.parameter.function.js</string>
+				</dict>
+				<key>7</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.end.js</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>match stuff like: Sound.play = function() { … } or play = function() { … }</string>
 			<key>match</key>
-			<string>([a-zA-Z_?\.\$]+\w*)(\.([a-zA-Z_?\.\$]+\w*))?\s*=\s*(function)?\s*\((.*?)\)</string>
+			<string>([a-zA-Z_?\.\$]+\w*)(\.([a-zA-Z_?\.\$]+\w*))?\s*=\s*(function)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.js</string>
 		</dict>
@@ -170,13 +190,23 @@
 				<key>3</key>
 				<dict>
 					<key>name</key>
+					<string>punctuation.definition.parameters.begin.js</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
 					<string>variable.parameter.function.js</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.end.js</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>match regular function like: function myFunc(arg) { … }</string>
 			<key>match</key>
-			<string>\b(function)\s+([a-zA-Z_$]\w*)?\s*\((.*?)\)</string>
+			<string>\b(function)\s+([a-zA-Z_$]\w*)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.js</string>
 		</dict>
@@ -196,13 +226,23 @@
 				<key>3</key>
 				<dict>
 					<key>name</key>
+					<string>punctuation.definition.parameters.begin.js</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
 					<string>variable.parameter.function.js</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.end.js</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>match stuff like: foobar: function() { … }</string>
 			<key>match</key>
-			<string>\b([a-zA-Z_?\.$]+\w*)\s*:\s*\b(function)?\s*\((.*?)\)</string>
+			<string>\b([a-zA-Z_?\.$]+\w*)\s*:\s*\b(function)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.json.js</string>
 		</dict>
@@ -212,28 +252,68 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>string.quoted.js</string>
+					<string>string.quoted.single.js</string>
+				</dict>
+				<key>10</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.begin.js</string>
+				</dict>
+				<key>11</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.function.js</string>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.end.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.js</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>object.property.function.js</string>
 				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.js</string>
+				</dict>
 				<key>5</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.js</string>
+					<string>string.quoted.double.js</string>
 				</dict>
 				<key>6</key>
 				<dict>
 					<key>name</key>
-					<string>variable.parameter.function.js</string>
+					<string>punctuation.definition.string.begin.js</string>
+				</dict>
+				<key>7</key>
+				<dict>
+					<key>name</key>
+					<string>object.property.function.js</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.js</string>
+				</dict>
+				<key>9</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.js</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>Attempt to match "foo": function</string>
 			<key>match</key>
-			<string>(('|")(.*?)(\2))\s*:\s*\b(function)?\s*\((.*?)\)</string>
+			<string>(?:((')(.*?)('))|((")(.*?)(")))\s*:\s*\b(function)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.json.js</string>
 		</dict>
@@ -277,18 +357,26 @@
 		<dict>
 			<key>begin</key>
 			<string>'</string>
-			<key>captures</key>
+			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>string.quoted.single.brace.js</string>
+					<string>punctuation.definition.string.begin.js</string>
 				</dict>
 			</dict>
 			<key>contentName</key>
 			<string>string.quoted.single.js</string>
 			<key>end</key>
 			<string>'</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.js</string>
+				</dict>
+			</dict>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -302,18 +390,26 @@
 		<dict>
 			<key>begin</key>
 			<string>"</string>
-			<key>captures</key>
+			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>string.quoted.double.brace.js</string>
+					<string>punctuation.definition.string.begin.js</string>
 				</dict>
 			</dict>
-			<key>contentName</key>
-			<string>string.quoted.double.js</string>
 			<key>end</key>
 			<string>"</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.js</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.quoted.double.js</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -332,7 +428,7 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>meta.brace.comment.block.js</string>
+					<string>punctuation.definition.comment.js</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -341,12 +437,33 @@
 			<string>comment.block.js</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.js</string>
+				</dict>
+			</dict>
 			<key>match</key>
-			<string>//.*$\n?</string>
+			<string>(//).*$\n?</string>
 			<key>name</key>
 			<string>comment.line.double-slash.js</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.html.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.html.js</string>
+				</dict>
+			</dict>
 			<key>match</key>
 			<string>(&lt;!--|--&gt;)</string>
 			<key>name</key>
@@ -402,25 +519,25 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(abort|abs|acos|alert|anchor|apply|asin|atan|atan2|atob|attachEvent|back|big|blink|bold|borderWidths|btoa|call|captureEvents|ceil|charAt|charCodeAt|clear|clearInterval|clearTimeout|compile|concat|confirm|contextual|cos|createEventObject|createPopup|createStyleSheet|detachEvent|disableExternalCapture|dump|elementFromPoint|enableExternalCapture|escape|eval|exec|execCommand|execScript|exp|fileCreatedDate|fileModifiedDate|fileSize|fileUpdatedDate|find|fixed|floor|fontcolor|fontsize|fromCharCode|forward|getAllResponseHeaders|getAttention|getDate|getDay|getFullYear|getHours|getMilliseconds|getMinutes|getMonth|getResponseHeader|getSeconds|getSelection|getTime|getTimezoneOffset|getUTCDate|getUTCDay|getUTCFullYear|getUTCHours|getUTCMilliseconds|getUTCMinutes|getUTCMonth|getUTCSeconds|getYear|go|handleEvent|home|indexOf|isFinite|isNaN|italics|javaEnabled|join|lastIndexOf|link|load|log|margins|match|max|mergeAttributes|min|moveAbove|moveBelow|moveBy|moveTo|moveToAbsolute|navigate|paddings|parse|parseFloat|parseInt|plugins.refresh|pop|pow|preference|print|prompt|push|queryCommandEnabled|queryCommandIndeterm|queryCommandState|queryCommandValue|random|recalc|releaseCapture|releaseEvents|reload|replace|resizeBy|resizeTo|returnValue|reverse|round|routeEvents|savePreferences|scroll|scrollBy|scrollByLines|scrollByPages|scrollTo|scrollX|scrollY|search|send|setDate|setFullYear|setActive|setCursor|setHotKeys|setHours|setInterval|setMilliseconds|setMinutes|setMonth|setResizable|setRequestHeader|setSeconds|setTime|setTimeout|setUTCDate|setUTCFullYear|setUTCHours|setUTCMilliseconds|setUTCMinutes|setUTCMonth|setUTCSeconds|setYear|setZOptions|shift|showHelp|showModalDialog|showModelessDialog|sidebar|sin|signText|sizeToContent|slice|small|sort|splice|split|sqrt|strike|stop|sub|substr|substring|sup|taint|taintEnabled|tan|test|toGMTString|toLocaleString|toLowerCase|toSource|toString|toUpperCase|toUTCString|UTC|unescape|unshift|untaint|updateCommands|unwatch|valueOf|watch)\b(?=\()</string>
+			<string>\b(s(h(ift|ow(Mod(elessDialog|alDialog)|Help))|croll(X|By(Pages|Lines)?|Y|To)?|t(op|rike)|i(n|zeToContent|debar|gnText)|ort|u(p|b(str(ing)?)?)|pli(ce|t)|e(nd|t(Re(sizable|questHeader)|M(i(nutes|lliseconds)|onth)|Seconds|Ho(tKeys|urs)|Year|Cursor|Time(out)?|Interval|ZOptions|Date|UTC(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Date|FullYear)|FullYear|Active)|arch)|qrt|lice|avePreferences|mall)|h(ome|andleEvent)|navigate|c(har(CodeAt|At)|o(s|n(cat|textual|firm)|mpile)|eil|lear(Timeout|Interval)?|a(ptureEvents|ll)|reate(StyleSheet|Popup|EventObject))|t(o(GMTString|S(tring|ource)|U(TCString|pperCase)|Lo(caleString|werCase))|est|a(n|int(Enabled)?))|i(s(NaN|Finite)|ndexOf|talics)|d(isableExternalCapture|ump|etachEvent)|u(n(shift|taint|escape|watch)|pdateCommands)|j(oin|avaEnabled)|p(o(p|w)|ush|lugins.refresh|a(ddings|rse(Int|Float)?)|r(int|ompt|eference))|e(scape|nableExternalCapture|val|lementFromPoint|x(p|ec(Script|Command)?))|valueOf|UTC|queryCommand(State|Indeterm|Enabled|Value)|f(i(nd|le(ModifiedDate|Size|CreatedDate|UpdatedDate)|xed)|o(nt(size|color)|rward)|loor|romCharCode)|watch|l(ink|o(ad|g)|astIndexOf)|a(sin|nchor|cos|t(tachEvent|ob|an(2)?)|pply|lert|b(s|ort))|r(ou(nd|teEvents)|e(size(By|To)|calc|turnValue|place|verse|l(oad|ease(Capture|Events)))|andom)|g(o|et(ResponseHeader|M(i(nutes|lliseconds)|onth)|Se(conds|lection)|Hours|Year|Time(zoneOffset)?|Da(y|te)|UTC(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Da(y|te)|FullYear)|FullYear|A(ttention|llResponseHeaders)))|m(in|ove(B(y|elow)|To(Absolute)?|Above)|ergeAttributes|a(tch|rgins|x))|b(toa|ig|o(ld|rderWidths)|link|ack))\b(?=\()</string>
 			<key>name</key>
 			<string>support.function.js</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(add|appendChild|appendData|blur|cloneNode|close|click|createAttribute|createCaption|createCDATASection|createComment|createDocumentFragment|createElement|createEntityReference|createTextNode|createTFoot|createTHead|createProcessingInstruction|deleteCaption|deleteCell|deleteData|deleteRow|deleteTFoot|deleteTHead|focus|getElementById|getElementsByName|getElementsByTagName|getAttributeNode|getAttribute|getNamedItem|insertBefore|insertCell|insertData|insertRow|item|hasChildNodes|hasFeature|namedItem|open|remove|removeAttributeNode|removeAttribute|removeChild|removeNamedItem|replaceChild|replaceData|reset|select|setAttributeNode|setAttribute|setNamedItem|splitText|submit|substringData|tabIndex|write|writeln)\b(?=\()</string>
+			<string>\b(s(ub(stringData|mit)|plitText|e(t(NamedItem|Attribute(Node)?)|lect))|has(ChildNodes|Feature)|namedItem|c(l(ick|o(se|neNode))|reate(C(omment|DATASection|aption)|T(Head|extNode|Foot)|DocumentFragment|ProcessingInstruction|E(ntityReference|lement)|Attribute))|tabIndex|i(nsert(Row|Before|Cell|Data)|tem)|open|delete(Row|C(ell|aption)|T(Head|Foot)|Data)|focus|write(ln)?|a(dd|ppend(Child|Data))|re(set|place(Child|Data)|move(NamedItem|Child|Attribute(Node)?)?)|get(NamedItem|Element(sBy(Name|TagName)|ById)|Attribute(Node)?)|blur)\b(?=\()</string>
 			<key>name</key>
 			<string>support.function.dom.js</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=\.)(_content|above|aLinkcolor|all|appCodeName|appCore|appMinorVersion|appName|appVersion|arguments|arity|availHeight|availLeft|availTop|availWidth|backgroundColor|backgroundImage|below|borderBottomWidth|borderColor|borderLeftWidth|borderRightWidth|borderStyle|borderTopWidth|bottom|bufferDepth|callee|caller|characterSet|classes|clientInformation|clipboardData|clip|closed|colorDepth|complete|components|constructor|controllers|cookieEnabled|cpuClass|crypto|current|defaultCharset|defaultChecked|defaultStatus|defaultView|description|dialogArguments|dialogHeight|dialogLeft|dialogTop|dialogWidth|directories|display|E|embeds|enabledPlugin|encoding|expando|external|fgColor|filename|fontFamily|fontSize|fontWeight|formName|frameElement|frames|global|hasFocus|hash|history|hostname|host|ids|ignoreCase|input|innerHeight|innerWidth|LN10|LN2|LOG10E|LOG2E|language|lastIndex|lastMatch|lastModified|lastParen|layers|layerX|leftContext|left|length|lineHeight|linkColor|listStyleType|localName|locationbar|location|lowsrc|MAX_VALUE|MIN_VALUE|marginBottom|marginLeft|marginRight|marginTop|menubar|mimeTypes|multiline|NEGATIVE_INFINITY|nameProp|namespaces|namespaceURI|next|offscreenBuffering|onLine|onreadystatechange|opener|opsProfile|oscpu|outerHeight|outerWidth|POSITIVE_INFINITY|PI|paddingBottom|paddingLeft|paddingRight|paddingTop|pageXOffset|pageYOffset|pageX|pageY|parentLayer|parentWindow|parent|pathname|personalbar|pixelDepth|platform|plugins|pkcs11|port|prefix|previous|productSub|product|prompter|protocol|prototype|readyState|responseText|responseXML|rightContext|right|SQRT1_2|SQRT2|screenLeft|screenTop|screenX|screenY|scripts|scrollbars|securityPolicy|security|selection|self|siblingAbove|siblingBelow|source|statusbar|statusText|status|style|styleSheets|suffixes|systemLanguage|tags|textAlign|textDecoration|textIndent|textTransform|toolbar|top|URLUnencoded|undefined|uniqueID|updateInterval|userAgent|userLanguage|userProfile|vendorSub|vendor|visibility|vLinkcolor|whiteSpace|XMLDocument|XSLDocument|x|y|zIndex)\b</string>
+			<string>(?&lt;=\.)(s(ystemLanguage|cr(ipts|ollbars|een(X|Y|Top|Left))|t(yle(Sheets)?|atus(Text|bar)?)|ibling(Below|Above)|ource|uffixes|e(curity(Policy)?|l(ection|f)))|h(istory|ost(name)?|as(h|Focus))|y|X(MLDocument|SLDocument)|n(ext|ame(space(s|URI)|Prop))|M(IN_VALUE|AX_VALUE)|c(haracterSet|o(n(structor|trollers)|okieEnabled|lorDepth|mp(onents|lete))|urrent|puClass|l(i(p(boardData)?|entInformation)|osed|asses)|alle(e|r)|rypto)|t(o(olbar|p)|ext(Transform|Indent|Decoration|Align)|ags)|SQRT(1_2|2)|i(n(ner(Height|Width)|put)|ds|gnoreCase)|zIndex|o(scpu|n(readystatechange|Line)|uter(Height|Width)|p(sProfile|ener)|ffscreenBuffering)|NEGATIVE_INFINITY|d(i(splay|alog(Height|Top|Width|Left|Arguments)|rectories)|e(scription|fault(Status|Ch(ecked|arset)|View)))|u(ser(Profile|Language|Agent)|n(iqueID|defined)|pdateInterval)|_content|p(ixelDepth|ort|ersonalbar|kcs11|l(ugins|atform)|a(thname|dding(Right|Bottom|Top|Left)|rent(Window|Layer)?|ge(X(Offset)?|Y(Offset)?))|r(o(to(col|type)|duct(Sub)?|mpter)|e(vious|fix)))|e(n(coding|abledPlugin)|x(ternal|pando)|mbeds)|v(isibility|endor(Sub)?|Linkcolor)|URLUnencoded|P(I|OSITIVE_INFINITY)|f(ilename|o(nt(Size|Family|Weight)|rmName)|rame(s|Element)|gColor)|E|whiteSpace|l(i(stStyleType|n(eHeight|kColor))|o(ca(tion(bar)?|lName)|wsrc)|e(ngth|ft(Context)?)|a(st(M(odified|atch)|Index|Paren)|yer(s|X)|nguage))|a(pp(MinorVersion|Name|Co(deName|re)|Version)|vail(Height|Top|Width|Left)|ll|r(ity|guments)|Linkcolor|bove)|r(ight(Context)?|e(sponse(XML|Text)|adyState))|global|x|m(imeTypes|ultiline|enubar|argin(Right|Bottom|Top|Left))|L(N(10|2)|OG(10E|2E))|b(o(ttom|rder(RightWidth|BottomWidth|Style|Color|TopWidth|LeftWidth))|ufferDepth|elow|ackground(Color|Image)))\b</string>
 			<key>name</key>
 			<string>support.constant.js</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=\.)(abbr|accept|acceptCharset|accessKey|action|aLink|align|alt|anchors|applets|areas|archive|attributes|axis|background|bgColor|body|border|caption|charset|cellPadding|cells|cellSpacing|ch|checked|childNodes|chOff|cite|className|clear|colSpan|code|codeBase|codeType|color|cols|compact|content|cookie|coords|data|dateTime|declare|defaultChecked|defaultSelected|defaultValue|defer|dir|disabled|doctype|documentElement|domain|elements|enctype|entities|event|face|firstChild|form|forms|frame|frameBorder|headers|height|hspace|href|hreflang|htmlFor|httpEquiv|id|images|implementation|index|isMap|label|lang|lastChild|link|links|longDesc|lowSrc|maxLength|marginHeight|marginWidth|media|method|multiple|name|nextSibling|nodeName|nodeType|nodeValue|noHref|noResize|noShade|notationName|notations|noWrap|object|options|ownerDocument|parentNode|previousSibling|profile|prompt|publicId|readOnly|rel|referrer|rev|rowIndex|rows|rowSpan|rules|scheme|scope|scrolling|sectionRowIndex|selected|selectedIndex|shape|size|specified|src|standby|start|summary|systemId|tagName|target|text|tBodies|tFoot|tHead|title|type|URL|useMap|vAlign|value|valueType|version|vLink|vspace|width)\b</string>
+			<string>(?&lt;=\.)(s(hape|ystemId|c(heme|ope|rolling)|ta(ndby|rt)|ize|ummary|pecified|e(ctionRowIndex|lected(Index)?)|rc)|h(space|t(tpEquiv|mlFor)|e(ight|aders)|ref(lang)?)|n(o(Resize|tation(s|Name)|Shade|Href|de(Name|Type|Value)|Wrap)|extSibling|ame)|c(h(ildNodes|Off|ecked|arset)?|ite|o(ntent|o(kie|rds)|de(Base|Type)?|l(s|Span|or)|mpact)|ell(s|Spacing|Padding)|l(ear|assName)|aption)|t(ype|Bodies|itle|Head|ext|a(rget|gName)|Foot)|i(sMap|ndex|d|m(plementation|ages))|o(ptions|wnerDocument|bject)|d(i(sabled|r)|o(c(type|umentElement)|main)|e(clare|f(er|ault(Selected|Checked|Value)))|at(eTime|a))|useMap|p(ublicId|arentNode|r(o(file|mpt)|eviousSibling))|e(n(ctype|tities)|vent|lements)|v(space|ersion|alue(Type)?|Link|Align)|URL|f(irstChild|orm(s)?|ace|rame(Border)?)|width|l(ink(s)?|o(ngDesc|wSrc)|a(stChild|ng|bel))|a(nchors|c(ce(ssKey|pt(Charset)?)|tion)|ttributes|pplets|l(t|ign)|r(chive|eas)|xis|Link|bbr)|r(ow(s|Span|Index)|ules|e(v|ferrer|l|adOnly))|m(ultiple|e(thod|dia)|a(rgin(Height|Width)|xLength))|b(o(dy|rder)|ackground|gColor))\b</string>
 			<key>name</key>
 			<string>support.constant.dom.js</string>
 		</dict>
@@ -432,7 +549,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(onAbort|onActivate|onAfterprint|onAfterupdate|onBeforeactivate|onBeforecut|onBeforedeactivate|onBeforeeditfocus|onBeforepaste|onBeforeprint|onBeforeunload|onBeforeupdate|onBlur|onCellchange|onChange|onClick|onClose|onContextmenu|onControlselect|onCut|onDataavailable|onDatasetchanged|onDatasetcomplete|onDblclick|onDeactivate|onDrag|onDragdrop|onDragend|onDragenter|onDragleave|onDragover|onDragstart|onDrop|onError|onErrorupdate|onFocus|onHelp|onHover|onKeydown|onKeypress|onKeyup|onLoad|onMousedown|onMousemove|onMouseout|onMouseover|onMouseup|onPaste|onPropertychange|onReadystatechange|onReset|onResize|onResizeend|onResizestart|onRowenter|onRowexit|onRowsdelete|onRowsinserted|onScroll|onSelect|onSelectionchange|onSelectstart|onStop|onSubmit|onUnload)\b</string>
+			<string>\bon(R(ow(s(inserted|delete)|e(nter|xit))|e(s(ize(start|end)?|et)|adystatechange))|Mouse(o(ut|ver)|down|up|move)|B(efore(cut|deactivate|u(nload|pdate)|p(aste|rint)|editfocus|activate)|lur)|S(croll|top|ubmit|elect(start|ionchange)?)|H(over|elp)|C(hange|ont(extmenu|rolselect)|ut|ellchange|l(ick|ose))|D(eactivate|ata(setc(hanged|omplete)|available)|r(op|ag(start|over|drop|en(ter|d)|leave)?)|blclick)|Unload|P(aste|ropertychange)|Error(update)?|Key(down|up|press)|Focus|Load|A(ctivate|fter(update|print)|bort))\b</string>
 			<key>name</key>
 			<string>support.function.event-handler.js</string>
 		</dict>
@@ -450,9 +567,25 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?&lt;=[=(:]|^)\s*/(?![/*+{}?])</string>
+			<string>(?&lt;=[=(:]|^)\s*(/)(?![/*+{}?])</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.js</string>
+				</dict>
+			</dict>
 			<key>end</key>
-			<string>/[igm]*</string>
+			<string>(/)[igm]*</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.js</string>
+				</dict>
+			</dict>
 			<key>name</key>
 			<string>string.regexp.js</string>
 			<key>patterns</key>
@@ -469,7 +602,7 @@
 			<key>match</key>
 			<string>\;</string>
 			<key>name</key>
-			<string>meta.delimiter.statement.semicolon.js</string>
+			<string>punctuation.terminator.statement.js</string>
 		</dict>
 		<dict>
 			<key>match</key>
