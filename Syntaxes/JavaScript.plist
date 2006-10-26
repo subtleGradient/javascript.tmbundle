@@ -495,9 +495,21 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(false|null|true)\b</string>
+			<string>\btrue\b</string>
 			<key>name</key>
-			<string>constant.language.js</string>
+			<string>constant.language.boolean.true.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\bfalse\b</string>
+			<key>name</key>
+			<string>constant.language.boolean.false.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\bnull\b</string>
+			<key>name</key>
+			<string>constant.language.null.js</string>
 		</dict>
 		<dict>
 			<key>match</key>
