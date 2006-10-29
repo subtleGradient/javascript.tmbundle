@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>function($1) {${0:$TM_SELECTED_TEXT}};</string>
+	<string>getElement${1/(T)|.*/(?1:s)/}By${1:T}${1/(T)|(I)|.*/(?1:agName)(?2:d)/}('$2')</string>
 	<key>name</key>
-	<string>Anonymous Function</string>
+	<string>Get Elements</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
-	<string>f</string>
+	<string>get</string>
 	<key>uuid</key>
-	<string>4C6EDB43-3E2E-411B-A016-13C135C59833</string>
+	<string>9E0E3BCC-7F20-4D6B-891D-A44D6EC56E31</string>
 </dict>
 </plist>
