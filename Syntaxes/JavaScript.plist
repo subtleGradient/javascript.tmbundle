@@ -328,7 +328,7 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.instance.js</string>
+					<string>entity.name.type.instance.js</string>
 				</dict>
 			</dict>
 			<key>match</key>
@@ -340,7 +340,7 @@
 			<key>match</key>
 			<string>\b(console)\b</string>
 			<key>name</key>
-			<string>entity.name.object.js.firebug</string>
+			<string>entity.name.type.object.js.firebug</string>
 		</dict>
 		<dict>
 			<key>match</key>
