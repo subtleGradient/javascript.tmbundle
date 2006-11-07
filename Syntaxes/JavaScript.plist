@@ -365,8 +365,6 @@
 					<string>punctuation.definition.string.begin.js</string>
 				</dict>
 			</dict>
-			<key>contentName</key>
-			<string>string.quoted.single.js</string>
 			<key>end</key>
 			<string>'</string>
 			<key>endCaptures</key>
@@ -377,6 +375,8 @@
 					<string>punctuation.definition.string.end.js</string>
 				</dict>
 			</dict>
+			<key>name</key>
+			<string>string.quoted.single.js</string>
 			<key>patterns</key>
 			<array>
 				<dict>
