@@ -125,27 +125,6 @@
 					<key>name</key>
 					<string>entity.name.function.js</string>
 				</dict>
-			</dict>
-			<key>comment</key>
-			<string>match stuff like: Sound.play = { … }</string>
-			<key>match</key>
-			<string>([a-zA-Z_?\.$]+\w*)?\.([a-zA-Z_?\.$]+\w*)\s*=\s*</string>
-			<key>name</key>
-			<string>meta.function.js</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.class.js</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.function.js</string>
-				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
