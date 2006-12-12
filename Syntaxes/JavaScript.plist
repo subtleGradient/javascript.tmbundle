@@ -149,7 +149,7 @@
 			<key>comment</key>
 			<string>match stuff like: Sound.play = function() { … } or play = function() { … }</string>
 			<key>match</key>
-			<string>([a-zA-Z_?\.\$]+\w*)(\.([a-zA-Z_?\.\$]+\w*))?\s*=\s*(function)?\s*(\()(.*?)(\))</string>
+			<string>([a-zA-Z_?\.\$]+\w*)(\.([a-zA-Z_?\.\$]+\w*))?\s*=\s*(function)\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.js</string>
 		</dict>
