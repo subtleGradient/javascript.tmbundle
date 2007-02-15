@@ -4,6 +4,8 @@
 <dict>
 	<key>content</key>
 	<string>${1:key}: ${2:"${3:value}"}${4:, }</string>
+	<key>keyEquivalent</key>
+	<string>~:</string>
 	<key>name</key>
 	<string>Object key — key: "value"</string>
 	<key>scope</key>

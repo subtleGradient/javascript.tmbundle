@@ -256,7 +256,7 @@
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>object.property.function.js</string>
+					<string>entity.name.function.js</string>
 				</dict>
 				<key>4</key>
 				<dict>
@@ -276,7 +276,7 @@
 				<key>7</key>
 				<dict>
 					<key>name</key>
-					<string>object.property.function.js</string>
+					<string>entity.name.function.js</string>
 				</dict>
 				<key>8</key>
 				<dict>
