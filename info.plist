@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>contactEmailRot13</key>
+	<string>boyvivbhf@fhogyrTenqvrag.pbz</string>
+	<key>contactName</key>
+	<string>Thomas Aylott</string>
+	<key>description</key>
+	<string>Support for &lt;a href="http://developer.mozilla.org/en/docs/About_JavaScript"&gt;JavaScript&lt;/a&gt;.</string>
 	<key>mainMenu</key>
 	<dict>
 		<key>items</key>
