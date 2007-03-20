@@ -36,7 +36,7 @@
 			<key>comment</key>
 			<string>match stuff like: Sound.prototype = { … } when extending an object</string>
 			<key>match</key>
-			<string>([a-zA-Z_?\.$]+\w*)\.(prototype)\s*=\s*</string>
+			<string>([a-zA-Z_?.$][\w?.$]*)\.(prototype)\s*=\s*</string>
 			<key>name</key>
 			<string>meta.class.js</string>
 		</dict>
@@ -82,7 +82,7 @@
 			<key>comment</key>
 			<string>match stuff like: Sound.prototype.play = function() { … }</string>
 			<key>match</key>
-			<string>([a-zA-Z_?\.$]+\w*)\.(prototype)\.([a-zA-Z_?\.$]+\w*)\s*=\s*(function)?\s*(\()(.*?)(\))</string>
+			<string>([a-zA-Z_?.$][\w?.$]*)\.(prototype)\.([a-zA-Z_?.$][\w?.$]*)\s*=\s*(function)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.prototype.js</string>
 		</dict>
@@ -108,7 +108,7 @@
 			<key>comment</key>
 			<string>match stuff like: Sound.prototype.play = myfunc</string>
 			<key>match</key>
-			<string>([a-zA-Z_?\.\$]+\w*)\.(prototype)\.([a-zA-Z_?\.$]+\w*)\s*=\s*</string>
+			<string>([a-zA-Z_?.$][\w?.$]*)\.(prototype)\.([a-zA-Z_?.$][\w?.$]*)\s*=\s*</string>
 			<key>name</key>
 			<string>meta.function.js</string>
 		</dict>
@@ -149,7 +149,7 @@
 			<key>comment</key>
 			<string>match stuff like: Sound.play = function() { … }</string>
 			<key>match</key>
-			<string>([a-zA-Z_?\.\$]+\w*)\.([a-zA-Z_?\.\$]+\w*)\s*=\s*(function)\s*(\()(.*?)(\))</string>
+			<string>([a-zA-Z_?.$][\w?.$]*)\.([a-zA-Z_?.$][\w?.$]*)\s*=\s*(function)\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.js</string>
 		</dict>
@@ -185,7 +185,7 @@
 			<key>comment</key>
 			<string>match stuff like: play = function() { … }</string>
 			<key>match</key>
-			<string>([a-zA-Z_?\$]+\w*)\s*=\s*(function)\s*(\()(.*?)(\))</string>
+			<string>([a-zA-Z_?$][\w?$]*)\s*=\s*(function)\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.js</string>
 		</dict>
@@ -257,7 +257,7 @@
 			<key>comment</key>
 			<string>match stuff like: foobar: function() { … }</string>
 			<key>match</key>
-			<string>\b([a-zA-Z_?\.$]+\w*)\s*:\s*\b(function)?\s*(\()(.*?)(\))</string>
+			<string>\b([a-zA-Z_?.$][\w?.$]*)\s*:\s*\b(function)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.json.js</string>
 		</dict>
@@ -347,7 +347,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(new)\s+(\w+\.?\w*)</string>
+			<string>(new)\s+(\w+(?:\.\w*)?)</string>
 			<key>name</key>
 			<string>meta.class.instance.constructor</string>
 		</dict>
