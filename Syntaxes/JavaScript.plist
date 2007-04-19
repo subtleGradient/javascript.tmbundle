@@ -8,6 +8,7 @@
 	<array>
 		<string>js</string>
 		<string>htc</string>
+		<string>jsx</string>
 	</array>
 	<key>foldingStartMarker</key>
 	<string>^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$</string>
