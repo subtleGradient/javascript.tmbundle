@@ -611,7 +611,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?&lt;=[=(:]|^)\s*(/)(?![/*+{}?])</string>
+			<string>(?&lt;=[=(:]|^|return)\s*(/)(?![/*+{}?])</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
