@@ -9,9 +9,11 @@
 	<key>settings</key>
 	<dict>
 		<key>decreaseIndentPattern</key>
-		<string>^(.*\*/)?\s*(\}|\))([^{]*\{)?([;,]?\s*|\.[^{]*|\s*\)[;\s]*)$</string>
+		<string>^((.*\*/)?\s*(\}|\))([^{]*\{)?([;,]?\s*|\.[^{]*|\s*\)[;\s]*)$|\s*[}]while.*$)</string>
 		<key>increaseIndentPattern</key>
-		<string>^.*(\{[^}"']*|\([^)"']*)$</string>
+		<string>^(\/(?!\/)|[^\/])*((\{[^}"']*|\([^)"']*)|\=\s*)$</string>
+		<key>indentNextLinePattern</key>
+		<string>^\s*((if|while|for|switch|else if).*[)]|else)\s*$</string>
 	</dict>
 	<key>uuid</key>
 	<string>BC062860-3346-4D3B-8421-C5543F83D11F</string>
