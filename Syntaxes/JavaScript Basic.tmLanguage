@@ -17,7 +17,7 @@
 	<key>keyEquivalent</key>
 	<string>^~J</string>
 	<key>name</key>
-	<string>JavaScript Basic</string>
+	<string>Embedded JavaScript</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -641,6 +641,12 @@
 			<string>\[|\]</string>
 			<key>name</key>
 			<string>meta.brace.square.js</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=\.)\s</string>
+			<key>name</key>
+			<string>meta.complete.method</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
