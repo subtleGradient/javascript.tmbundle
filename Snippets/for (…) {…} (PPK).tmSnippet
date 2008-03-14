@@ -3,16 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>for (var ${20:i}=0; ${20:i} &lt; ${1:Things}.length; ${20:i}++) {
-	${100:${1:Things}[${20:i}]}$0
-};</string>
+	<string>for (var ${20:i}=0,${30:${1/(.+)(s)?/$0/}}; ${2:thing}=${1:Things}[${20:i}]; ${20:i}++){
+	$0
+};
+</string>
 	<key>name</key>
-	<string>for (…) {…}</string>
+	<string>for (…) {…} (PPK)</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>for</string>
 	<key>uuid</key>
-	<string>011C4681-FBEC-4891-9326-3DECFCDED6D6</string>
+	<string>9BF3315C-88FF-46A1-89E1-9A5E9EAC78D0</string>
 </dict>
 </plist>
