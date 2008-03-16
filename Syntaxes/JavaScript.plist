@@ -22,7 +22,12 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?x) (function) (?= (\s+ ([_$a-zA-Z][_$\w]*))? \s* \(.*?\))</string>
+			<string>(?x) 
+				(function) 
+				(?=
+				    (?:\s+ (?:[_$a-zA-Z][_$\w]*))? \s* # The function name
+				    \([^)]*\) # The properties that the function accepts
+				)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -164,7 +169,7 @@
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>(\{)</string>
+					<string>(?&lt;!\))(\{)</string>
 					<key>captures</key>
 					<dict>
 						<key>1</key>
@@ -205,6 +210,8 @@
 							<string>punctuation.section.scope.round.js</string>
 						</dict>
 					</dict>
+					<key>disabled</key>
+					<integer>1</integer>
 					<key>end</key>
 					<string>(\))</string>
 					<key>name</key>
@@ -345,7 +352,10 @@
 		<key>function-params</key>
 		<dict>
 			<key>begin</key>
-			<string>(?x)(?&lt;=function) (?:\s+ ([_$a-zA-Z][_$\w]*))? \s* (\()</string>
+			<string>(?x)
+				(?&lt;=function) # Must come after the word "function"
+				(?:\s+ ([_$a-zA-Z][_$\w]*))? # Mtch the name if it exists
+				\s* (\()</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
