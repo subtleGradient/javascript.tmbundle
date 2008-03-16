@@ -600,7 +600,7 @@
 					<key>comment</key>
 					<string>"something" : </string>
 					<key>match</key>
-					<string>((")([^"]*)(")\s*)(:)\s*+(?!function)</string>
+					<string>((")([^"]*)(")\s*)(:)(?!\s*+function)</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -634,7 +634,7 @@
 					<key>comment</key>
 					<string>'something' : </string>
 					<key>match</key>
-					<string>((')([^']*)(')\s*)(:)\s*+(?!function)</string>
+					<string>((')([^']*)(')\s*)(:)(?!\s*+function)</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -653,7 +653,7 @@
 					<key>comment</key>
 					<string>something : </string>
 					<key>match</key>
-					<string>\b(\w+\b\s*)(:)\s*+(?!function)</string>
+					<string>\b(\w+\b\s*)(:)(?!\s*+function)</string>
 				</dict>
 			</array>
 		</dict>
