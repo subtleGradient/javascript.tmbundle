@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>for (var ${20:i}=0,${30:${1/(.+)(s)?/$0/}}; ${2:thing}=${1:Things}[${20:i}]; ${20:i}++){
-	$0
+	<string>for (var ${20:i}=0,${2:thing}; ${2:thing}=${1:Things}[${20:i}]; ${20:i}++){
+	${2:thing}$0
 };
 </string>
 	<key>name</key>
