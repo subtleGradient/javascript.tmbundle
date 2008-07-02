@@ -339,8 +339,6 @@
 			</dict>
 			<key>end</key>
 			<string>(})</string>
-			<key>name</key>
-			<string>meta.group.braces.curly.function.js</string>
 			<key>patterns</key>
 			<array>
 				<dict>
