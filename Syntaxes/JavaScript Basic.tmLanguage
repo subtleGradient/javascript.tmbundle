@@ -201,19 +201,24 @@
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.function.js</string>
+					<string>punctuation.separator.key-value.js</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.parameters.begin.js</string>
+					<string>storage.type.function.js</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>variable.parameter.function.js</string>
+					<string>punctuation.definition.parameters.begin.js</string>
 				</dict>
 				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.function.js</string>
+				</dict>
+				<key>6</key>
 				<dict>
 					<key>name</key>
 					<string>punctuation.definition.parameters.end.js</string>
@@ -222,7 +227,7 @@
 			<key>comment</key>
 			<string>match stuff like: foobar: function() { … }</string>
 			<key>match</key>
-			<string>\b([a-zA-Z_?.$][\w?.$]*)\s*:\s*\b(function)?\s*(\()(.*?)(\))</string>
+			<string>\b([a-zA-Z_?.$][\w?.$]*)\s*(:)\s*\b(function)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.json.js</string>
 		</dict>
@@ -237,14 +242,19 @@
 				<key>10</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.parameters.begin.js</string>
+					<string>storage.type.function.js</string>
 				</dict>
 				<key>11</key>
 				<dict>
 					<key>name</key>
-					<string>variable.parameter.function.js</string>
+					<string>punctuation.definition.parameters.begin.js</string>
 				</dict>
 				<key>12</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.function.js</string>
+				</dict>
+				<key>13</key>
 				<dict>
 					<key>name</key>
 					<string>punctuation.definition.parameters.end.js</string>
@@ -287,13 +297,13 @@
 				<key>9</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.js</string>
+					<string>punctuation.separator.key-value.js</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>Attempt to match "foo": function</string>
 			<key>match</key>
-			<string>(?:((')(.*?)('))|((")(.*?)(")))\s*:\s*\b(function)?\s*(\()(.*?)(\))</string>
+			<string>(?:((')(.*?)('))|((")(.*?)(")))\s*(:)\s*\b(function)?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.json.js</string>
 		</dict>
