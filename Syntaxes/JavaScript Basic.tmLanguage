@@ -186,7 +186,7 @@
 			<key>comment</key>
 			<string>match regular function like: function myFunc(arg) { … }</string>
 			<key>match</key>
-			<string>\b(function)\s+([a-zA-Z_$]\w*)?\s*(\()(.*?)(\))</string>
+			<string>\b(function)(?:\s+([a-zA-Z_$]\w*))?\s*(\()(.*?)(\))</string>
 			<key>name</key>
 			<string>meta.function.js</string>
 		</dict>
