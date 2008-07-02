@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>content</key>
 	<string>for (var ${20:i} = ${1:Things}.length - 1; ${20:i} &gt;= 0; ${20:i}--){
-	${100:${1:Things}[${20:i}]}$0
+	$0${100:${1:Things}[${20:i}]}
 };</string>
 	<key>name</key>
 	<string>for (…) {…} (Improved Native For-Loop)</string>
