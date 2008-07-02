@@ -585,27 +585,44 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?&lt;=[=(:]|^|return)\s*(/)(?![/*+{}?]|$)</string>
+			<string>(?x)
+				(?&lt;= [=(:] | ^ | return )
+				\s*((/)) (?! [/*+{}?] | $ )</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
+					<string>string.regexp.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
 					<string>punctuation.definition.string.begin.js</string>
 				</dict>
 			</dict>
+			<key>contentName</key>
+			<string>string.regexp.js</string>
 			<key>end</key>
-			<string>(/)[igm]*|$</string>
+			<string>((/([igm]*)))|$</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
+					<string>string.regexp.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
 					<string>punctuation.definition.string.end.js</string>
 				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.js</string>
+				</dict>
 			</dict>
-			<key>name</key>
-			<string>string.regexp.js</string>
 			<key>patterns</key>
 			<array>
 				<dict>
