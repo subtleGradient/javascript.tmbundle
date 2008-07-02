@@ -579,7 +579,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(Infinity|NaN|Undefined)\b</string>
+			<string>\b(Infinity|NaN|undefined)\b</string>
 			<key>name</key>
 			<string>constant.language.js</string>
 		</dict>
