@@ -94,19 +94,99 @@ funkName(
 // =========
 var regexName = /regex/
 
+"stringName".match(/regex/)
+
 funkName(/regex/, /regex/i)
 
 [/regex/, /regex/i]
 
 {keyName : /regex/}
 
+/regex/ && /regex/
 /regex/
 /regex/i
 /regex/g
 /regex/m
 /regex/igm
 
-function(){
-	return /regex/
-}
+function(){ return /regex/ }
+
+/regex/.test('test')
+1==1 && /regex/.test('test')
+
+
+
+// ===========
+// = Numbers =
+// ===========
+// http://www.hunlock.com/blogs/The_Complete_Javascript_Number_Reference
+
+999
+.999
+999.999
+4
+16
+256
+65536
+4294967296
+18446744073709552000
+3.402823669209385e+38
+1.157920892373162e+77
+1.3407807929942597e+154
+Infinity
+0377 // octal
+0xFF // hex
+0xff // hex
+
+-999
+-.999
+-999.999
+-4
+-16
+-256
+-65536
+-4294967296
+-18446744073709552000
+-3.402823669209385e+38
+-1.157920892373162e+77
+-1.3407807929942597e+154
+-Infinity
+-0377 // octal
+-0xFF // hex
+-0xff // hex
+
+1e5
+2.5E5
+
+5e-324
+1.7976931348623157e+308
+
+x = x+5; // is the same as x += 5;
+x = x-5; // is the same as x -= 5;
+x = x*5; // is the same as x *= 5;
+x = x/5; // is the same as x /= 5;
+x = x%5; // is the same as x %= 5;
+
+x += 5
+x -= 5
+x *= 5
+x /= 5
+x %= 5
+
+x ++
+x --
+
+x = x&5;    // is the same as x &= 5;
+x = x|5;    // is the same as x |= 5;
+x = x^5;    // is the same as x ^= 5;
+x = x<<5;   // is the same as x <<= 5;
+x = x>>5;   // is the same as x >>= 5;
+x = x>>>5;  // is the same as x >>>= 5;
+
+x &= 5
+x |= 5
+x ^= 5
+x <<= 5
+x >>= 5
+x >>>= 5
 
