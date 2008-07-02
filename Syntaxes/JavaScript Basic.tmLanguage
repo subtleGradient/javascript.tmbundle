@@ -586,7 +586,7 @@
 		<dict>
 			<key>begin</key>
 			<string>(?x)
-				(?&lt;= [=(:] | ^ | return )
+				(?&lt;= [\[,=(:] | ^ | &amp;&amp; | return )
 				\s*((/)) (?! [/*+{}?] | $ )</string>
 			<key>beginCaptures</key>
 			<dict>
@@ -641,7 +641,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>,[ |\t]*</string>
+			<string>,</string>
 			<key>name</key>
 			<string>meta.delimiter.object.comma.js</string>
 		</dict>
