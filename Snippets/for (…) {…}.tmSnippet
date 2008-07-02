@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>for (var ${20:i}=0; ${20:i} &lt; ${1:Things}.length; ${20:i}++) {
-	${100:${1:Things}[${20:i}]}$0
+	$0${100:${1:Things}[${20:i}]}
 };</string>
 	<key>name</key>
 	<string>for (…) {…}</string>
