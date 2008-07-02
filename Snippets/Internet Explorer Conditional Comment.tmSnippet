@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/*@cc_on ${0:$TM_SELECTED_TEXT} @*/</string>
+	<key>name</key>
+	<string>Internet Explorer Conditional Comment</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>tabTrigger</key>
+	<string>@</string>
+	<key>uuid</key>
+	<string>E1B2FC98-AF98-4392-8069-C82C2C192617</string>
+</dict>
+</plist>
