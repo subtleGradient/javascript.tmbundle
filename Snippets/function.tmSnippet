@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>function($1){${0:${TM_SELECTED_TEXT}}}</string>
+	<string>function$1($2){$0}</string>
 	<key>name</key>
-	<string>Anonymous Function</string>
+	<string>Function</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
 	<string>f</string>
 	<key>uuid</key>
-	<string>4C6EDB43-3E2E-411B-A016-13C135C59833</string>
+	<string>F0E4FB6A-4878-48C6-A777-62438DF1E14F</string>
 </dict>
 </plist>
