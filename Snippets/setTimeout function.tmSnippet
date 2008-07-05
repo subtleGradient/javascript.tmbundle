@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>setTimeout(${20:function(){$0\}}, ${10:10});</string>
+	<string>setTimeout($0, ${10:10});</string>
 	<key>name</key>
-	<string>setTimeout function</string>
+	<string>setTimeout</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
