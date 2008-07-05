@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>Embedded Javascript Test.html</title>
+	<style type="text/css" media="screen">
+		del{color:red;}
+		ins{color:green;}
+	</style>
+</head>
+<body>
+
+1 <a href="#" onclick='var stringName = "	   </a> SHOULD be scoped as string";'>Link!</a> <br />
+2 <a href="#" onclick='var stringName = "	</"+"a> SHOULD be scoped as string";'>Link!</a> <br />
+3 <a href="#" onclick="var stringName = '	   </a> SHOULD be scoped as string';">Link!</a> <br />
+4 <a href="#" onclick="var stringName = '	</'+'a> SHOULD be scoped as string';">Link!</a> <br />
+
+5 <script>
+"	
+</script>" </script></ins><br />
+
+6 <script>
+"	\
+</script>" </script></ins><br />
+
+7 <script> "	   </script>" </script><br />
+8 <script> "	</scr"+"ipt>" </script><br />
+
+End the string if the /script tag is followed by a newline. Don't if not.
+9  <script>
+" </script>
+" </script>
+<br />
+
+10 <script>
+' </script>
+' </script>
+<br />
+
+11 <script>
+" </script>"
+  </script>
+<br />
+
+12 <script>
+' </script>'
+  </script>
+<br />
+
+<script>
+var stringName = "SHOULD be scoped as string
+var stringName = "SHOULD be scoped as string
+</script>
+
+<script>
+var stringName = 'SHOULD be scoped as string
+var stringName = 'SHOULD be scoped as string
+</script>
+
+</body>
+</html>
