@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>getElement${1/(T)|.*/(?1:s)/}By${1:T}${1/(T)|(I)|.*/(?1:agName)(?2:d)/}('$2')</string>
+	<string>.getElement${1/(T)|.*/(?1:s)/}By${1:I}${1/(I)|(T)|.*/(?2:agName)(?1:d)/}($2)$0</string>
 	<key>name</key>
-	<string>Get Elements</string>
+	<string>get Elements</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
-	<string>get</string>
+	<string>.get</string>
 	<key>uuid</key>
 	<string>9E0E3BCC-7F20-4D6B-891D-A44D6EC56E31</string>
 </dict>
