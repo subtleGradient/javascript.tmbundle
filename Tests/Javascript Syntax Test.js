@@ -226,9 +226,9 @@ Should NOT be scoped as string'
 // First newline SHOULD be scoped as invalid
 
 var stringName4 = "Lorem ipsum dolor sit amet</script>";
-"</script>" SHOULD be scoped as string & invalid.deprecated
+// "</script>" SHOULD be scoped as string & invalid.deprecated
 var stringName5 = "Lorem ipsum dolor sit amet</script>
-"</script>" Should NOT be scoped as string
+// "</script>" Should NOT be scoped as string
 
 // WARNING: regular expressions should be preceded by a left parenthesis, assignment, colon, or comma
 

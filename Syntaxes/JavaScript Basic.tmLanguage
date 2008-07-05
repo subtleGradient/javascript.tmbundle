@@ -356,7 +356,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>'</string>
+			<string>(?i)'|(?=&lt;/\s*script\s*&gt;\s*\n)|(?&lt;=[^\\]\n)</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>0</key>
@@ -375,6 +375,24 @@
 					<key>name</key>
 					<string>constant.character.escape.js</string>
 				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\\n</string>
+					<key>name</key>
+					<string>constant.character.escape.newline.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\n</string>
+					<key>name</key>
+					<string>invalid.illegal.newline.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)&lt;/\s*script\s*&gt;</string>
+					<key>name</key>
+					<string>invalid.deprecated.inconsistent.js</string>
+				</dict>
 			</array>
 		</dict>
 		<dict>
@@ -389,7 +407,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>"</string>
+			<string>(?i)"|(?=&lt;/\s*script\s*&gt;\s*\n)|(?&lt;=[^\\]\n)</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>0</key>
@@ -407,6 +425,24 @@
 					<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)</string>
 					<key>name</key>
 					<string>constant.character.escape.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\\\n</string>
+					<key>name</key>
+					<string>constant.character.escape.newline.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\n</string>
+					<key>name</key>
+					<string>invalid.illegal.newline.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?i)&lt;/\s*script\s*&gt;</string>
+					<key>name</key>
+					<string>invalid.deprecated.inconsistent.js</string>
 				</dict>
 			</array>
 		</dict>
@@ -676,6 +712,11 @@
 			<string>meta.complete.method</string>
 		</dict>
 	</array>
+	<key>repository</key>
+	<dict>
+		<key>string-double</key>
+		<dict/>
+	</dict>
 	<key>scopeName</key>
 	<string>source.js</string>
 	<key>uuid</key>
