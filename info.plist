@@ -17,16 +17,17 @@
 			<string>D2E6A1FE-2881-4754-B399-B65F61F29C2F</string>
 			<string>43F40EB6-5839-4BE8-99C8-4976D0534E5D</string>
 			<string>52090C49-D8B2-49A0-9597-80574354B3CD</string>
+			<string>6F601764-6A78-4857-A866-B617890F0DEC</string>
 			<string>28B33806-DCD4-4D5D-A422-B6041A6D9FAA</string>
+			<string>20E61C43-B81F-4FB9-9362-BFFE668EB9C9</string>
+			<string>36EC03E9-EFF4-479A-AB90-8DFA16800642</string>
 		</array>
 		<key>submenus</key>
 		<dict>
 			<key>28B33806-DCD4-4D5D-A422-B6041A6D9FAA</key>
 			<dict>
 				<key>items</key>
-				<array>
-					<string>0C6DE5D1-2AAA-4327-A746-94FCCD7A45C9</string>
-				</array>
+				<array/>
 				<key>name</key>
 				<string>Idioms</string>
 			</dict>
@@ -34,6 +35,7 @@
 			<dict>
 				<key>items</key>
 				<array>
+					<string>C1197E58-D065-4EDC-9BAB-EB41622C1630</string>
 					<string>9E0E3BCC-7F20-4D6B-891D-A44D6EC56E31</string>
 				</array>
 				<key>name</key>
@@ -52,7 +54,6 @@
 			<dict>
 				<key>items</key>
 				<array>
-					<string>4C6EDB43-3E2E-411B-A016-13C135C59833</string>
 					<string>F0E4FB6A-4878-48C6-A777-62438DF1E14F</string>
 					<string>------------------------------------</string>
 					<string>73951799-AC15-40A6-81DB-EC051AB4A033</string>
@@ -64,6 +65,16 @@
 				<key>name</key>
 				<string>Function</string>
 			</dict>
+			<key>6F601764-6A78-4857-A866-B617890F0DEC</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>E1B2FC98-AF98-4392-8069-C82C2C192617</string>
+					<string>603A6D98-A136-4766-828B-C39178AB8003</string>
+				</array>
+				<key>name</key>
+				<string>Special</string>
+			</dict>
 			<key>7699AC1A-80AC-4120-A375-9371D1591F79</key>
 			<dict>
 				<key>items</key>
@@ -73,6 +84,8 @@
 					<string>------------------------------------</string>
 					<string>011C4681-FBEC-4891-9326-3DECFCDED6D6</string>
 					<string>C207B7C3-5597-4873-8AAD-C46FB8842AF2</string>
+					<string>9BF3315C-88FF-46A1-89E1-9A5E9EAC78D0</string>
+					<string>3F4AB53B-210C-4E0C-8D04-12192DECC3D1</string>
 				</array>
 				<key>name</key>
 				<string>Control</string>
@@ -109,10 +122,10 @@
 		<string>77065D69-742A-4FF0-9A41-AD211DFBE72F</string>
 		<string>B4874A14-2491-465A-A349-61E4EBCF4700</string>
 		<string>F0E4FB6A-4878-48C6-A777-62438DF1E14F</string>
+		<string>C1197E58-D065-4EDC-9BAB-EB41622C1630</string>
 		<string>2F96136B-0193-42F5-90FC-B6F456A3AD77</string>
 		<string>73951799-AC15-40A6-81DB-EC051AB4A033</string>
 		<string>1717B5AE-209B-4548-9155-9E88A7230C1C</string>
-		<string>4C6EDB43-3E2E-411B-A016-13C135C59833</string>
 		<string>93E017CC-6F27-11D9-90EB-000D93589AF6</string>
 		<string>0D2D03B9-F18B-4D9D-A960-716FDEC35331</string>
 		<string>A67A8BD9-A951-406F-9175-018DD4B52FD1</string>
