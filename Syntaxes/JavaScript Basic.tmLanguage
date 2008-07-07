@@ -524,20 +524,20 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>(?i)\B[-+]?0x[0-9a-f]*\.(\B|\b[0-9]+)</string>
+					<string>(?i)(?:\B[-+]|\b)0x[0-9a-f]*\.(\B|\b[0-9]+)</string>
 					<key>name</key>
 					<string>invalid.illegal.numeric.hex.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\B[-+]?0[0-9]+\.(\B|\b[0-9]+)</string>
+					<string>(?:\B[-+]|\b)0[0-9]+\.(\B|\b[0-9]+)</string>
 					<key>name</key>
 					<string>invalid.illegal.numeric.octal.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>(?xi)(?:\B[-+])?(?:
-					 0x[0-9a-f]* # HEX
+					 \b0x[0-9a-f]* # HEX
 					|(          \B\.[0-9]+   # EG:    .999
 					  | \b[0-9]+ (\.[0-9]*)? # EG: 999.999 or 999. or 999 
 					 )(e[-+]?[0-9]+)?        # EG: e+123 or E-123
