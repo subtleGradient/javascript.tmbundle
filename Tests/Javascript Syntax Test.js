@@ -151,6 +151,8 @@ function(){ return /regex/ }
 
 999
 .999
+(.999)
+999. == 999;
 999.999
 4
 16
@@ -161,10 +163,27 @@ function(){ return /regex/ }
 3.402823669209385e+38
 1.157920892373162e+77
 1.3407807929942597e+154
+.3407807929942597e+154
+.3407807929942597E-154
+3407807929942597.E-154.5 // SYNTAX ERROR: missing ; before statement
+//....................^
 Infinity
+Infinity.propertyName
+Infinity.methodName()
+
 0377 // octal
+0377. // SYNTAX ERROR
+0377.5 // SYNTAX ERROR
+0377.propertyName // number property
+0377.methodName() // number method
+
+0x // HEX
+0XFF // HEX
 0xFF // hex
-0xff // hex
+0xff. // SYNTAX ERROR
+0xff.5 // SYNTAX ERROR
+0xff.propertyName // number property
+0xff.methodName() // number method
 
 -999
 -.999
@@ -180,8 +199,31 @@ Infinity
 -1.3407807929942597e+154
 -Infinity
 -0377 // octal
+-0x // hex
+-0xFF // hex
+-0377 // octal
 -0xFF // hex
 -0xff // hex
+
++999
++.999
++999.999
++4
++16
++256
++65536
++4294967296
++18446744073709552000
++3.402823669209385e+38
++1.157920892373162e+77
++1.3407807929942597e+154
++Infinity
++0377 // octal
++0x // hex
++0xFF // hex
++0377 // octal
++0xFF // hex
++0xff // hex
 
 1e5
 2.5E5
@@ -189,6 +231,15 @@ Infinity
 5e-324
 1.7976931348623157e+308
 
+x == 5;
+x >  5;
+x >= 5;
+x <  5;
+x <= 5;
+x <=> 5; // Syntax Error
+
+x = x +5; // is the same as x += 5;
+x = x -5; // is the same as x -= 5;
 x = x+5; // is the same as x += 5;
 x = x-5; // is the same as x -= 5;
 x = x*5; // is the same as x *= 5;
