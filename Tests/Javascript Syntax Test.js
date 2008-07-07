@@ -1,3 +1,18 @@
+// Root
+// 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // =============
 // = FUNCTIONS =
 // =============
@@ -31,6 +46,17 @@ var funkName=new Function("argument1", "argument2", "return argument1 + argument
 var funkName1 = function funkName (argument1, argument2) {return argument1 + argument1;};
 var funkName1=function funkName(argument1,argument2){return argument1 + argument1;};
 
+function myFunc(argument1, argument2){}
+
+Sound.prototype = {}
+Sound.prototype.play = function(){}
+Sound.prototype.play = myfunc
+Sound.play = function(){}
+var objectName = {
+	foobar: function(){},
+	'foo': function(){},
+	"foo": function(){}
+}
 
 // ===================
 // = OBJECT LITERALS =
