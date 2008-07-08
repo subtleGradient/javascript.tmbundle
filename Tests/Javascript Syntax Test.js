@@ -43,6 +43,40 @@ var objectName = {
 	"foo": function(){}
 }
 
+// ==================
+// = Function Calls =
+// ==================
+funkName(parameter1, parameter2)
+objectName.methodName(parameter1, parameter2)
+objectName.objectName.methodName(parameter1, parameter2)
+
+funkName(funkName(parameter1, parameter2), parameter2)
+funkName(parameter1, funkName(parameter1, parameter2))
+
+objectName.methodName(objectName.methodName(parameter1, parameter2), parameter2)
+objectName.methodName(parameter1,objectName.methodName(parameter1, parameter2))
+
+objectName.objectName.methodName(objectName.objectName.methodName(parameter1, parameter2), parameter2)
+objectName.objectName.methodName(parameter1,objectName.objectName.methodName(parameter1, parameter2))
+
+
+// ==========================
+// = Variables / Properties =
+// ==========================
+variableName
+variableName == "stringName"
+variableName = "stringName"
+
+objectName.propertyName
+objectName.propertyName.propertyName
+
+objectName.propertyName == "stringName"
+objectName.propertyName.propertyName == "stringName"
+
+objectName.propertyName = "stringName"
+objectName.propertyName.propertyName = "stringName"
+
+
 // ===================
 // = OBJECT LITERALS =
 // ===================
