@@ -37,11 +37,11 @@ Sound.prototype = {}
 Sound.prototype.play = function(){}
 Sound.prototype.play = myfunc
 Sound.play = function(){}
-var objectName = {
+({
 	foobar: function(){},
 	'foo': function(){},
 	"foo": function(){}
-}
+})
 
 // ==================
 // = Function Calls =
@@ -66,6 +66,140 @@ objectName.objectName.methodName(parameter1,objectName.objectName.methodName(par
 variableName
 variableName == "stringName"
 variableName = "stringName"
+
+objectName.5 // SYNTAX ERROR
+objectName().5 // SYNTAX ERROR
+objectName   .5 // SYNTAX ERROR
+objectName() .5 // SYNTAX ERROR
+
+
+
+/** 
+#!/usr/bin/env ruby
+code = <<-JS
+*/
+               a ==variableName                            ; // Comparison
+               a > variableName                            ; // Comparison
+               a >=variableName                            ; // Comparison
+               a < variableName                            ; // Comparison
+               a <=variableName                            ; // Comparison
+                a +variableName                            ; // Arithmetic
+                a -variableName                            ; // Arithmetic
+              a + +variableName                            ; // Arithmetic
+              a + -variableName                            ; // Arithmetic
+              a + ~variableName                            ; // Arithmetic
+                a *variableName                            ; // Arithmetic
+                a /variableName                            ; // Arithmetic
+                a %variableName                            ; // Arithmetic
+                a &variableName                            ; // Arithmetic
+                a |variableName                            ; // Arithmetic
+                a ^variableName                            ; // Arithmetic
+               a <<variableName                            ; // Arithmetic
+               a >>variableName                            ; // Arithmetic
+              a >>>variableName                            ; // Arithmetic
+               a +=variableName                            ; // Assignment
+               a -=variableName                            ; // Assignment
+               a *=variableName                            ; // Assignment
+               a /=variableName                            ; // Assignment
+               a %=variableName                            ; // Assignment
+               a &=variableName                            ; // Assignment
+               a |=variableName                            ; // Assignment
+               a ^=variableName                            ; // Assignment
+              a <<=variableName                            ; // Assignment
+              a >>=variableName                            ; // Assignment
+             a >>>=variableName                            ; // Assignment
+                   variableName== a                        ; // Comparison
+                   variableName>  a                        ; // Comparison
+                   variableName>= a                        ; // Comparison
+                   variableName<  a                        ; // Comparison
+                   variableName<= a                        ; // Comparison
+                   variableName+ a                         ; // Arithmetic
+                   variableName- a                         ; // Arithmetic
+                   variableName+ +a                        ; // Arithmetic
+                   variableName+ -a                        ; // Arithmetic
+                   variableName+ ~a                        ; // Arithmetic
+                   variableName* a                         ; // Arithmetic
+                   variableName/ a                         ; // Arithmetic
+                   variableName% a                         ; // Arithmetic
+                   variableName& a                         ; // Arithmetic
+                   variableName| a                         ; // Arithmetic
+                   variableName^ a                         ; // Arithmetic
+                   variableName<< a                        ; // Arithmetic
+                   variableName>> a                        ; // Arithmetic
+                   variableName>>> a                       ; // Arithmetic
+                   variableName+= a                        ; // Assignment
+                   variableName-= a                        ; // Assignment
+                   variableName*= a                        ; // Assignment
+                   variableName/= a                        ; // Assignment
+                   variableName%= a                        ; // Assignment
+                   variableName&= a                        ; // Assignment
+                   variableName|= a                        ; // Assignment
+                   variableName^= a                        ; // Assignment
+                   variableName<<= a                       ; // Assignment
+                   variableName>>= a                       ; // Assignment
+                   variableName>>>= a                      ; // Assignment
+                   variableName++                          ; // Assignment
+                   variableName--                          ; // Assignment
+               var variableName                            ; // Assignment
+               var variableName,a                          ; // Assignment
+               var variableName,a= a                       ; // Assignment
+               var variableName= a                         ; // Assignment
+             var a,variableName                            ; // Assignment
+          var a= a,variableName                            ; // Assignment
+                   variableName()                          ; // function call
+          funkName(variableName)                           ; // function call
+          funkName(variableName,a)                         ; // function call
+        funkName(a,variableName)                           ; // function call
+                 a.variableName()                          ; // function call method
+                   variableName.a()                        ; // objectName
+        a.funkName(variableName)                           ; // function call
+        a.funkName(variableName,a)                         ; // function call
+      a.funkName(a,variableName)                           ; // function call
+         new Class(variableName)                           ; // class instantiation
+         new Class(variableName,a)                         ; // class instantiation
+       new Class(a,variableName)                           ; // class instantiation
+                  (variableName)                           ; // logical grouping
+                  [variableName]                           ; // arrayLiteral
+                [a,variableName]                           ; // arrayLiteral
+                  [variableName,a]                         ; // arrayLiteral
+                 ({variableName:a})                        ; // objectLiteral
+               ({a:variableName})                          ; // objectLiteral
+             ({'a':variableName})                          ; // objectLiteral
+             ({"a":variableName})                          ; // objectLiteral
+              a = {variableName:a}                         ; // objectLiteral
+            a = {a:variableName}                           ; // objectLiteral
+          a = {'a':variableName}                           ; // objectLiteral
+          a = {"a":variableName}                           ; // objectLiteral
+        function(){variableName;}                          ; // function definition
+        function(){variableName}                           ; // function definition
+      a.prototype =variableName                            ; // class definition
+    a.prototype.a =variableName                            ; // method definition
+                ({'variableName':a})                       ; // objectLiteral
+                ({"variableName":a})                       ; // objectLiteral
+             a = {'variableName':a}                        ; // objectLiteral
+             a = {"variableName":a}                        ; // objectLiteral
+                ({"variableName":function(){},a:a})        ; // objectLiteral method
+                ({'variableName':function(){},a:a})        ; // objectLiteral method
+          function(variableName){}                         ; // function definition
+          function(variableName,a){}                       ; // function definition
+        function(a,variableName){}                         ; // function definition
+          function variableName(){}                        ; // function definition
+          function variableName(a){}                       ; // function definition
+                 ({variableName: function(){},a:a})        ; // method definition
+       a.prototype.variableName= a                         ; // class definition
+       a.prototype.variableName= function(){}              ; // method definition
+                 a.variableName= function(){}              ; // method definition
+                   variableName.a = function(){}           ; // method definition
+                   variableName.prototype = a              ; // class definition
+                   variableName.prototype.a = a            ; // method definition
+                   variableName.prototype.a = function(){} ; // method definition
+               new variableName                            ; // class instantiation
+               new variableName()                          ; // class instantiation
+/*
+JS
+%w`$$$$ 999 999. 999.999 .999 [arrayLiteral]`.each{|key| puts code.gsub('variableName',key); puts code.gsub('variableName',' '+key+' ') }
+**/
+
 
 objectName.propertyName
 objectName.propertyName.propertyName
@@ -287,15 +421,14 @@ x >  5;
 x >= 5;
 x <  5;
 x <= 5;
-x <=> 5; // Syntax Error
 
 x = x +5; // is the same as x += 5;
 x = x -5; // is the same as x -= 5;
-x = x+5; // is the same as x += 5;
-x = x-5; // is the same as x -= 5;
-x = x*5; // is the same as x *= 5;
-x = x/5; // is the same as x /= 5;
-x = x%5; // is the same as x %= 5;
+x =  x+5; // is the same as x += 5;
+x =  x-5; // is the same as x -= 5;
+x =  x*5; // is the same as x *= 5;
+x =  x/5; // is the same as x /= 5;
+x =  x%5; // is the same as x %= 5;
 
 x += 5
 x -= 5
