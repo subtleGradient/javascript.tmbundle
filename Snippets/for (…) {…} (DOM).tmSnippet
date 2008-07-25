@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>for (var ${1:property} in ${2:object}) {
-	${0:$2[$1]}
+	<string>for (var ${20:i}=0, ${2:node}; ${2:node} = ${1:Nodes}[${20:i}++];) {
+    ${0:${2:node}}
 }</string>
 	<key>name</key>
-	<string>for (in) {…}</string>
+	<string>for (…) {…} (DOM)</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
-	<string>forin</string>
+	<string>for</string>
 	<key>uuid</key>
-	<string>3F4AB53B-210C-4E0C-8D04-12192DECC3D1</string>
+	<string>92D6EE80-615E-45B7-B2E2-FF5C200A8478</string>
 </dict>
 </plist>
