@@ -26,6 +26,7 @@ Documentation Comment (idiom)
  * officia deserunt mollit anim id est laborum.
  */
 
+// nothing
 
 [1,2,3]
 [
@@ -341,8 +342,8 @@ myFunction(()something
 myFunction((something)
 )
 
-    myFunction(something(something)something
-    something(something)something)
+myFunction(something(something)something
+something(something)something)
 
 
 
@@ -357,6 +358,38 @@ myFunction((something)()
 
 myFunction(()something()(something)()something()
 )
+
+
+
+// ===========
+// = Special =
+// ===========
+switch (statement){
+    case 'label':
+        statement;
+        break;
+    case 'label':
+        statement;
+        break;
+    case 'label':
+        statement;
+        break;
+    default:
+        statement;
+}
+
+if (statement) statement;
+
+if (statement)
+    statement;
+
+if (statement){
+    statement;}
+
+if (statement){
+    statement;
+}
+
 
 
 
