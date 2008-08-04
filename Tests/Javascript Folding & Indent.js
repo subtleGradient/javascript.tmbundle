@@ -98,12 +98,12 @@ myArray[
 myFunction(
     statement
 )()
-{
+({
     label:'value'
-}()
-function(){
+})['label']()
+(function(){
     statement()
-}()
+})()
 
 
 
@@ -325,13 +325,10 @@ function(){ function(){ statement }; function(){ statement };
 myFunction()
 
 myFunction(
-)myFunction
+);myFunction
 
-myFunction(()
-)myFunction
-
-myFunction(()()
-{()()()())()()}
+myFunction((0)
+);myFunction
 
 myFunction(something()
 )
@@ -378,6 +375,7 @@ switch (statement){
         statement;
 }
 
+// No fold
 if (statement) statement;
 
 if (statement)
@@ -386,10 +384,125 @@ if (statement)
 if (statement){
     statement;}
 
+// Fold
 if (statement){
     statement;
 }
 
 
+// ===========
+// = Strings =
+// ===========
 
+// No Fold; No Indent
+myFunction(")"
+	// Fold; Indent
+"(")
+// No Fold; No Indent
+myArray = ["]",
+	// Fold; Indent
+"["]
+// No Fold; No Indent
+function(){"}"
+	// Fold; Indent
+"{"}
+// No Fold; No Indent
+myFunction("\")"
+	// Fold; Indent
+"\"(")
+// No Fold; No Indent
+myArray = ["\"]",
+	// Fold; Indent
+"\"["]
+// No Fold; No Indent
+function(){"\"}"
+	// Fold; Indent
+"\"{"}
+// No Fold; No Indent
+myFunction(')'
+	// Fold; Indent
+'(')
+// No Fold; No Indent
+myArray = [']',
+	// Fold; Indent
+'[']
+// No Fold; No Indent
+function(){'}'
+	// Fold; Indent
+'{'}
+// No Fold; No Indent
+myFunction('\')'
+	// Fold; Indent
+'\'(')
+// No Fold; No Indent
+myArray = ['\']',
+	// Fold; Indent
+'\'[']
+// No Fold; No Indent
+function(){'\'}'
+	// Fold; Indent
+'\'{'}
+// No Fold; No Indent
+myFunction(/)/
+	// Fold; Indent
+/(/)
+// No Fold; No Indent
+myArray = [/]/,
+	// Fold; Indent
+/[/]
+// No Fold; No Indent
+function(){/}/
+	// Fold; Indent
+/{/}
+// No Fold; No Indent
+myFunction(/\/)/
+	// Fold; Indent
+/\/(/)
+// No Fold; No Indent
+myArray = [/\/]/,
+	// Fold; Indent
+/\/[/]
+// No Fold; No Indent
+function(){/\/}/
+	// Fold; Indent
+/\/{/}
+
+// No Fold; No Indent
+function(){"   { "}
+function(){"\" { "}
+function(){'   { '}
+function(){'\' { '}
+function(){/  \{ /}
+function(){/\/\{ /}
+myArray = ["   [ "]
+myArray = ["\" [ "]
+myArray = ['   [ ']
+myArray = ['\' [ ']
+myArray = [/  \[ /]
+myArray = [/\/\[ /]
+myFunction("   ( ")
+myFunction("\" ( ")
+myFunction('   ( ')
+myFunction('\' ( ')
+myFunction(/  \( /)
+myFunction(/\/\( /)
+// No Fold; No Indent
+function(){"   } "}
+function(){"\" } "}
+function(){'   } '}
+function(){'\' } '}
+function(){/   } /}
+function(){/\/ } /}
+myArray = ["   ] "]
+myArray = ["\" ] "]
+myArray = ['   ] ']
+myArray = ['\' ] ']
+myArray = [/   ] /]
+myArray = [/\/ ] /]
+myFunction("   ) ")
+myFunction("\" ) ")
+myFunction('   ) ')
+myFunction('\' ) ')
+myFunction(/  \) /)
+myFunction(/\/\) /)
 
