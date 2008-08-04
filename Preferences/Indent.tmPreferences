@@ -14,7 +14,9 @@
 		(      (?:      | ( (?&lt;str&gt; '(\\'|[^'])*+' | "(\\"|[^"])*+" | /(\\/|[^/])*+/) | (?&lt;noR&gt;[^\[\]'"/]++) )++ | (\g&lt;noR&gt;?   (?&lt;round&gt; \[ (?: \g&lt;str&gt; | \g&lt;noR&gt; | \g&lt;round&gt; )* \] ) \g&lt;noR&gt;?  )++ ) \]
 		|      (?:      | ( \g&lt;str&gt;                                    | (?&lt;noS&gt;[^\(\)'"/]++) )++ | (\g&lt;noS&gt;?   (?&lt;squar&gt; \( (?: \g&lt;str&gt; | \g&lt;noS&gt; | \g&lt;squar&gt; )* \) ) \g&lt;noS&gt;?  )++ ) \)
 		|      (?:      | ( \g&lt;str&gt;                                    | (?&lt;noC&gt;[^\{\}'"/]++) )++ | (\g&lt;noC&gt;?   (?&lt;curly&gt; \{ (?: \g&lt;str&gt; | \g&lt;noC&gt; | \g&lt;curly&gt; )* \} ) \g&lt;noC&gt;?  )++ ) \}
-		| \b(?:case|default)\b .*$# [^;]*$
+		| \b(?:case|default)\b
+			(\g&lt;str&gt; | \g&lt;noC&gt; | \g&lt;noC&gt;? \g&lt;curly&gt; \b&lt;noC&gt;?)++ (?!\})
+			$
 		)</string>
 		<key>increaseIndentPattern</key>
 		<string>(?x)^ \s* (?!//|/\*)([^\s].*)?
@@ -22,7 +24,8 @@
 		( \[   (?:      | ( (?&lt;str&gt; '(\\'|[^'])*+' | "(\\"|[^"])*+" | /(\\/|[^/])*+/) | (?&lt;noR&gt;[^\[\]'"/]++) )++ | (\g&lt;noR&gt;?   (?&lt;round&gt; \[ (?: \g&lt;str&gt; | \g&lt;noR&gt; | \g&lt;round&gt; )* \] ) \g&lt;noR&gt;?  )++ )
 		| \(   (?:      | ( \g&lt;str&gt;                                    | (?&lt;noS&gt;[^\(\)'"/]++) )++ | (\g&lt;noS&gt;?   (?&lt;squar&gt; \( (?: \g&lt;str&gt; | \g&lt;noS&gt; | \g&lt;squar&gt; )* \) ) \g&lt;noS&gt;?  )++ )
 		| \{   (?:      | ( \g&lt;str&gt;                                    | (?&lt;noC&gt;[^\{\}'"/]++) )++ | (\g&lt;noC&gt;?   (?&lt;curly&gt; \{ (?: \g&lt;str&gt; | \g&lt;noC&gt; | \g&lt;curly&gt; )* \} ) \g&lt;noC&gt;?  )++ )
-		| \b(?:case|default)\b .*# [^;]*
+		| \b(?:case|default)\b
+			(\g&lt;str&gt; | \g&lt;noC&gt; | \g&lt;noC&gt;? \g&lt;curly&gt; \b&lt;noC&gt;?)++ (?!\})
 		)$</string>
 		<key>indentNextLinePattern</key>
 		<string>^\s*((if|while|for|switch|else if).*[)]|else)\s*$</string>
