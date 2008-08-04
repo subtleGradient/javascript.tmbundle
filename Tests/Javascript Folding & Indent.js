@@ -404,10 +404,37 @@ function(){
 
     switch (statement){
     case 'label': statement; break;
+    case 'label':
+        statement;
+        break;
+    case 'label': statement; break;
+    default:
+        statement;
+    }
+
+    switch (statement){
+    case 'label': statement; break;
     case 'label': statement; break;
     case 'label': statement; break;
     default: statement;
     }
+
+    switch(expression){case expression:statements;break;default:statements;}
+    statements; // No More Indent
+
+    switch(expression){ default:function(){"   { "}; }
+    switch(expression){ default:function(){"   } "}; }
+    switch(expression){ default:function(){"\" { "}; }
+    switch(expression){ default:function(){"\" } "}; }
+    switch(expression){ default:function(){'   { '}; }
+    switch(expression){ default:function(){'   } '}; }
+    switch(expression){ default:function(){'\' { '}; }
+    switch(expression){ default:function(){'\' } '}; }
+    switch(expression){ default:function(){/   } /}; }
+    switch(expression){ default:function(){/  \{ /}; }
+    switch(expression){ default:function(){/\/ } /}; }
+    switch(expression){ default:function(){/\/\{ /}; }
+    // No More Indent
 
 }
 
