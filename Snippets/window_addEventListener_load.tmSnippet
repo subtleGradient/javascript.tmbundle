@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>window.addEventListener('load',function(){
+	
+	$0${TM_SELECTED_TEXT:
+}	
+},true);</string>
+	<key>name</key>
+	<string>window.addEventListener('load')</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>tabTrigger</key>
+	<string>load</string>
+	<key>uuid</key>
+	<string>523E9E93-6E43-4E2F-9F6F-465A8A24714E</string>
+</dict>
+</plist>
