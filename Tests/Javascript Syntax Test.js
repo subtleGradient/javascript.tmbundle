@@ -864,17 +864,21 @@ export
 import
 
 // Labels
-checkiandj:
+var objectName = {
+	labelName: "",
+	labelName2: ""
+}
+labelName:
 while (i < 4) {
    document.write(i + "<br>");
    i += 1;
 
-   checkj:
+   labelName2:
    while (j > 4) {
       document.write(j + "<br>");
       j -= 1;
       if ((j % 2) == 0)
-         continue checkj;
+         continue labelName2;
       document.write(j + " is odd.<br>");
    }
    document.write("i = " + i + "<br>");
@@ -886,4 +890,21 @@ while (i < 4) {
 new new Function();
 new (function(){})();
 new(function(){})();
+
+
+// Comments
+/**/
+/* */
+/** **/
+//
+
+
+/*
+Block Comment
+*/
+/**
+Documentation Comment (idiom)
+**/
+// Inline Comment
+
 

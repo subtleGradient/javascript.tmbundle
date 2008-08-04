@@ -46,7 +46,11 @@ myFunction(
 {
     label:'value'
 }
-function(){
+var myObj = {
+    label:'value'
+}
+
+function (){
     statement;
 }
 
@@ -73,6 +77,32 @@ myFunction(
 function(){
     statement;
 };
+
+
+
+// With ()
+[1,2,3]()
+[
+    1,
+    2,
+    3
+]()
+myArray[
+    0
+]()
+(statement)
+(
+    statement
+)()
+myFunction(
+    statement
+)()
+{
+    label:'value'
+}()
+function(){
+    statement()
+}()
 
 
 
@@ -261,5 +291,72 @@ var myObj = {           /* Comment */
     },                  /* Comment */
     label: 0            /* Comment */
 };                      /* Comment */
+
+
+// ==============
+// = Mixed line =
+// ==============
+
+[   [1,2,3],[1,2,3],
+    [1,2,3],[1,2,3],
+][0]
+myArray[ myArray[0] + myArray[0] +
+    0
+][  0
+]
+(  (statement) +
+    statement
+)
+myFunction( myFunction() + myFunction()
+)
+var myObj = { label:{ label:'value' }, label:{ label:'value' },
+    label:'value'
+}
+function(){ function(){ statement }; function(){ statement };
+    statement;
+}
+
+
+// ========
+// = Bugs =
+// ========
+
+myFunction()
+
+myFunction(
+)myFunction
+
+myFunction(()
+)myFunction
+
+myFunction(()()
+{()()()())()()}
+
+myFunction(something()
+)
+
+myFunction(()something
+)
+
+myFunction((something)
+)
+
+    myFunction(something(something)something
+    something(something)something)
+
+
+
+myFunction(something()()
+)
+
+myFunction(()something()
+)
+
+myFunction((something)()
+)
+
+myFunction(()something()(something)()something()
+)
+
 
 

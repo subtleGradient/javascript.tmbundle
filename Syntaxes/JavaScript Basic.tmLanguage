@@ -11,9 +11,19 @@
 		<string>jsx</string>
 	</array>
 	<key>foldingStartMarker</key>
-	<string>^.*(\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$)|(={\s*$)|(\({$)</string>
+	<string>(?x)^ \s* ([^\s].*)?
+		# Open (nothing | no parens         | (no parens? (nested parens                             ) no parens?)+  )
+		( \[   (?:      | (?&lt;noR&gt;[^\[\]]++) | (\g&lt;noR&gt;?   (?&lt;round&gt; \[ (?: \g&lt;noR&gt; | \g&lt;round&gt; )* \] ) \g&lt;noR&gt;?  )++ )
+		| \(   (?:      | (?&lt;noS&gt;[^\(\)]++) | (\g&lt;noS&gt;?   (?&lt;squar&gt; \( (?: \g&lt;noS&gt; | \g&lt;squar&gt; )* \) ) \g&lt;noS&gt;?  )++ )
+		| \{   (?:      | (?&lt;noC&gt;[^\{\}]++) | (\g&lt;noC&gt;?   (?&lt;curly&gt; \{ (?: \g&lt;noC&gt; | \g&lt;curly&gt; )* \} ) \g&lt;noC&gt;?  )++ )
+		)$</string>
 	<key>foldingStopMarker</key>
-	<string>(^\s*\})|(^}\));</string>
+	<string>(?x)^ \s*
+		#      (nothing | no parens         | (no parens? (nested parens                             ) no parens?)+  ) Close
+		(      (?:      | (?&lt;noR&gt;[^\[\]]++) | (\g&lt;noR&gt;?   (?&lt;round&gt; \[ (?: \g&lt;noR&gt; | \g&lt;round&gt; )* \] ) \g&lt;noR&gt;?  )++ ) \]
+		|      (?:      | (?&lt;noS&gt;[^\(\)]++) | (\g&lt;noS&gt;?   (?&lt;squar&gt; \( (?: \g&lt;noS&gt; | \g&lt;squar&gt; )* \) ) \g&lt;noS&gt;?  )++ ) \)
+		|      (?:      | (?&lt;noC&gt;[^\{\}]++) | (\g&lt;noC&gt;?   (?&lt;curly&gt; \{ (?: \g&lt;noC&gt; | \g&lt;curly&gt; )* \} ) \g&lt;noC&gt;?  )++ ) \}
+		)</string>
 	<key>keyEquivalent</key>
 	<string>^~J</string>
 	<key>name</key>
