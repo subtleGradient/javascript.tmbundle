@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Indent</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>settings</key>
+	<dict>
+		<key>decreaseIndentPattern</key>
+		<string>(?x)^ \s* (?!//|/\*)
+		#      (nothing | ( string                                     | no parens             )+  | (no parens? (nested parens                             ) no parens?)+  )           Close
+		(      (?:      | ( (?&lt;str&gt; '(\\'|[^'])*+' | "(\\"|[^"])*+" | /(\\/|[^/])*+/) | (?&lt;noR&gt;[^\[\]'"/]++) )++ | (\g&lt;noR&gt;?   (?&lt;round&gt; \[ (?: \g&lt;str&gt; | \g&lt;noR&gt; | \g&lt;round&gt; )* \] ) \g&lt;noR&gt;?  )++ ) \]
+		|      (?:      | ( \g&lt;str&gt;                                    | (?&lt;noS&gt;[^\(\)'"/]++) )++ | (\g&lt;noS&gt;?   (?&lt;squar&gt; \( (?: \g&lt;str&gt; | \g&lt;noS&gt; | \g&lt;squar&gt; )* \) ) \g&lt;noS&gt;?  )++ ) \)
+		|      (?:      | ( \g&lt;str&gt;                                    | (?&lt;noC&gt;[^\{\}'"/]++) )++ | (\g&lt;noC&gt;?   (?&lt;curly&gt; \{ (?: \g&lt;str&gt; | \g&lt;noC&gt; | \g&lt;curly&gt; )* \} ) \g&lt;noC&gt;?  )++ ) \}
+		| \b(?:case|default)\b .*$# [^;]*$
+		)</string>
+		<key>increaseIndentPattern</key>
+		<string>(?x)^ \s* (?!//|/\*)([^\s].*)?
+		# Open (nothing | ( string                                     | no parens             )+  | (no parens? (nested parens                             ) no parens?)+  )
+		( \[   (?:      | ( (?&lt;str&gt; '(\\'|[^'])*+' | "(\\"|[^"])*+" | /(\\/|[^/])*+/) | (?&lt;noR&gt;[^\[\]'"/]++) )++ | (\g&lt;noR&gt;?   (?&lt;round&gt; \[ (?: \g&lt;str&gt; | \g&lt;noR&gt; | \g&lt;round&gt; )* \] ) \g&lt;noR&gt;?  )++ )
+		| \(   (?:      | ( \g&lt;str&gt;                                    | (?&lt;noS&gt;[^\(\)'"/]++) )++ | (\g&lt;noS&gt;?   (?&lt;squar&gt; \( (?: \g&lt;str&gt; | \g&lt;noS&gt; | \g&lt;squar&gt; )* \) ) \g&lt;noS&gt;?  )++ )
+		| \{   (?:      | ( \g&lt;str&gt;                                    | (?&lt;noC&gt;[^\{\}'"/]++) )++ | (\g&lt;noC&gt;?   (?&lt;curly&gt; \{ (?: \g&lt;str&gt; | \g&lt;noC&gt; | \g&lt;curly&gt; )* \} ) \g&lt;noC&gt;?  )++ )
+		| \b(?:case|default)\b .*# [^;]*
+		)$</string>
+		<key>indentNextLinePattern</key>
+		<string>^\s*((if|while|for|switch|else if).*[)]|else)\s*$</string>
+		<key>unIndentedLinePattern</key>
+		<string>^\s*((/\*|\*/\s*$|\ \*).*)?$</string>
+	</dict>
+	<key>uuid</key>
+	<string>BC062860-3346-4D3B-8421-C5543F83D11F</string>
+</dict>
+</plist>

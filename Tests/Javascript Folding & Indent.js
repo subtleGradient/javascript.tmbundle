@@ -26,6 +26,7 @@ Documentation Comment (idiom)
  * officia deserunt mollit anim id est laborum.
  */
 
+
 // nothing
 
 [1,2,3]
@@ -325,35 +326,45 @@ function(){ function(){ statement }; function(){ statement };
 myFunction()
 
 myFunction(
+    // Fold; Indent
 );myFunction
 
 myFunction((0)
+    // Fold; Indent
 );myFunction
 
 myFunction(something()
+    // Fold; Indent
 )
 
 myFunction(()something
+    // Fold; Indent
 )
 
 myFunction((something)
+    // Fold; Indent
 )
 
 myFunction(something(something)something
+    // Fold; Indent
 something(something)something)
 
 
 
 myFunction(something()()
+    // Fold; Indent
 )
 
 myFunction(()something()
+    // Fold; Indent
 )
 
 myFunction((something)()
+    // Fold; Indent
 )
 
 myFunction(()something()(something)()something()
+    // Fold; Indent
 )
 
 
@@ -362,6 +373,22 @@ myFunction(()something()(something)()something()
 // = Special =
 // ===========
 switch (statement){
+case 'label':
+    statement;
+    break;
+case 'label':
+    statement;
+    break;
+case 'label':
+    statement;
+    break;
+default:
+    statement;
+}
+
+function(){
+
+    switch (statement){
     case 'label':
         statement;
         break;
@@ -373,7 +400,19 @@ switch (statement){
         break;
     default:
         statement;
+    }
+
+    switch (statement){
+    case 'label': statement; break;
+    case 'label': statement; break;
+    case 'label': statement; break;
+    default: statement;
+    }
+
 }
+
+
+
 
 // No fold
 if (statement) statement;
@@ -382,12 +421,25 @@ if (statement)
     statement;
 
 if (statement){
-    statement;}
+statement;}
 
 // Fold
 if (statement){
     statement;
 }
+
+if ()
+    statement;
+else if ()
+    statement;
+else
+    statement;
+while ()
+    statement;
+for ()
+    statement;
+switch ()
+    statement;
 
 
 // ===========
@@ -396,75 +448,75 @@ if (statement){
 
 // No Fold; No Indent
 myFunction(")"
-	// Fold; Indent
+    statement; // Fold; Indent
 "(")
 // No Fold; No Indent
 myArray = ["]",
-	// Fold; Indent
+    statement; // Fold; Indent
 "["]
 // No Fold; No Indent
 function(){"}"
-	// Fold; Indent
+    statement; // Fold; Indent
 "{"}
 // No Fold; No Indent
 myFunction("\")"
-	// Fold; Indent
+    statement; // Fold; Indent
 "\"(")
 // No Fold; No Indent
 myArray = ["\"]",
-	// Fold; Indent
+    statement; // Fold; Indent
 "\"["]
 // No Fold; No Indent
 function(){"\"}"
-	// Fold; Indent
+    statement; // Fold; Indent
 "\"{"}
 // No Fold; No Indent
 myFunction(')'
-	// Fold; Indent
+    statement; // Fold; Indent
 '(')
 // No Fold; No Indent
 myArray = [']',
-	// Fold; Indent
+    statement; // Fold; Indent
 '[']
 // No Fold; No Indent
 function(){'}'
-	// Fold; Indent
+    statement; // Fold; Indent
 '{'}
 // No Fold; No Indent
 myFunction('\')'
-	// Fold; Indent
+    statement; // Fold; Indent
 '\'(')
 // No Fold; No Indent
 myArray = ['\']',
-	// Fold; Indent
+    statement; // Fold; Indent
 '\'[']
 // No Fold; No Indent
 function(){'\'}'
-	// Fold; Indent
+    statement; // Fold; Indent
 '\'{'}
 // No Fold; No Indent
 myFunction(/)/
-	// Fold; Indent
+    statement; // Fold; Indent
 /(/)
 // No Fold; No Indent
 myArray = [/]/,
-	// Fold; Indent
+    statement; // Fold; Indent
 /[/]
 // No Fold; No Indent
 function(){/}/
-	// Fold; Indent
+    statement; // Fold; Indent
 /{/}
 // No Fold; No Indent
 myFunction(/\/)/
-	// Fold; Indent
+    statement; // Fold; Indent
 /\/(/)
 // No Fold; No Indent
 myArray = [/\/]/,
-	// Fold; Indent
+    statement; // Fold; Indent
 /\/[/]
 // No Fold; No Indent
 function(){/\/}/
-	// Fold; Indent
+    statement; // Fold; Indent
 /\/{/}
 
 // No Fold; No Indent
@@ -505,4 +557,37 @@ myFunction('   ) ')
 myFunction('\' ) ')
 myFunction(/  \) /)
 myFunction(/\/\) /)
+
+
+// ============
+// = Comments =
+// ============
+
+// myFunction(
+//     No Fold; No Indent
+// )
+// myArray = [
+//     No Fold; No Indent
+// ]
+// function(){
+//     No Fold; No Indent
+// }
+
+
+function(){
+    some_function();
+
+/*  ignore_first();
+    ignore_second();
+*/
+
+    more_functions();
+}
+
+
+""
+''
+()
+[]
+{}
 
