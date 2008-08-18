@@ -3,16 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>for (var ${20:i}=0, ${2:node}; ${2:node} = ${1:Nodes}[${20:i}++];) {
-	${0:${2:node}}
-}</string>
+	<string>	break;
+case ${20:/*Expression*/}:
+	${0:}
+	break;</string>
 	<key>name</key>
-	<string>for (…) {…} (DOM)</string>
+	<string>case</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
-	<string>for</string>
+	<string>	break;</string>
 	<key>uuid</key>
-	<string>92D6EE80-615E-45B7-B2E2-FF5C200A8478</string>
+	<string>77750C34-3335-4766-900D-FFFF412DB7F5</string>
 </dict>
 </plist>
