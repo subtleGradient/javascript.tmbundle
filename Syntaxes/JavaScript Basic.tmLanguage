@@ -783,7 +783,7 @@
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>/\*((@)end)\s*@\*/|(?&lt;=@)\*/</string>
+					<string>\*/</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
