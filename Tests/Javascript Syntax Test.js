@@ -721,64 +721,59 @@ car2.owner.name
 // = Operators =
 // =============
 
-//Individual operators  ;// Precedence  Operator type   Associativity   Proximity     
-a =          b          ;// 16          assignment      right-to-left   both          
-a %=         b          ;// 16          assignment      right-to-left   both          
-a &=         b          ;// 16          assignment      right-to-left   both          
-a *=         b          ;// 16          assignment      right-to-left   both          
-a +=         b          ;// 16          assignment      right-to-left   both          
-a -=         b          ;// 16          assignment      right-to-left   both          
-a /=         b          ;// 16          assignment      right-to-left   both          
-a ^=         b          ;// 16          assignment      right-to-left   both          
-a |=         b          ;// 16          assignment      right-to-left   both          
-a <<=        b          ;// 16          assignment      right-to-left   both          
-a >>=        b          ;// 16          assignment      right-to-left   both          
-a >>>=       b          ;// 16          assignment      right-to-left   both          
-a ?          b : c      ;// 15          conditional     right-to-left   both          
-a in         b          ;// 8           in              left-to-right   both          
-a in(        b )        ;// 8           in              left-to-right   both          
-a ,          b          ;// 17          comma           left-to-right   both          
-a .          b          ;// 1           member          left-to-right   both          
-a %          b          ;// 5           modulus         left-to-right   both          
-a /          b          ;// 5           division        left-to-right   both          
-a +          b          ;// 6           addition        left-to-right   both          
-a !=         b          ;// 9           equality        left-to-right   both          
-a ==         b          ;// 9           equality        left-to-right   both          
-a !==        b          ;// 9           equality        left-to-right   both          
-a ===        b          ;// 9           equality        left-to-right   both          
-a instanceof b          ;// 8           instanceof      left-to-right   both          
-a instanceof(b)         ;// 8           instanceof      left-to-right   both          
-a <          b          ;// 8           relational      left-to-right   both          
-a >          b          ;// 8           relational      left-to-right   both          
-a <=         b          ;// 8           relational      left-to-right   both          
-a >=         b          ;// 8           relational      left-to-right   both          
-a |          b          ;// 12          bitwise-or      left-to-right   both          
-a ||         b          ;// 14          logical-or      left-to-right   both          
-a &          b          ;// 10          bitwise-and     left-to-right   both          
-a &&         b          ;// 13          logical-and     left-to-right   both          
-a -          b          ;// 6           subtraction     left-to-right   both          
-a ^          b          ;// 11          bitwise-xor     left-to-right   both          
-a <<         b          ;// 7           bitwise shift   left-to-right   both          
-a >>         b          ;// 7           bitwise shift   left-to-right   both          
-a >>>        b          ;// 7           bitwise shift   left-to-right   both          
-a *          b          ;// 5           multiplication  left-to-right   both          
-a [          b ]        ;// 1           member          left-to-right   inside + left  
-a (          b )        ;// 2           function call   left-to-right   inside + left  
-a --                    ;// 3           decrement       n/a             right-or-left
-a ++                    ;// 3           increment       n/a             right-or-left
-  --         b          ;// 3           decrement       n/a             right-or-left
-  ++         b          ;// 3           increment       n/a             right-or-left
-  new        b          ;// 1           new             right-to-left   right         
-  void       b          ;// 4           void            right-to-left   right         
-  void(      b )        ;// 4           void            right-to-left   right         
-  delete     b          ;// 4           delete          right-to-left   right         
-  delete(    b )        ;// 4           delete          right-to-left   right         
-  typeof     b          ;// 4           typeof          right-to-left   right         
-  typeof(    b )        ;// 4           typeof          right-to-left   right         
-  +          b          ;// 4           unary +         right-to-left   right         
-  ~          b          ;// 4           bitwise not     right-to-left   right         
-  !          b          ;// 4           logical-not     right-to-left   right         
-  -          b          ;// 4           unary negation  right-to-left   right         
+/* Precedence  Operator type   Associativity   Proximity     */ //Individual operators  ;
+/*          1  member          left-to-right   both          */ a          . b          ;
+/*          1  member          left-to-right   inside + left */ a          [ b ]        ;
+/*          1  new             right-to-left   right         */          new b          ;
+/*          2  function-call   left-to-right   inside + left */ a          ( b )        ;
+/*          3  decrement       n/a             right-or-left */           -- b          ;
+/*          3  decrement       n/a             right-or-left */ a         --            ;
+/*          3  increment       n/a             right-or-left */           ++ b          ;
+/*          3  increment       n/a             right-or-left */ a         ++            ;
+/*          4  bitwise-not     right-to-left   right         */            ~ b          ;
+/*          4  delete          right-to-left   right         */       delete b          ;
+/*          4  logical-not     right-to-left   right         */            ! b          ;
+/*          4  typeof          right-to-left   right         */       typeof b          ;
+/*          4  unary-+         right-to-left   right         */            + b          ;
+/*          4  unary-negation  right-to-left   right         */            - b          ;
+/*          4  void            right-to-left   right         */         void b          ;
+/*          5  division        left-to-right   both          */ a          / b          ;
+/*          5  modulus         left-to-right   both          */ a          % b          ;
+/*          5  multiplication  left-to-right   both          */ a          * b          ;
+/*          6  addition        left-to-right   both          */ a          + b          ;
+/*          6  subtraction     left-to-right   both          */ a          - b          ;
+/*          7  bitwise-shift   left-to-right   both          */ a         << b          ;
+/*          7  bitwise-shift   left-to-right   both          */ a         >> b          ;
+/*          7  bitwise-shift   left-to-right   both          */ a        >>> b          ;
+/*          8  in              left-to-right   both          */ a         in b          ;
+/*          8  instanceof      left-to-right   both          */ a instanceof b          ;
+/*          8  relational      left-to-right   both          */ a          < b          ;
+/*          8  relational      left-to-right   both          */ a          > b          ;
+/*          8  relational      left-to-right   both          */ a         <= b          ;
+/*          8  relational      left-to-right   both          */ a         >= b          ;
+/*          9  equality        left-to-right   both          */ a         != b          ;
+/*          9  equality        left-to-right   both          */ a         == b          ;
+/*          9  equality        left-to-right   both          */ a        !== b          ;
+/*          9  equality        left-to-right   both          */ a        === b          ;
+/*         10  bitwise-and     left-to-right   both          */ a          & b          ;
+/*         11  bitwise-xor     left-to-right   both          */ a          ^ b          ;
+/*         12  bitwise-or      left-to-right   both          */ a          | b          ;
+/*         13  logical-and     left-to-right   both          */ a         && b          ;
+/*         14  logical-or      left-to-right   both          */ a         || b          ;
+/*         15  conditional     right-to-left   both          */ a          ? b : c      ;
+/*         16  assignment      right-to-left   both          */ a          = b          ;
+/*         16  assignment      right-to-left   both          */ a         %= b          ;
+/*         16  assignment      right-to-left   both          */ a         &= b          ;
+/*         16  assignment      right-to-left   both          */ a         *= b          ;
+/*         16  assignment      right-to-left   both          */ a         += b          ;
+/*         16  assignment      right-to-left   both          */ a         -= b          ;
+/*         16  assignment      right-to-left   both          */ a         /= b          ;
+/*         16  assignment      right-to-left   both          */ a         ^= b          ;
+/*         16  assignment      right-to-left   both          */ a         |= b          ;
+/*         16  assignment      right-to-left   both          */ a        <<= b          ;
+/*         16  assignment      right-to-left   both          */ a        >>= b          ;
+/*         16  assignment      right-to-left   both          */ a       >>>= b          ;
+/*         17  comma           left-to-right   both          */ a          , b          ;
 
 
 // ==============
@@ -870,19 +865,19 @@ var objectName = {
 }
 labelName:
 while (i < 4) {
-   document.write(i + "<br>");
-   i += 1;
+	document.write(i + "<br>");
+	i += 1;
 
-   labelName2:
-   while (j > 4) {
-      document.write(j + "<br>");
-      j -= 1;
-      if ((j % 2) == 0)
-         continue labelName2;
-      document.write(j + " is odd.<br>");
-   }
-   document.write("i = " + i + "<br>");
-   document.write("j = " + j + "<br>");
+	labelName2:
+	while (j > 4) {
+		document.write(j + "<br>");
+		j -= 1;
+		if ((j % 2) == 0)
+			continue labelName2;
+		document.write(j + " is odd.<br>");
+	}
+	document.write("i = " + i + "<br>");
+	document.write("j = " + j + "<br>");
 }
 
 // Unorganized
@@ -906,5 +901,112 @@ Block Comment
 Documentation Comment (idiom)
 **/
 // Inline Comment
+
+
+// ==========
+// = Blocks =
+// ==========
+
+/* Comment Block */
+"stringiness";                             /* String */
+'stringiness';                             /* String */
+/regex/;                                   /* Regex */
+function myFunction(param1, param2){};     /* parameters */
+myFunction=function(param1, param2){};     /* parameters */
+myFunction(arg1, arg2);                    /* arguments */
+label:
+'label':
+"label":
+
+for(initialization;condition;update){ statements; }
+for(variable in object){ statements; }
+
+[1, 2, 3];                                 /* Array */
+var myObj = { label:'value' };             /* Object Block */
+var myFunction = function(){ statements; }; /* Function Block */
+myFunction(arg1, 
+arg2);                                     /* arguments on multiple lines */
+
+
+// ===========
+// = Invalid =
+// ===========
+
+/* Precedence  Operator type   Associativity   Proximity     */ //Individual operators  ;
+/*          1  member          left-to-right   both          */ a          . b          ;
+/*          1  member          left-to-right   inside + left */ a          [ b ]        ;
+/*          1  new             right-to-left   right         */          new b          ;
+/*          2  function-call   left-to-right   inside + left */ a          ( b )        ;
+/*          3  decrement       n/a             right-or-left */           -- b          ;
+/*          3  decrement       n/a             right-or-left */ a         --            ;
+/*          3  increment       n/a             right-or-left */           ++ b          ;
+/*          3  increment       n/a             right-or-left */ a         ++            ;
+/*          4  bitwise-not     right-to-left   right         */            ~ b          ;
+/*          4  delete          right-to-left   right         */       delete b          ;
+/*          4  logical-not     right-to-left   right         */            ! b          ;
+/*          4  typeof          right-to-left   right         */       typeof b          ;
+/*          4  unary-+         right-to-left   right         */            + b          ;
+/*          4  unary-negation  right-to-left   right         */            - b          ;
+/*          4  void            right-to-left   right         */         void b          ;
+/*          5  division        left-to-right   both          */ a          / b          ;
+/*          5  modulus         left-to-right   both          */ a          % b          ;
+/*          5  multiplication  left-to-right   both          */ a          * b          ;
+/*          6  addition        left-to-right   both          */ a          + b          ;
+/*          6  subtraction     left-to-right   both          */ a          - b          ;
+/*          7  bitwise-shift   left-to-right   both          */ a         << b          ;
+/*          7  bitwise-shift   left-to-right   both          */ a         >> b          ;
+/*          7  bitwise-shift   left-to-right   both          */ a        >>> b          ;
+/*          8  in              left-to-right   both          */ a         in b          ;
+/*          8  instanceof      left-to-right   both          */ a instanceof b          ;
+/*          8  relational      left-to-right   both          */ a          < b          ;
+/*          8  relational      left-to-right   both          */ a          > b          ;
+/*          8  relational      left-to-right   both          */ a         <= b          ;
+/*          8  relational      left-to-right   both          */ a         >= b          ;
+/*          9  equality        left-to-right   both          */ a         != b          ;
+/*          9  equality        left-to-right   both          */ a         == b          ;
+/*          9  equality        left-to-right   both          */ a        !== b          ;
+/*          9  equality        left-to-right   both          */ a        === b          ;
+/*         10  bitwise-and     left-to-right   both          */ a          & b          ;
+/*         11  bitwise-xor     left-to-right   both          */ a          ^ b          ;
+/*         12  bitwise-or      left-to-right   both          */ a          | b          ;
+/*         13  logical-and     left-to-right   both          */ a         && b          ;
+/*         14  logical-or      left-to-right   both          */ a         || b          ;
+/*         15  conditional     right-to-left   both          */ a          ? b : c      ;
+/*         16  assignment      right-to-left   both          */ a          = b          ;
+/*         16  assignment      right-to-left   both          */ a         %= b          ;
+/*         16  assignment      right-to-left   both          */ a         &= b          ;
+/*         16  assignment      right-to-left   both          */ a         *= b          ;
+/*         16  assignment      right-to-left   both          */ a         += b          ;
+/*         16  assignment      right-to-left   both          */ a         -= b          ;
+/*         16  assignment      right-to-left   both          */ a         /= b          ;
+/*         16  assignment      right-to-left   both          */ a         ^= b          ;
+/*         16  assignment      right-to-left   both          */ a         |= b          ;
+/*         16  assignment      right-to-left   both          */ a        <<= b          ;
+/*         16  assignment      right-to-left   both          */ a        >>= b          ;
+/*         16  assignment      right-to-left   both          */ a       >>>= b          ;
+/*         17  comma           left-to-right   both          */ a          , b          ;
+
+// SYNTAX ERROR
+myVar  myVar
+myVar$ myVar
+myVar_ myVar
+myVar0 myVar
+
+() myVar
+() _myVar
+() $myVar
+
+00 ()
+A0 () //ok
+
+() ,            //ok 
+() ;            //ok 
+() /*operator*/ //ok 
+
+myVar /*both operator*/ myVar //valid
+() /*both operator*/ () //valid
+/*right operator*/ myVar //valid
+/*right operator*/ () //valid
+ 
 
 
