@@ -1,0 +1,8 @@
+{
+	"suggestions": [
+		{ "image":"Array", "display": "constructor", "match": "constructor", "tool_tip": "Specifies the function that creates an object's prototype." },
+		{ "image":"Array", "display": "index",       "match": "index",       "tool_tip": "This is pseudo-property of Array prototypes because it is not inherited by default. It is, in fact, only present in arrays created by regular expression matches. The property represents the zero-based index of the match in the string." },
+		{ "image":"Array", "display": "input",       "match": "input",       "tool_tip": "This property is only present in arrays created by regular expression matches. It reflects the original string against which the regular expression was matched." },
+		{ "image":"Array", "display": "length",      "match": "length",      "tool_tip": "Reflects the number of elements in an array." }
+	]
+}

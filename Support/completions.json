@@ -1,0 +1,14 @@
+{
+	"extra_chars": "_$",
+	"images": {
+		"String"  : "String.png",
+		"RegExp"  : "RegExp.png",
+		"Number"  : "Number.png",
+		"Array"   : "Array.png",
+		"Function": "Function.png",
+		"Object"  : "Object.png",
+		"Node"    : "Node.png",
+		"NodeList": "NodeList.png",
+		"mixed"   : "mixed.png"
+	}
+}
