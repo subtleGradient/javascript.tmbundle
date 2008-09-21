@@ -1,0 +1,18 @@
+Dumb Completion
+
+* Cross-Platform Browser Object Model API
+* Cross-Platform Document Object Model API
+* String
+* Number
+* Array
+
+Smart Completion
+
+* String
+* "string literal"
+* 'string literal'
+* /regex literal/
+* Number
+
+Find out the return type of all the DOM, BOM & Object methods / properties
+Completions Format
