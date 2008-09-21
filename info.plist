@@ -16,6 +16,8 @@
 			<string>------------------------------------</string>
 			<string>B4874A14-2491-465A-A349-61E4EBCF4700</string>
 			<string>------------------------------------</string>
+			<string>C09ABCA9-7558-4385-8E29-10E42093D8B6</string>
+			<string>------------------------------------</string>
 			<string>D2E6A1FE-2881-4754-B399-B65F61F29C2F</string>
 			<string>43F40EB6-5839-4BE8-99C8-4976D0534E5D</string>
 			<string>52090C49-D8B2-49A0-9597-80574354B3CD</string>
@@ -40,6 +42,7 @@
 			<dict>
 				<key>items</key>
 				<array>
+					<string>5CAA9822-629C-4362-B02A-FCEF38C79BD5</string>
 					<string>C1197E58-D065-4EDC-9BAB-EB41622C1630</string>
 					<string>9E0E3BCC-7F20-4D6B-891D-A44D6EC56E31</string>
 				</array>
@@ -94,6 +97,9 @@
 					<string>92D6EE80-615E-45B7-B2E2-FF5C200A8478</string>
 					<string>------------------------------------</string>
 					<string>3F4AB53B-210C-4E0C-8D04-12192DECC3D1</string>
+					<string>------------------------------------</string>
+					<string>65AAF33F-7706-4FC0-B5E0-E9AABEF0731E</string>
+					<string>77750C34-3335-4766-900D-FFFF412DB7F5</string>
 				</array>
 				<key>name</key>
 				<string>Control</string>
