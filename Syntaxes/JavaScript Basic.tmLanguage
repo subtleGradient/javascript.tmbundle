@@ -11,19 +11,19 @@
 		<string>jsx</string>
 	</array>
 	<key>foldingStartMarker</key>
-	<string>(?x)^ \s* (?!//|/\*)([^\s].*)?
-		# Open (nothing |( string                                                                             | no parens/string      )++ | (no parens? (nested parens                                       ) no parens?)+  )
-		( \[   (?:      |( (?&lt;str&gt; (?&lt;!\\)'(\\'|[^'])*+' | (?&lt;!\\)"(\\"|[^"])*+" | (?&lt;!\\)/(\\/|[^/])*+/) | (?&lt;noS&gt;[^\[\]'"/]++) )++ | (\g&lt;noS&gt;?   (?&lt;squar&gt; \[ (?: \g&lt;str&gt; | \g&lt;noS&gt; | \g&lt;squar&gt; )* \] ) \g&lt;noS&gt;?  )++ )
-		| \(   (?:      |( \g&lt;str&gt;                                                                            | (?&lt;noR&gt;[^\(\)'"/]++) )++ | (\g&lt;noR&gt;?   (?&lt;round&gt; \( (?: \g&lt;str&gt; | \g&lt;noR&gt; | \g&lt;round&gt; )* \) ) \g&lt;noR&gt;?  )++ )
-		| \{   (?:      |( \g&lt;str&gt;                                                                            | (?&lt;noC&gt;[^\{\}'"/]++) )++ | (\g&lt;noC&gt;?   (?&lt;curly&gt; \{ (?: \g&lt;str&gt; | \g&lt;noC&gt; | \g&lt;curly&gt; )* \} ) \g&lt;noC&gt;?  )++ )
+	<string>(?x)^
+			#   Yes *+      Open  (         Blank |Comments                                        | (No Paren | String) | String                                                        | (Nested Parens             )  )*+
+			(?&gt; \g&lt;yesS&gt;*+  \[    (?&lt;yesS&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noS&gt;[^\[\]'"/]) | (?&lt;str&gt; '(\\'|[^'])*+' | "(\\"|[^"])*+" | /(\\/|[^/])*+/) | (?&lt;squar&gt; \[ \g&lt;yesS&gt;*+ \] )  )*+
+			|   \g&lt;yesR&gt;*+  \(    (?&lt;yesR&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noR&gt;[^\(\)'"/]) | \g&lt;str&gt;                                                       | (?&lt;round&gt; \( \g&lt;yesR&gt;*+ \) )  )*+
+			|   \g&lt;yesC&gt;*+  \{    (?&lt;yesC&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noC&gt;[^\{\}'"/]) | \g&lt;str&gt;                                                       | (?&lt;curly&gt; \{ \g&lt;yesC&gt;*+ \} )  )*+
 		)$</string>
 	<key>foldingStopMarker</key>
-	<string>(?x)^ \s* (?!//|/\*)
-		#      (nothing |( string                                                                             | no parens/string      )++ | (no parens? (nested parens                                       ) no parens?)+  ) Close
-		(      (?:      |( (?&lt;str&gt; (?&lt;!\\)'(\\'|[^'])*+' | (?&lt;!\\)"(\\"|[^"])*+" | (?&lt;!\\)/(\\/|[^/])*+/) | (?&lt;noS&gt;[^\[\]'"/]++) )++ | (\g&lt;noS&gt;?   (?&lt;squar&gt; \[ (?: \g&lt;str&gt; | \g&lt;noS&gt; | \g&lt;squar&gt; )* \] ) \g&lt;noS&gt;?  )++ ) \]
-		|      (?:      |( \g&lt;str&gt;                                                                            | (?&lt;noR&gt;[^\(\)'"/]++) )++ | (\g&lt;noR&gt;?   (?&lt;round&gt; \( (?: \g&lt;str&gt; | \g&lt;noR&gt; | \g&lt;round&gt; )* \) ) \g&lt;noR&gt;?  )++ ) \)
-		|      (?:      |( \g&lt;str&gt;                                                                            | (?&lt;noC&gt;[^\{\}'"/]++) )++ | (\g&lt;noC&gt;?   (?&lt;curly&gt; \{ (?: \g&lt;str&gt; | \g&lt;noC&gt; | \g&lt;curly&gt; )* \} ) \g&lt;noC&gt;?  )++ ) \}
-		)</string>
+	<string>(?x)^
+			#                     (         Blank |Comments                                        | (No Paren | String) | String                                                        | (Nested Parens             )  )*+  Close  Yes *+
+			(?&gt;                   (?&lt;yesS&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noS&gt;[^\[\]'"/]) | (?&lt;str&gt; '(\\'|[^'])*+' | "(\\"|[^"])*+" | /(\\/|[^/])*+/) | (?&lt;squar&gt; \[ \g&lt;yesS&gt;*+ \] )  )*+  \]     \g&lt;yesS&gt;*+
+			|                     (?&lt;yesR&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noR&gt;[^\(\)'"/]) | \g&lt;str&gt;                                                       | (?&lt;round&gt; \( \g&lt;yesR&gt;*+ \) )  )*+  \)     \g&lt;yesR&gt;*+
+			|                     (?&lt;yesC&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noC&gt;[^\{\}'"/]) | \g&lt;str&gt;                                                       | (?&lt;curly&gt; \{ \g&lt;yesC&gt;*+ \} )  )*+  \}     \g&lt;yesC&gt;*+
+		)$</string>
 	<key>keyEquivalent</key>
 	<string>^~J</string>
 	<key>name</key>
