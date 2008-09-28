@@ -187,58 +187,201 @@ function(){             // Comment
 };                      // Comment
 
 
-var myObj = {           // Comment
-    label: [1,2,3],     // Comment
-    label: [            // Comment
-        1,              // Comment
-        2,              // Comment
-        3               // Comment
-    ],                  // Comment
-    label: myArray[     // Comment
-        0               // Comment
-    ],                  // Comment
-    label: (statement), // Comment
-    label: (            // Comment
-        statement       // Comment
-    ),                  // Comment
-    label: myFunction(  // Comment
-        statement       // Comment
-    ),                  // Comment
-    label: {            // Comment
-        label:'value'   // Comment
-    },                  // Comment
-    label: function(){  // Comment
-        statement;      // Comment
-    },                  // Comment
-    label: 0            // Comment
-};                      // Comment
+var myObj = {           // Comment 
+    label: [1,2,3],     // Comment 
+    label: [            // Comment 
+        1,              // Comment 
+        2,              // Comment 
+        3               // Comment 
+    ],                  // Comment 
+    label: myArray[     // Comment 
+        0               // Comment 
+    ],                  // Comment 
+    label: (statement), // Comment 
+    label: (            // Comment 
+        statement       // Comment 
+    ),                  // Comment 
+    label: myFunction(  // Comment 
+        statement       // Comment 
+    ),                  // Comment 
+    label: {            // Comment 
+        label:'value'   // Comment 
+    },                  // Comment 
+    label: function(){  // Comment 
+        statement;      // Comment 
+    },                  // Comment 
+    label: 0            // Comment 
+};                      // Comment 
+
+
+// ========================
+// = With inline comments =
+// ========================
+[1,2,3]                 /* Comment 
+*/
+[                       /* Comment 
+*/
+    1,                  /* Comment 
+*/
+    2,                  /* Comment 
+*/
+    3                   /* Comment 
+*/
+]                       /* Comment 
+*/
+myArray[                /* Comment 
+*/
+    0                   /* Comment 
+*/
+]                       /* Comment 
+*/
+(statement)             /* Comment 
+*/
+(                       /* Comment 
+*/
+    statement           /* Comment 
+*/
+)                       /* Comment 
+*/
+myFunction(             /* Comment 
+*/
+    statement           /* Comment 
+*/
+)                       /* Comment 
+*/
+{                       /* Comment 
+*/
+    label:'value'       /* Comment 
+*/
+}                       /* Comment 
+*/
+function(){             /* Comment 
+*/
+    statement;          /* Comment 
+*/
+}                       /* Comment 
+*/
+[1,2,3];                /* Comment 
+*/
+[                       /* Comment 
+*/
+    1,                  /* Comment 
+*/
+    2,                  /* Comment 
+*/
+    3                   /* Comment 
+*/
+];                      /* Comment 
+*/
+myArray[                /* Comment 
+*/
+    0                   /* Comment 
+*/
+];                      /* Comment 
+*/
+(statement)             /* Comment 
+*/
+(                       /* Comment 
+*/
+    statement           /* Comment 
+*/
+);                      /* Comment 
+*/
+myFunction(             /* Comment 
+*/
+    statement           /* Comment 
+*/
+);                      /* Comment 
+*/
+{                       /* Comment 
+*/
+    label:'value'       /* Comment 
+*/
+};                      /* Comment 
+*/
+function(){             /* Comment 
+*/
+    statement;          /* Comment 
+*/
+};                      /* Comment 
+*/
+var myObj = {           /* Comment 
+*/
+    label: [1,2,3],     /* Comment 
+*/
+    label: [            /* Comment 
+*/
+        1,              /* Comment 
+*/
+        2,              /* Comment 
+*/
+        3               /* Comment 
+*/
+    ],                  /* Comment 
+*/
+    label: myArray[     /* Comment 
+*/
+        0               /* Comment 
+*/
+    ],                  /* Comment 
+*/
+    label: (statement), /* Comment 
+*/
+    label: (            /* Comment 
+*/
+        statement       /* Comment 
+*/
+    ),                  /* Comment 
+*/
+    label: myFunction(  /* Comment 
+*/
+        statement       /* Comment 
+*/
+    ),                  /* Comment 
+*/
+    label: {            /* Comment 
+*/
+        label:'value'   /* Comment 
+*/
+    },                  /* Comment 
+*/
+    label: function(){  /* Comment 
+*/
+        statement;      /* Comment 
+*/
+    },                  /* Comment 
+*/
+    label: 0            /* Comment 
+*/
+};                      /* Comment 
+*/
 
 
 // =================
 // = With Comments =
 // =================
-[1,2,3]                 /* Comment */
-[                       /* Comment */
-    1,                  /* Comment */
-    2,                  /* Comment */
-    3                   /* Comment */
-]                       /* Comment */
-myArray[                /* Comment */
-    0                   /* Comment */
-]                       /* Comment */
-(statement)             /* Comment */
-(                       /* Comment */
-    statement           /* Comment */
-)                       /* Comment */
-myFunction(             /* Comment */
-    statement           /* Comment */
-)                       /* Comment */
-{                       /* Comment */
-    label:'value'       /* Comment */
-}                       /* Comment */
-function(){             /* Comment */
-    statement;          /* Comment */
-}                       /* Comment */
+[1,2,3]                 /* Comment */ 
+[                       /* Comment */ 
+    1,                  /* Comment */ 
+    2,                  /* Comment */ 
+    3                   /* Comment */ 
+]                       /* Comment */ 
+myArray[                /* Comment */ 
+    0                   /* Comment */ 
+]                       /* Comment */ 
+(statement)             /* Comment */ 
+(                       /* Comment */ 
+    statement           /* Comment */ 
+)                       /* Comment */ 
+myFunction(             /* Comment */ 
+    statement           /* Comment */ 
+)                       /* Comment */ 
+{                       /* Comment */ 
+    label:'value'       /* Comment */ 
+}                       /* Comment */ 
+function(){             /* Comment */ 
+    statement;          /* Comment */ 
+}                       /* Comment */ 
 
 // With ;               /* Comment */
 [1,2,3];                /* Comment */
@@ -267,32 +410,214 @@ function(){             /* Comment */
 };                      /* Comment */
 
 
-// Object               /* Comment */
-var myObj = {           /* Comment */
-    label: [1,2,3],     /* Comment */
-    label: [            /* Comment */
-        1,              /* Comment */
-        2,              /* Comment */
-        3               /* Comment */
-    ],                  /* Comment */
-    label: myArray[     /* Comment */
-        0               /* Comment */
-    ],                  /* Comment */
-    label: (statement), /* Comment */
-    label: (            /* Comment */
-        statement       /* Comment */
-    ),                  /* Comment */
-    label: myFunction(  /* Comment */
-        statement       /* Comment */
-    ),                  /* Comment */
-    label: {            /* Comment */
-        label:'value'   /* Comment */
-    },                  /* Comment */
-    label: function(){  /* Comment */
-        statement;      /* Comment */
-    },                  /* Comment */
-    label: 0            /* Comment */
-};                      /* Comment */
+// Object               /* Comment */ 
+var myObj = {           /* Comment */ 
+    label: [1,2,3],     /* Comment */ 
+    label: [            /* Comment */ 
+        1,              /* Comment */ 
+        2,              /* Comment */ 
+        3               /* Comment */ 
+    ],                  /* Comment */ 
+    label: myArray[     /* Comment */ 
+        0               /* Comment */ 
+    ],                  /* Comment */ 
+    label: (statement), /* Comment */ 
+    label: (            /* Comment */ 
+        statement       /* Comment */ 
+    ),                  /* Comment */ 
+    label: myFunction(  /* Comment */ 
+        statement       /* Comment */ 
+    ),                  /* Comment */ 
+    label: {            /* Comment */ 
+        label:'value'   /* Comment */ 
+    },                  /* Comment */ 
+    label: function(){  /* Comment */ 
+        statement;      /* Comment */ 
+    },                  /* Comment */ 
+    label: 0            /* Comment */ 
+};                      /* Comment */ 
+
+
+// =================
+// = With Comments =
+// =================
+/* Comment         */ [1,2,3]
+/* Comment         */ [
+    /* Comment     */     1,
+    /* Comment     */     2,
+    /* Comment     */     3
+/* Comment         */ ]
+/* Comment         */ myArray[
+    /* Comment     */     0
+/* Comment         */ ]
+/* Comment         */ (statement)
+/* Comment         */ (
+    /* Comment     */     statement
+/* Comment         */ )
+/* Comment         */ myFunction(
+    /* Comment     */     statement
+/* Comment         */ )
+/* Comment         */ {
+    /* Comment     */     label:'value'
+/* Comment         */ }
+/* Comment         */ function(){
+    /* Comment     */     statement;
+/* Comment         */ }
+
+/* Comment         */ // With ;
+/* Comment         */ [1,2,3];
+/* Comment         */ [
+    /* Comment     */     1,
+    /* Comment     */     2,
+    /* Comment     */     3
+/* Comment         */ ];
+/* Comment         */ myArray[
+    /* Comment     */     1,
+    /* Comment     */     2,
+    /* Comment     */     3
+/* Comment         */ ];
+/* Comment         */ (statement)
+/* Comment         */ (
+    /* Comment     */     statement
+/* Comment         */ );
+/* Comment         */ myFunction(
+    /* Comment     */     statement
+/* Comment         */ );
+/* Comment         */ {
+    /* Comment     */     label:'value'
+/* Comment         */ };
+/* Comment         */ function(){
+    /* Comment     */     statement;
+/* Comment         */ };
+
+/* Comment         */ // Object
+/* Comment         */ var myObj = {
+    /* Comment     */     label: [1,2,3],
+    /* Comment     */     label: [
+        /* Comment */         1,
+        /* Comment */         2,
+        /* Comment */         3
+    /* Comment     */     ],
+    /* Comment     */     label: myArray[
+        /* Comment */         0
+    /* Comment     */     ],
+    /* Comment     */     label: (statement),
+    /* Comment     */     label: (
+        /* Comment */         statement
+    /* Comment     */     ),
+    /* Comment     */     label: myFunction(
+        /* Comment */         statement
+    /* Comment     */     ),
+    /* Comment     */     label: {
+        /* Comment */         label:'value'
+    /* Comment     */     },
+    /* Comment     */     label: function(){
+        /* Comment */         statement;
+    /* Comment     */     },
+    /* Comment     */     label: 0
+/* Comment         */ };
+
+
+// No Fold; No Indent
+function(){/* { */}
+myArray = [/* [ */]
+myFunction(/* ( */)
+// No Fold; No Indent
+function(){/* } */}
+myArray = [/* ] */]
+myFunction(/* ) */)
+// No Fold; No Indent
+
+
+/* Comment {*/ function(){/* { */}
+/* Comment [*/ myArray = [/* [ */]
+/* Comment (*/ myFunction(/* ( */)
+// No Fold; No Indent
+/* Comment }*/ function(){/* } */}
+/* Comment ]*/ myArray = [/* ] */]
+/* Comment )*/ myFunction(/* ) */)
+// No Fold; No Indent
+
+
+/* Comment {*/ function(){
+    // Fold; Indent
+}
+/* Comment [*/ myArray = [
+    // Fold; Indent
+]
+/* Comment (*/ myFunction(
+    // Fold; Indent
+)
+// No Fold; No Indent
+/* Comment }*/ function(){
+    // Fold; Indent
+}
+/* Comment ]*/ myArray = [
+    // Fold; Indent
+]
+/* Comment )*/ myFunction(
+    // Fold; Indent
+)
+// No Fold; No Indent
+
+
+/* Comment 
+}*/ function(){
+    // Fold; Indent
+}
+/* Comment 
+]*/ myArray = [
+    // Fold; Indent
+]
+/* Comment 
+)*/ myFunction(
+    // Fold; Indent
+)
+// No Fold; No Indent
+
+
+/* Comment 
+{*/ function(){}
+/* Comment 
+[*/ myArray = []
+/* Comment 
+(*/ myFunction()
+// No Fold; No Indent
+/* Comment 
+}*/ function(){}
+/* Comment 
+]*/ myArray = []
+/* Comment 
+)*/ myFunction()
+// No Fold; No Indent
+
+
+function(){/* } */
+    // Fold; Indent
+/*{*/}
+myArray = [/* ] */
+    // Fold; Indent
+/*[*/]
+myFunction(/* ) */
+    // Fold; Indent
+/*(*/)
+// No Fold; No Indent
+
+
+function(){/* }
+    */// Fold; Indent
+    /*{
+*/}
+myArray = [/* ]
+    */// Fold; Indent
+    /*[
+*/]
+myFunction(/* )
+    */// Fold; Indent
+    /*(
+*/)
+// No Fold; No Indent
+
 
 
 // ==============
@@ -473,6 +798,18 @@ switch ()
 // = Strings =
 // ===========
 
+// No Fold; No Indent
+myFunction(""
+    statement; // Fold; Indent
+"")
+// No Fold; No Indent
+myArray = ["",
+    statement; // Fold; Indent
+""]
+// No Fold; No Indent
+function(){""
+    statement; // Fold; Indent
+""}
 // No Fold; No Indent
 myFunction(")"
     statement; // Fold; Indent
@@ -700,6 +1037,17 @@ myFunction(/{  }/)
 myFunction(/{\/}/)
 
 
+{/
+// No Fold; No Indent
+}/
+{'
+// No Fold; No Indent
+}'
+{"
+// No Fold; No Indent
+}"
+
+
 // ============
 // = Comments =
 // ============
@@ -713,6 +1061,16 @@ myFunction(/{\/}/)
 // function(){
 //     No Fold; No Indent
 // }
+
+0 // myFunction(
+0 //     No Fold; No Indent
+0 // )
+0 // myArray = [
+0 //     No Fold; No Indent
+0 // ]
+0 // function(){
+0 //     No Fold; No Indent
+0 // }
 
 
 function(){
@@ -751,6 +1109,5 @@ function(){
 ']\'['
 ')\'('
 '}\'{'
-
 
 
