@@ -584,6 +584,120 @@ myFunction('   ) ')
 myFunction('\' ) ')
 myFunction(/  \) /)
 myFunction(/\/\) /)
+// No Fold; No Indent
+function(){"[  ]"}
+function(){"[\"]"}
+function(){'[  ]'}
+function(){'[\']'}
+function(){/[  ]/}
+function(){/[\/]/}
+function(){"(  )"}
+function(){"(\")"}
+function(){'(  )'}
+function(){'(\')'}
+function(){/(  )/}
+function(){/(\/)/}
+function(){"{  }"}
+function(){"{\"}"}
+function(){'{  }'}
+function(){'{\'}'}
+function(){/{  }/}
+function(){/{\/}/}
+// No Fold; No Indent
+myArray = ["[  ]"]
+myArray = ["[\"]"]
+myArray = ['[  ]']
+myArray = ['[\']']
+myArray = [/[  ]/]
+myArray = [/[\/]/]
+myArray = ["(  )"]
+myArray = ["(\")"]
+myArray = ['(  )']
+myArray = ['(\')']
+myArray = [/(  )/]
+myArray = [/(\/)/]
+myArray = ["{  }"]
+myArray = ["{\"}"]
+myArray = ['{  }']
+myArray = ['{\'}']
+myArray = [/{  }/]
+myArray = [/{\/}/]
+// No Fold; No Indent
+myFunction("[  ]")
+myFunction("[\"]")
+myFunction('[  ]')
+myFunction('[\']')
+myFunction(/[  ]/)
+myFunction(/[\/]/)
+myFunction("(  )")
+myFunction("(\")")
+myFunction('(  )')
+myFunction('(\')')
+myFunction(/(  )/)
+myFunction(/(\/)/)
+myFunction("{  }")
+myFunction("{\"}")
+myFunction('{  }')
+myFunction('{\'}')
+myFunction(/{  }/)
+myFunction(/{\/}/)
+// No Fold; No Indent
+function(){"[  "}
+function(){"[\""}
+function(){'[  '}
+function(){'[\''}
+function(){/[  /}
+function(){/[\//}
+function(){"(  "}
+function(){"(\""}
+function(){'(  '}
+function(){'(\''}
+function(){/(  /}
+function(){/(\//}
+function(){"{  "}
+function(){"{\""}
+function(){'{  '}
+function(){'{\''}
+function(){/{  /}
+function(){/{\//}
+// No Fold; No Indent
+myArray = ["[  ]"]
+myArray = ["[\"]"]
+myArray = ['[  ]']
+myArray = ['[\']']
+myArray = [/[  ]/]
+myArray = [/[\/]/]
+myArray = ["(  )"]
+myArray = ["(\")"]
+myArray = ['(  )']
+myArray = ['(\')']
+myArray = [/(  )/]
+myArray = [/(\/)/]
+myArray = ["{  }"]
+myArray = ["{\"}"]
+myArray = ['{  }']
+myArray = ['{\'}']
+myArray = [/{  }/]
+myArray = [/{\/}/]
+// No Fold; No Indent
+myFunction("[  ]")
+myFunction("[\"]")
+myFunction('[  ]')
+myFunction('[\']')
+myFunction(/[  ]/)
+myFunction(/[\/]/)
+myFunction("(  )")
+myFunction("(\")")
+myFunction('(  )')
+myFunction('(\')')
+myFunction(/(  )/)
+myFunction(/(\/)/)
+myFunction("{  }")
+myFunction("{\"}")
+myFunction('{  }')
+myFunction('{\'}')
+myFunction(/{  }/)
+myFunction(/{\/}/)
 
 
 // ============
@@ -617,4 +731,26 @@ function(){
 ()
 []
 {}
+
+
+
+// More Strings
+// ============
+"[\"]"
+"(\")"
+"{\"}"
+
+"]\"["
+")\"("
+"}\"{"
+
+'[\']'
+'(\')'
+'{\'}'
+
+']\'['
+')\'('
+'}\'{'
+
+
 
