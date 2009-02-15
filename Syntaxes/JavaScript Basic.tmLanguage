@@ -32,6 +32,14 @@
 	<array>
 		<dict>
 			<key>include</key>
+			<string>#comments</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#support</string>
+		</dict>
+		<dict>
+			<key>include</key>
 			<string>#core</string>
 		</dict>
 		<dict>
@@ -40,50 +48,12 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#support</string>
-		</dict>
-		<dict>
-			<key>include</key>
 			<string>#sugar</string>
 		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
-		<key>core</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>#core-comments</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#core-number</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#core-string</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#core-regex</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#core-function</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#core-keywords</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#core-punctuation</string>
-				</dict>
-			</array>
-		</dict>
-		<key>core-comments</key>
+		<key>comments</key>
 		<dict>
 			<key>patterns</key>
 			<array>
@@ -158,7 +128,72 @@
 				</dict>
 			</array>
 		</dict>
-		<key>core-function</key>
+		<key>core</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#literal-number</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal-string</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal-regex</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal-function-call</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal-function-constructor</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal-keywords</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal-labels</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal-variable</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal-punctuation</string>
+				</dict>
+			</array>
+		</dict>
+		<key>literal-function-call</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>(?=[_$a-zA-Z][_$\w]*\s*\()</string>
+					<key>end</key>
+					<string>(?=\()</string>
+					<key>name</key>
+					<string>meta.function-call.static.with-arguments.js</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>[_$a-zA-Z][_$\w]*</string>
+							<key>name</key>
+							<string>entity.name.function.js</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<key>literal-function-constructor</key>
 		<dict>
 			<key>patterns</key>
 			<array>
@@ -451,7 +486,7 @@
 				</dict>
 			</array>
 		</dict>
-		<key>core-keywords</key>
+		<key>literal-keywords</key>
 		<dict>
 			<key>patterns</key>
 			<array>
@@ -466,7 +501,7 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.type.instance.js</string>
+							<string>entity.name.type.class.js</string>
 						</dict>
 					</dict>
 					<key>match</key>
@@ -494,7 +529,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(delete|in|instanceof|new|typeof|with)\b</string>
+					<string>\b(delete|in(stanceof)?|new|typeof|void|with)\b</string>
 					<key>name</key>
 					<string>keyword.operator.js</string>
 				</dict>
@@ -518,25 +553,170 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(super|this)\b</string>
+					<string>\bundefined\b</string>
+					<key>name</key>
+					<string>constant.language.null.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\bNaN\b</string>
+					<key>name</key>
+					<string>constant.language.null.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?&lt;!\.)\b(super|this|arguments)\b</string>
 					<key>name</key>
 					<string>variable.language.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>!|%|&amp;|\*|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\*=|/=|%=|\+=|\-=|&amp;=|\^=|\b(in|instanceof|new|delete|typeof|void)\b</string>
+					<string>(?&lt;=\.)\b(prototype|constructor)\b</string>
+					<key>name</key>
+					<string>variable.language.js</string>
+				</dict>
+				<dict>
+					<key>disabled</key>
+					<integer>1</integer>
+					<key>match</key>
+					<string>!|%|&amp;|\*|\-\-|\-|\+\+|\+|~|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\*=|/=|%=|\+=|\-=|&amp;=|\^=</string>
 					<key>name</key>
 					<string>keyword.operator.js</string>
 				</dict>
 				<dict>
+					<key>disabled</key>
+					<integer>1</integer>
 					<key>match</key>
-					<string>\b(NaN|undefined)\b</string>
+					<string>:</string>
 					<key>name</key>
-					<string>constant.language.js</string>
+					<string>punctuation.separator.key-value</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?x)
+					!(?!=)| # logical-not     right-to-left   right
+					&amp;&amp;    | # logical-and     left-to-right   both
+					\|\|   # logical-or      left-to-right   both
+					</string>
+					<key>name</key>
+					<string>keyword.operator.logical.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?x)
+					~    | # bitwise-not     right-to-left   right
+					&lt;&lt;   | # bitwise-shift   left-to-right   both
+					&gt;&gt;&gt;  | # bitwise-shift   left-to-right   both
+					&gt;&gt;   | # bitwise-shift   left-to-right   both
+					&amp;    | # bitwise-and     left-to-right   both
+					\^   | # bitwise-xor     left-to-right   both
+					\|     # bitwise-or      left-to-right   both
+					</string>
+					<key>name</key>
+					<string>keyword.operator.bitwise.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?x)
+					&lt;    | # relational      left-to-right   both
+					&gt;    | # relational      left-to-right   both
+					&lt;=   | # relational      left-to-right   both
+					&gt;=     # relational      left-to-right   both
+					</string>
+					<key>name</key>
+					<string>keyword.operator.relational.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?x)
+					===  | # equality        left-to-right   both
+					!==  | # equality        left-to-right   both
+					 ==  | # equality        left-to-right   both
+					!=     # equality        left-to-right   both
+					</string>
+					<key>name</key>
+					<string>keyword.operator.comparison.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?x)
+					  %= | # assignment      right-to-left   both
+					  &amp;= | # assignment      right-to-left   both
+					 \*= | # assignment      right-to-left   both
+					 \+= | # assignment      right-to-left   both
+					  -= | # assignment      right-to-left   both
+					  /= | # assignment      right-to-left   both
+					 \^= | # assignment      right-to-left   both
+					 \|= | # assignment      right-to-left   both
+					 &lt;&lt;= | # assignment      right-to-left   both
+					 &gt;&gt;= | # assignment      right-to-left   both
+					&gt;&gt;&gt;=   # assignment      right-to-left   both
+					</string>
+					<key>name</key>
+					<string>keyword.operator.assignment.augmented.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?x)
+					=     # assignment      right-to-left   both
+					</string>
+					<key>name</key>
+					<string>keyword.operator.assignment.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?x)
+					--   | # decrement       n/a             right-or-left
+					\+\+ | # increment       n/a             right-or-left
+					/    | # division        left-to-right   both
+					%    | # modulus         left-to-right   both
+					\*   | # multiplication  left-to-right   both
+					\+   | # addition        left-to-right   both
+					-      # subtraction     left-to-right   both
+					</string>
+					<key>name</key>
+					<string>keyword.operator.arithmetic.js</string>
 				</dict>
 			</array>
 		</dict>
-		<key>core-number</key>
+		<key>literal-labels</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.separator.key-value.js</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(?&lt;=['"])(\s*)(:)</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>string.unquoted.label.js</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.separator.key-value.js</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(?&lt;!\?|\? |case )([_$a-zA-Z][_$\w]*)\s*(:)</string>
+					<key>name</key>
+					<string>constant.other.object.key.js</string>
+				</dict>
+			</array>
+		</dict>
+		<key>literal-number</key>
 		<dict>
 			<key>patterns</key>
 			<array>
@@ -571,7 +751,7 @@
 				</dict>
 			</array>
 		</dict>
-		<key>core-punctuation</key>
+		<key>literal-punctuation</key>
 		<dict>
 			<key>patterns</key>
 			<array>
@@ -619,7 +799,7 @@
 				</dict>
 			</array>
 		</dict>
-		<key>core-regex</key>
+		<key>literal-regex</key>
 		<dict>
 			<key>patterns</key>
 			<array>
@@ -644,7 +824,7 @@
 					<key>contentName</key>
 					<string>string.regexp.js</string>
 					<key>end</key>
-					<string>((/([igm]*)))|$</string>
+					<string>((/([igm]*)))|(?=&lt;/\s*script\s*&gt;\s*\n)|(?&lt;=[^\\]\n)</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>1</key>
@@ -667,6 +847,18 @@
 					<array>
 						<dict>
 							<key>match</key>
+							<string>\\\n</string>
+							<key>name</key>
+							<string>constant.character.escape.newline.js</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>\n</string>
+							<key>name</key>
+							<string>invalid.illegal.newline.js</string>
+						</dict>
+						<dict>
+							<key>match</key>
 							<string>\\.</string>
 							<key>name</key>
 							<string>constant.character.escape.js</string>
@@ -675,7 +867,7 @@
 				</dict>
 			</array>
 		</dict>
-		<key>core-string</key>
+		<key>literal-string</key>
 		<dict>
 			<key>patterns</key>
 			<array>
@@ -740,6 +932,57 @@
 							<string>#string-double-innards</string>
 						</dict>
 					</array>
+				</dict>
+			</array>
+		</dict>
+		<key>literal-variable</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>(?&lt;!\.)[_$a-zA-Z][_$\w]*\s*(?=[\[\.])</string>
+					<key>name</key>
+					<string>variable.other.object.js</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>meta.property-name.js</string>
+						</dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>variable.other.object.js</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>([_$a-zA-Z][_$\w]*)\s*(?=[\[\.])</string>
+					<key>name</key>
+					<string>meta.property.js</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>variable.other.property.js</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>(?&lt;=[\.\]])\s*[_$a-zA-Z][_$\w]*</string>
+					<key>name</key>
+					<string>meta.property.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>[_$a-zA-Z][_$\w]*</string>
+					<key>name</key>
+					<string>variable.other.readwrite.js</string>
 				</dict>
 			</array>
 		</dict>
@@ -984,7 +1227,7 @@
 								</dict>
 							</dict>
 							<key>match</key>
-							<string>(  )(  )?(  )?(  )?(  )?(  )?(  )?(  )?(  )?(  )?(  )?</string>
+							<string>(    )(    )?(    )?(    )?(    )?(    )?(    )?(    )?(    )?(    )?(    )?</string>
 						</dict>
 						<dict>
 							<key>captures</key>
@@ -1076,9 +1319,9 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?&lt;=\.)(s(ystemLanguage|cr(ipts|ollbars|een(X|Y|Top|Left))|t(yle(Sheets)?|atus(Text|bar)?)|ibling(Below|Above)|ource|uffixes|e(curity(Policy)?|l(ection|f)))|h(istory|ost(name)?|as(h|Focus))|y|X(MLDocument|SLDocument)|n(ext|ame(space(s|URI)|Prop))|M(IN_VALUE|AX_VALUE)|c(haracterSet|o(n(structor|trollers)|okieEnabled|lorDepth|mp(onents|lete))|urrent|puClass|l(i(p(boardData)?|entInformation)|osed|asses)|alle(e|r)|rypto)|t(o(olbar|p)|ext(Transform|Indent|Decoration|Align)|ags)|SQRT(1_2|2)|i(n(ner(Height|Width)|put)|ds|gnoreCase)|zIndex|o(scpu|n(readystatechange|Line)|uter(Height|Width)|p(sProfile|ener)|ffscreenBuffering)|NEGATIVE_INFINITY|d(i(splay|alog(Height|Top|Width|Left|Arguments)|rectories)|e(scription|fault(Status|Ch(ecked|arset)|View)))|u(ser(Profile|Language|Agent)|n(iqueID|defined)|pdateInterval)|_content|p(ixelDepth|ort|ersonalbar|kcs11|l(ugins|atform)|a(thname|dding(Right|Bottom|Top|Left)|rent(Window|Layer)?|ge(X(Offset)?|Y(Offset)?))|r(o(to(col|type)|duct(Sub)?|mpter)|e(vious|fix)))|e(n(coding|abledPlugin)|x(ternal|pando)|mbeds)|v(isibility|endor(Sub)?|Linkcolor)|URLUnencoded|P(I|OSITIVE_INFINITY)|f(ilename|o(nt(Size|Family|Weight)|rmName)|rame(s|Element)|gColor)|E|whiteSpace|l(i(stStyleType|n(eHeight|kColor))|o(ca(tion(bar)?|lName)|wsrc)|e(ngth|ft(Context)?)|a(st(M(odified|atch)|Index|Paren)|yer(s|X)|nguage))|a(pp(MinorVersion|Name|Co(deName|re)|Version)|vail(Height|Top|Width|Left)|ll|r(ity|guments)|Linkcolor|bove)|r(ight(Context)?|e(sponse(XML|Text)|adyState))|global|x|m(imeTypes|ultiline|enubar|argin(Right|Bottom|Top|Left))|L(N(10|2)|OG(10E|2E))|b(o(ttom|rder(RightWidth|BottomWidth|Style|Color|TopWidth|LeftWidth))|ufferDepth|elow|ackground(Color|Image)))\b</string>
+					<string>(?&lt;=\.)(s(ystemLanguage|cr(ipts|ollbars|een(X|Y|Top|Left))|t(yle(Sheets)?|atus(Text|bar)?)|ibling(Below|Above)|ource|uffixes|e(curity(Policy)?|l(ection|f)))|h(istory|ost(name)?|as(h|Focus))|y|n(ext|ame(space(s|URI)|Prop))|c(haracterSet|o(ntrollers|okieEnabled|lorDepth|mp(onents|lete))|urrent|puClass|l(i(p(boardData)?|entInformation)|osed|asses)|alle(e|r)|rypto)|X(MLDocument|SLDocument)|M(IN_VALUE|AX_VALUE)|t(o(olbar|p)|ext(Transform|Indent|Decoration|Align)|ags)|i(n(ner(Height|Width)|put)|ds|gnoreCase)|SQRT(1_2|2)|zIndex|o(scpu|n(readystatechange|Line)|uter(Height|Width)|p(sProfile|ener)|ffscreenBuffering)|d(i(splay|alog(Height|Top|Width|Left|Arguments)|rectories)|e(scription|fault(Status|Ch(ecked|arset)|View)))|NEGATIVE_INFINITY|u(ser(Profile|Language|Agent)|niqueID|pdateInterval)|_content|p(ixelDepth|ort|ersonalbar|kcs11|l(ugins|atform)|a(thname|dding(Right|Bottom|Top|Left)|rent(Window|Layer)?|ge(X(Offset)?|Y(Offset)?))|r(o(tocol|duct(Sub)?|mpter)|e(vious|fix)))|e(n(coding|abledPlugin)|x(ternal|pando)|mbeds)|v(isibility|endor(Sub)?|Linkcolor)|URLUnencoded|f(ilename|o(nt(Size|Family|Weight)|rmName)|rame(s|Element)|gColor)|P(I|OSITIVE_INFINITY)|E|whiteSpace|l(i(stStyleType|n(eHeight|kColor))|o(ca(tion(bar)?|lName)|wsrc)|e(ngth|ft(Context)?)|a(st(M(odified|atch)|Index|Paren)|yer(s|X)|nguage))|a(pp(MinorVersion|Name|Co(deName|re)|Version)|vail(Height|Top|Width|Left)|ll|rity|bove|Linkcolor)|r(ight(Context)?|e(sponse(XML|Text)|adyState))|global|x|m(imeTypes|ultiline|enubar|argin(Right|Bottom|Top|Left))|b(o(ttom|rder(RightWidth|BottomWidth|Style|Color|TopWidth|LeftWidth))|ufferDepth|elow|ackground(Color|Image))|L(N(10|2)|OG(10E|2E)))\b</string>
 					<key>name</key>
-					<string>support.constant.js</string>
+					<string>support.variable.property.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
