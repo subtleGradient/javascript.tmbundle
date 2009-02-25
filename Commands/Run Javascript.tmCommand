@@ -36,8 +36,11 @@ cat &lt;&lt;HTML
 	
 }catch(e){ console.log(e.message); }; })();
 &lt;/script&gt;
-&lt;pre id="log"&gt;
+&lt;input type="button" value="Show Code" onclick="var c=document.getElementById('code');c.style.display==''?c.style.display='none':c.style.display='';" /&gt;
+&lt;pre id="code" style="display:none"&gt;
 $YOURCODE
+&lt;/pre&gt;
+&lt;pre id="log"&gt;
 &lt;script&gt;
 try{throw {}}catch(e){ window.__line=(e.line||0) + 3 };
 try{
