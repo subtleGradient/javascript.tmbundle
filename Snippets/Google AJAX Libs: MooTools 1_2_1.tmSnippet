@@ -3,16 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>if (${1:true}) {${0:${TM_SELECTED_TEXT:}}}</string>
-	<key>keyEquivalent</key>
-	<string>^W</string>
+	<string>http://ajax.googleapis.com/ajax/libs/mootools/1.2.1/mootools.js</string>
 	<key>name</key>
-	<string>if</string>
-	<key>scope</key>
-	<string>source.js</string>
+	<string>Google AJAX Libs: MooTools 1.2.1</string>
 	<key>tabTrigger</key>
-	<string>if</string>
+	<string>moo</string>
 	<key>uuid</key>
-	<string>F19F3732-39A7-48EC-A72B-A8F477A01795</string>
+	<string>B914AE71-B1B3-48A1-A4AE-6E5F9425C3B6</string>
 </dict>
 </plist>
