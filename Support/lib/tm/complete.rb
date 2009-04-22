@@ -59,8 +59,9 @@ module TextMate
       if choice
         result = choices[choice]
       end
+      result = {'tool_tip' => 'No information'} unless result
       
-      TextMate::UI.tool_tip( result['tool_tip'], {:format => result['tool_tip_format'] || :text }) if result
+      TextMate::UI.tool_tip( result['tool_tip'], {:format => result['tool_tip_format'] || :text })
     end
     
     def choices
