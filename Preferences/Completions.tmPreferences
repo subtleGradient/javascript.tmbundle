@@ -10,6 +10,8 @@
 	<dict>
 		<key>completions</key>
 		<array>
+			<string>prototype</string>
+			<string>constructor</string>
 			<string>blur</string>
 			<string>change</string>
 			<string>click</string>
