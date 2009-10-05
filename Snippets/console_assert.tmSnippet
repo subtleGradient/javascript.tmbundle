@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>console.assert(${10:false}, '${100:Should $110}');$0</string>
+	<string>console.assert(${100:false}, '${10:Should $11}');$0</string>
 	<key>name</key>
 	<string>console.assert</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
-	<string>a</string>
+	<string>ass</string>
 	<key>uuid</key>
 	<string>19479745-D001-4EB3-8A66-6679C2273C58</string>
 </dict>
