@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>var ${1:element} = document.createElement('${10:div}');
+$0${100:$1.innerHTML = ${290:'${300:lorem}'};
+}${110:$1.appendChild(document.createTextNode(${355:${290:'${350:$300}'}}));
+}${200:document.body}.appendChild($1);</string>
+	<key>name</key>
+	<string>createNode…appendChild idiom</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>tabTrigger</key>
+	<string>el=</string>
+	<key>uuid</key>
+	<string>E39E4E5A-32FC-4BD5-91D8-6A8B6A5AEB2F</string>
+</dict>
+</plist>
