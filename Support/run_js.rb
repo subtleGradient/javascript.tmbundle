@@ -23,6 +23,7 @@ requirements = requirements.map do |requirement|
   
   requirement = 'http://ajax.googleapis.com/ajax/libs/mootools/1.2.1/mootools.js' if requirement == 'mootools'
   requirement = 'http://ajax.googleapis.com/ajax/libs/mootools/1.2.1/mootools.js' if requirement == 'mootools'
+  requirement = 'http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.js' if requirement == 'jquery'
   
   if requirement == 'jsspec'
     requirement = [
