@@ -636,10 +636,10 @@
 				<dict>
 					<key>match</key>
 					<string>(?x)
-					&lt;    | # relational      left-to-right   both
-					&gt;    | # relational      left-to-right   both
 					&lt;=   | # relational      left-to-right   both
-					&gt;=     # relational      left-to-right   both
+					&gt;=   | # relational      left-to-right   both
+					&lt;    | # relational      left-to-right   both
+					&gt;      # relational      left-to-right   both
 					</string>
 					<key>name</key>
 					<string>keyword.operator.relational.js</string>
