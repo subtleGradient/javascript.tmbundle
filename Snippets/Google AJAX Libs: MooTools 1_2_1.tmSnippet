@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>http://ajax.googleapis.com/ajax/libs/mootools/1.2.1/mootools.js</string>
+	<string>http://ajax.googleapis.com/ajax/libs/mootools/1.2.3/mootools.js</string>
 	<key>name</key>
 	<string>Google AJAX Libs: MooTools 1.2.1</string>
 	<key>tabTrigger</key>
