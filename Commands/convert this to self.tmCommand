@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+code = STDIN.read
+
+if code =~ /\bself\b/
+
+  code.gsub!(/(\s*var\s+)?self\s+=\s+this\s*;?\s*$\n?/,'')
+  code.gsub!(/\bself\b/,'this')
+
+else
+  code.gsub!(/\bthis\b/,'self')
+  indent = code.split("\n")[0].match(/^\s*/)[0]
+  code = "#{indent}var self = this;\n" &lt;&lt; code
+end
+
+print code
+</string>
+	<key>fallbackInput</key>
+	<string>line</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^@S</string>
+	<key>name</key>
+	<string>convert this to self</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>uuid</key>
+	<string>F035D69A-8987-459C-8425-090752784BC4</string>
+</dict>
+</plist>
