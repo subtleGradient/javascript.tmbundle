@@ -36,7 +36,7 @@ requirements = requirements.map do |requirement|
 end.flatten
 
 requirements.uniq.each do |requirement|
-  requirement = 'tm-file://' + File.dirname(ENV['TM_FILEPATH']) +'/'+ requirement if requirement =~ /^(?!\/|https?:|(tm-)?file:\/\/)/
+  requirement = 'tm-file://' + File.dirname(ENV['TM_FILEPATH']||ENV['HOME']) +'/'+ requirement if requirement =~ /^(?!\/|https?:|(tm-)?file:\/\/)/
   
   print %{<script src="#{requirement}" type="text/javascript" charset="utf-8"></script>\n} unless requirement =~ /\.css$/
   
