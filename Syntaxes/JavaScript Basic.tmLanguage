@@ -690,6 +690,12 @@
 			<key>patterns</key>
 			<array>
 				<dict>
+					<key>match</key>
+					<string>(?&lt;=break|continue)\s+([_$a-zA-Z][_$\w]*)</string>
+					<key>name</key>
+					<string>string.unquoted.label.js</string>
+				</dict>
+				<dict>
 					<key>captures</key>
 					<dict>
 						<key>2</key>
