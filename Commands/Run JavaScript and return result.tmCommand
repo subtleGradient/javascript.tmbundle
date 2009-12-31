@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+code = STDIN.read
+
+$YOURCODE = &lt;&lt;-JS
+
+window.onerror = function(){
+	for (var i=0, l=arguments.length; i &lt; l; i++) {
+		document.write(arguments[i]);
+	}
+};
+
+try {
+  document.write(
+    #{code.sub(/;\s*\Z/m,'')}
+  );
+} catch(e){
+  document.write(e.message);
+  try {
+    #{code.sub(/;\s*\Z/m,'')}
+  } catch(e){
+    document.write(e.message);
+  }
+}
+
+JS
+
+require ENV['TM_BUNDLE_SUPPORT'] + '/run_js'
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>~@r</string>
+	<key>name</key>
+	<string>Run JavaScript and show result</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>uuid</key>
+	<string>1A2A351C-50D9-4DF0-BDAB-7033C4CE1E9E</string>
+</dict>
+</plist>
