@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>console.assert(${100:false}, '${10:Should $11}');$0</string>
+	<string>console.assert(${1:false}, '${0:Should }');</string>
 	<key>name</key>
 	<string>console.assert</string>
 	<key>scope</key>
