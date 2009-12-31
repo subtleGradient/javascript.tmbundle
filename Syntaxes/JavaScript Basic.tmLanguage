@@ -58,6 +58,12 @@
 			<key>patterns</key>
 			<array>
 				<dict>
+					<key>match</key>
+					<string>/\*\*/</string>
+					<key>name</key>
+					<string>comment.block.js</string>
+				</dict>
+				<dict>
 					<key>include</key>
 					<string>#special-comments-conditional-compilation</string>
 				</dict>
