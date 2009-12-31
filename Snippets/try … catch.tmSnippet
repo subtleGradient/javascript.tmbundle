@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>try{${1:
+	<string>try {${1:
 ${TM_SELECTED_TEXT:	}$0
-}}catch(e){${0}}
+}} catch(e){${0}}
 </string>
 	<key>keyEquivalent</key>
 	<string>^W</string>
