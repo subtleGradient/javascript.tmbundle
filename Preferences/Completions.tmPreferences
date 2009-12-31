@@ -1436,7 +1436,7 @@
 				<key>name</key>
 				<string>TM_COMPLETIONS_FILES</string>
 				<key>value</key>
-				<string>"completions.json" "Array.instance.completions.json" "org.quirksmode.dom.w3c_core.completions.json" "org.quirksmode.dom.w3c_html.completions.json" "org.quirksmode.dom.w3c_css.completions.json" "org.quirksmode.dom.w3c_cssom.completions.json" "org.quirksmode.dom.w3c_events.completions.json" "org.quirksmode.dom.events.completions.json"</string>
+				<string>"completions.json" "Array.instance.completions.json" "org.quirksmode.dom.w3c_core.completions.json" "org.quirksmode.dom.w3c_html.completions.json" "org.quirksmode.dom.w3c_css.completions.json" "org.quirksmode.dom.w3c_cssom.completions.json" "org.quirksmode.dom.w3c_events.completions.json" "org.quirksmode.dom.events.completions.json"  "org.quirksmode.dom.w3c_traversal.completions.json"</string>
 			</dict>
 		</array>
 	</dict>
