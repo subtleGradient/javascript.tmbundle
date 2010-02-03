@@ -1,3 +1,14 @@
+**How to install from GitHub**
+
+0. Install the json ruby gem. `sudo gem install json`
+1. Click the "Download Source" button.
+2. Unzip the download
+3. Rename the folder to JavaScript.tmbundle
+4. Double-click
+5. TextMate handles the rest!
+
+---
+
 The Javascript Bundle
 =====================
 
