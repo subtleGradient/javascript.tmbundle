@@ -1,6 +1,19 @@
 The Javascript Bundle
 =====================
 
+How to install
+----
+
+0. Install TextMate (um… duh?)
+1. Download
+2. Unzip
+3. Rename the folder to `js.tmbundle`
+    * The name of the folder doesn't really matter, just so long as it has the `tmbundle` extension
+4. Double-Click
+5. Install the JSON Ruby Gem from your Terminal
+    * `sudo gem install json`
+6. Enjoy!
+
 Integrated Quirksmode.org Docs
 ------------------------------
 
