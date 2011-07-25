@@ -6,23 +6,25 @@
 	<string>nop</string>
 	<key>command</key>
 	<string>. "$TM_SUPPORT_PATH/lib/webpreview.sh"
-html_header "Javascript Bundle Help" "Javascript"
+html_header "Run JavaScript in HammerJS"
 
-"$TM_SUPPORT_PATH/lib/markdown_to_help.rb" "$TM_BUNDLE_SUPPORT/../README.md"
+require_cmd hammerjs
+
+hammerjs "$TM_FILEPATH"|pre
 
 html_footer
 </string>
-	<key>dontFollowNewOutput</key>
-	<true/>
 	<key>input</key>
-	<string>none</string>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>~@R</string>
 	<key>name</key>
-	<string>Help</string>
+	<string>Run Javascript in HammerJS</string>
 	<key>output</key>
 	<string>showAsHTML</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>uuid</key>
-	<string>EB00F356-06C8-4267-8226-AA8F3943E5B1</string>
+	<string>EE871DA2-04F2-4499-8323-AB9004221C94</string>
 </dict>
 </plist>

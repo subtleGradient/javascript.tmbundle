@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>console.assert(${0:false})</string>
+	<string>\n</string>
+	<key>keyEquivalent</key>
+	<string>~</string>
 	<key>name</key>
-	<string>console.assert</string>
+	<string>Escaped Newline</string>
 	<key>scope</key>
-	<string>source.js</string>
-	<key>tabTrigger</key>
-	<string>ass</string>
+	<string>source.js string.quoted</string>
 	<key>uuid</key>
-	<string>19479745-D001-4EB3-8A66-6679C2273C58</string>
+	<string>B7D324A1-E600-4014-8CDF-B73BA554921A</string>
 </dict>
 </plist>

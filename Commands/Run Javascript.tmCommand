@@ -5,8 +5,14 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/env ruby
-require ENV['TM_BUNDLE_SUPPORT'] + '/run_js'
+	<string>. "$TM_SUPPORT_PATH/lib/webpreview.sh"
+html_header "Run JavaScript in WebKit"
+
+require_cmd ruby
+
+ruby "$TM_BUNDLE_SUPPORT/run_js.rb"
+
+html_footer
 </string>
 	<key>input</key>
 	<string>selection</string>

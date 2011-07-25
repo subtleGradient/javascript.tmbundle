@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>foldingStartMarker</key>
-	<string>(?x)^
+	<string>//\s*&lt;[^/]|(?x)^
 			#   Yes *+      Open  (         Blank |Comments                                        | (No Paren | String) | String                                                        | (Nested Parens             )  )*+
 			(?&gt; \g&lt;yesS&gt;*+  \[    (?&lt;yesS&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noS&gt;[^\[\]'"/]) | (?&lt;str&gt; '(\\'|[^'])*+' | "(\\"|[^"])*+" | /(\\/|[^/])*+/) | (?&lt;squar&gt; \[ \g&lt;yesS&gt;*+ \] )  )*+
 			|   \g&lt;yesR&gt;*+  \(    (?&lt;yesR&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noR&gt;[^\(\)'"/]) | \g&lt;str&gt;                                                       | (?&lt;round&gt; \( \g&lt;yesR&gt;*+ \) )  )*+
 			|   \g&lt;yesC&gt;*+  \{    (?&lt;yesC&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noC&gt;[^\{\}'"/]) | \g&lt;str&gt;                                                       | (?&lt;curly&gt; \{ \g&lt;yesC&gt;*+ \} )  )*+
 		)$</string>
 	<key>foldingStopMarker</key>
-	<string>(?x)^
+	<string>//\s*&lt;/|(?x)^
 			#                     (         Blank |Comments                                        | (No Paren | String) | String                                                        | (Nested Parens             )  )*+  Close  Yes *+
 			(?&gt;                   (?&lt;yesS&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noS&gt;[^\[\]'"/]) | (?&lt;str&gt; '(\\'|[^'])*+' | "(\\"|[^"])*+" | /(\\/|[^/])*+/) | (?&lt;squar&gt; \[ \g&lt;yesS&gt;*+ \] )  )*+  \]     \g&lt;yesS&gt;*+
 			|                     (?&lt;yesR&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noR&gt;[^\(\)'"/]) | \g&lt;str&gt;                                                       | (?&lt;round&gt; \( \g&lt;yesR&gt;*+ \) )  )*+  \)     \g&lt;yesR&gt;*+
