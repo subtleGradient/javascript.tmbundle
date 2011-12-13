@@ -5,26 +5,21 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>. "$TM_SUPPORT_PATH/lib/webpreview.sh"
-html_header "Run JavaScript in Node.js"
-
-require_cmd node
-
-node "$TM_FILEPATH"|pre
-
-html_footer
-</string>
+	<string>echo -n "$TM_DROPPED_FILE"</string>
+	<key>draggedFileExtensions</key>
+	<array>
+		<string>js</string>
+		<string>json</string>
+	</array>
 	<key>input</key>
 	<string>selection</string>
-	<key>keyEquivalent</key>
-	<string>~@r</string>
 	<key>name</key>
-	<string>Run Javascript in Node.js</string>
+	<string>relative script path</string>
 	<key>output</key>
-	<string>showAsHTML</string>
+	<string>insertAsSnippet</string>
 	<key>scope</key>
-	<string>source.js</string>
+	<string>source.js string.quoted -punctuation.definition.string.begin</string>
 	<key>uuid</key>
-	<string>A2A911D2-4D18-47CF-8E2D-FCDAD3006A1A</string>
+	<string>BF6200B3-9E7A-442D-873D-73FBF34657F9</string>
 </dict>
 </plist>

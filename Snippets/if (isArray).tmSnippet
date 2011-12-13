@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>console.log($0)</string>
+	<string>if ($1Array.isArray(${2:array}))$0</string>
 	<key>name</key>
-	<string>console.log</string>
+	<string>if (isArray)</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
-	<string>l</string>
+	<string>ifa</string>
 	<key>uuid</key>
-	<string>78F5005B-82AE-4BF0-9E1B-407E32FF796B</string>
+	<string>D99FC647-570A-48E2-B6FB-147D432346BB</string>
 </dict>
 </plist>

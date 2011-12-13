@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>document.</string>
+	<string>document</string>
 	<key>name</key>
-	<string>document.</string>
+	<string>document</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>

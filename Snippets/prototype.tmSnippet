@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>console.log($0)</string>
+	<string>.prototype</string>
 	<key>name</key>
-	<string>console.log</string>
+	<string>prototype</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
-	<string>l</string>
+	<string>.p</string>
 	<key>uuid</key>
-	<string>78F5005B-82AE-4BF0-9E1B-407E32FF796B</string>
+	<string>FB90E487-9B42-4512-9036-01CD3CD8B04B</string>
 </dict>
 </plist>

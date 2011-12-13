@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>for (var ${20:i}=0, ${2:node}; ${2:node} = ${1:Nodes}[${20:i}++];) {
+	<string>for (var ${20:i}=-1, ${2:node}; ${2:node} = ${1:Nodes}[++${20:i}];) {
 	${0:${2:node}}
 }</string>
 	<key>name</key>

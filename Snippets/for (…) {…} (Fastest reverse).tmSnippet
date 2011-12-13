@@ -3,14 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.prototype</string>
+	<string>for (var ${20:i} = ${1:${2:Things}.length}; --$20 &gt;= 0;){
+	${0:$2[$20]}
+}</string>
 	<key>name</key>
-	<string>.prototype</string>
+	<string>for (…) {…} (Fastest reverse)</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
-	<string>.p</string>
+	<string>for</string>
 	<key>uuid</key>
-	<string>E4733110-CFEF-48BB-B3AB-A96BD8B0156A</string>
+	<string>814C024D-3431-48B5-8B34-4BDC29DCB277</string>
 </dict>
 </plist>

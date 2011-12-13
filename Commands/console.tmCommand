@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+require ENV['TM_BUNDLE_SUPPORT'] + '/lib/tm/complete'
+
+ENV['TM_COMPLETIONS_FILE'] = nil
+ENV['TM_COMPLETIONS_FILES'] = nil
+
+ENV['TM_COMPLETIONS_SPLIT'] = 'json'
+ENV['TM_COMPLETIONS'] = '{
+    "suggestions":[
+        { "display":             "console.log(message)"                ,"match": "log"             ,"insert": "($0)"},
+        { "display":           "console.debug(message)"                ,"match": "debug"           ,"insert": "($0)"},
+        { "display":            "console.info(message)"                ,"match": "info"            ,"insert": "($0)"},
+        { "display":            "console.warn(message)"                ,"match": "warn"            ,"insert": "($0)"},
+        { "display":           "console.error(message)"                ,"match": "error"           ,"insert": "($0)"},
+        { "display":             "console.dir(object)"                 ,"match": "dir"             ,"insert": "($0)"},
+        { "display":          "console.dirxml(node)"                   ,"match": "dirxml"          ,"insert": "($0)"},
+        { "display":           "console.group(message)"                ,"match": "group"           ,"insert": "($0)"},
+        { "display":  "console.groupCollapsed(message)"                ,"match": "groupCollapsed"  ,"insert": "($0)"},
+        { "display":        "console.groupEnd()"                       ,"match": "groupEnd"        ,"insert": "($0)"},
+        { "display":         "console.profile(title)"                  ,"match": "profile"         ,"insert": "($0)"},
+        { "display":      "console.profileEnd(title)"                  ,"match": "profileEnd"      ,"insert": "($0)"},
+        { "display":           "console.count(title)"                  ,"match": "count"           ,"insert": "($0)"},
+        { "display":    "console.markTimeline(string)"                 ,"match": "markTimeline"    ,"insert": "($0)"},
+        { "display":            "console.time(name)"                   ,"match": "time"            ,"insert": "($0)"},
+        { "display":         "console.timeEnd(name)"                   ,"match": "timeEnd"         ,"insert": "($0)"},
+        { "display":           "console.trace()"                       ,"match": "trace"           ,"insert": "($0)"},
+        { "display":          "console.assert(expression, message)"    ,"match": "assert"          ,"insert": "(true, ${0:message})"}
+	]
+}'
+
+print 'console.'
+
+TextMate::Complete.new.complete!
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>console</string>
+	<key>output</key>
+	<string>afterSelectedText</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>tabTrigger</key>
+	<string>console.</string>
+	<key>uuid</key>
+	<string>EC7B0B43-3ABA-4074-8BFC-366469F8F07D</string>
+</dict>
+</plist>

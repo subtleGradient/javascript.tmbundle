@@ -5,26 +5,21 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>. "$TM_SUPPORT_PATH/lib/webpreview.sh"
-html_header "Run JavaScript in HammerJS"
-
-require_cmd hammerjs
-
-hammerjs "$TM_FILEPATH"|pre
-
-html_footer
-</string>
+	<string>echo "'$TM_DROPPED_FILE'"</string>
+	<key>draggedFileExtensions</key>
+	<array>
+		<string>js</string>
+		<string>json</string>
+	</array>
 	<key>input</key>
 	<string>selection</string>
-	<key>keyEquivalent</key>
-	<string>~@R</string>
 	<key>name</key>
-	<string>Run Javascript in HammerJS</string>
+	<string>relative script path string</string>
 	<key>output</key>
-	<string>showAsHTML</string>
+	<string>insertAsSnippet</string>
 	<key>scope</key>
-	<string>source.js</string>
+	<string>source.js -string</string>
 	<key>uuid</key>
-	<string>EE871DA2-04F2-4499-8323-AB9004221C94</string>
+	<string>5AE2BB5C-AF4F-4529-8FAE-5E0FCEE69872</string>
 </dict>
 </plist>

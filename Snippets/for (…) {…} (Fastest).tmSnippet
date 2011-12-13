@@ -3,14 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>console.log($0)</string>
+	<string>for (var ${20:i} = -1, ${30:ln} = ${1:${2:Things}.length}; ++$20 &lt; $30;) {
+	${0:$2[$20]}
+}</string>
 	<key>name</key>
-	<string>console.log</string>
+	<string>for (…) {…} (Fastest)</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>
-	<string>l</string>
+	<string>for</string>
 	<key>uuid</key>
-	<string>78F5005B-82AE-4BF0-9E1B-407E32FF796B</string>
+	<string>6DC06A4E-E151-467F-9CF7-FA61DD540D6E</string>
 </dict>
 </plist>

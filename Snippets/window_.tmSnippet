@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>window.</string>
+	<string>window</string>
 	<key>name</key>
-	<string>window.</string>
+	<string>window</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>tabTrigger</key>

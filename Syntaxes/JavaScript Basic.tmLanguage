@@ -1306,6 +1306,12 @@
 					<string>support.class.js</string>
 				</dict>
 				<dict>
+					<key>match</key>
+					<string>\b(R(e(ferenceError|gExp)|ange(E(rror|xception))?)|X(ML(Serializer|HttpRequest(Upload|Exception)?|Document)|SLTProcessor|Path(Result|E(valuator|xception)))|M(imeTypeArray|ouseEvent|utationEvent|e(ssage(Port|Event)|dia(Error|List)))|B(oolean|eforeLoadEvent)|S(yntaxError|t(yleSheetList|orage(Event)?|ring)|VG(Re(nderingIntent|ctElement)|G(Element|radientElement)|Ma(skElement|trix|rkerElement)|S(ymbolElement|t(opElement|ringList)|witchElement|VGElement)|NumberList|C(ircleElement|olor|ursorElement|lipPathElement)|T(itleElement|ext(ContentElement|PathElement|Element)|ransform(List)?)|ImageElement|D(ocument|e(scElement|fsElement))|U(seElement|nitTypes)|P(o(int(List)?|ly(lineElement|gonElement))|a(t(h(Seg(List)?|Element)|ternElement)|int)|reserveAspectRatio)|E(l(ementInstance(List)?|lipseElement)|xception)|ViewElement|ForeignObjectElement|L(ineElement|ength(List)?)|A(ngle|Element))|QLException)|H(TML(M(ediaElement|arqueeElement)|ButtonElement|SelectElement|C(ollection|anvasElement)|T(extAreaElement|able(RowElement|SectionElement|Element))|I(nputElement|FrameElement)|O(utputElement|bjectElement)|Document|E(lement|mbedElement)|VideoElement|KeygenElement|F(ieldSetElement|ormElement|rameElement)|A(nchorElement|llCollection))|ashChangeEvent)|N(ode(Filter|List)?|umber|amedNodeMap)|C(haracterData|SS(Rule(List)?|MediaRule|Style(Sheet|Declaration)|PrimitiveValue|Value(List)?)|l(i(pboard|entRectList)|oseEvent)|anvas(RenderingContext2D|Gradient))|T(ypeError|imeRanges|ext(Event)?)|Int(16Array|8Array|32Array)|O(verflowEvent|bject)|D(ocument(Fragment)?|OM(StringList|TokenList|Implementation|Parser|Exception)|at(e|aView))|U(RIError|int(16Array|8Array|32Array)|IEvent)|P(lugin(Array)?|ageTransitionEvent|rogressEvent)|E(v(ent(Source|Exception)?|alError)|lement|rror)|KeyboardEvent|F(ileList|ormData|unction|loat32Array)|W(heelEvent|orker|eb(GLRenderingContext|Socket|Kit(CSS(Matrix|TransformValue|KeyframesRule)|TransitionEvent|AnimationEvent)))|Array)\b</string>
+					<key>name</key>
+					<string>support.class.js</string>
+				</dict>
+				<dict>
 					<key>captures</key>
 					<dict>
 						<key>0</key>
@@ -1362,6 +1368,12 @@
 					<string>\bon(R(ow(s(inserted|delete)|e(nter|xit))|e(s(ize(start|end)?|et)|adystatechange))|Mouse(o(ut|ver)|down|up|move)|B(efore(cut|deactivate|u(nload|pdate)|p(aste|rint)|editfocus|activate)|lur)|S(croll|top|ubmit|elect(start|ionchange)?)|H(over|elp)|C(hange|ont(extmenu|rolselect)|ut|ellchange|l(ick|ose))|D(eactivate|ata(setc(hanged|omplete)|available)|r(op|ag(start|over|drop|en(ter|d)|leave)?)|blclick)|Unload|P(aste|ropertychange)|Error(update)?|Key(down|up|press)|Focus|Load|A(ctivate|fter(update|print)|bort))\b</string>
 					<key>name</key>
 					<string>support.function.event-handler.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b(s(hift|trike|o(rt|me)|u(p|b(str(ing)?)?)|pli(ce|t)|e(t(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Year|Time|Date|UTC(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Date|FullYear)|FullYear)|a(l|rch))|lice|mall)|hasOwnProperty|now|c(har(CodeAt|At)|o(n(structor|cat)|mpile)|all|reate)|t(o(GMTString|String|TimeString|ISOString|DateString|U(TCString|pperCase)|JSON|Precision|Exponential|Fixed|Lo(cale(String|TimeString|DateString|UpperCase|LowerCase)|werCase))|est|rim(Right|Left)?)|i(s(Sealed|PrototypeOf|Extensible|Frozen|Array)|ndexOf|talics)|definePropert(y|ies)|unshift|join|__(define(Getter__|Setter__)|lookup(Getter__|Setter__))|p(op|ush|arse|r(o(totype|pertyIsEnumerable)|eventExtensions))|e(very|xec)|valueOf|keys|f(i(lter|xed)|o(nt(size|color)|rEach)|r(omCharCode|eeze))|l(ink|ocaleCompare|astIndexOf)|a(nchor|pply)|re(duce(Right)?|place|verse)|get(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Year|Time(zoneOffset)?|OwnProperty(Names|Descriptor)|Da(y|te)|UTC(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Da(y|te)|FullYear)|PrototypeOf|FullYear)|ma(tch|p)|b(ig|old|link))\b</string>
+					<key>name</key>
+					<string>support.function.js</string>
 				</dict>
 			</array>
 		</dict>
