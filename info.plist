@@ -137,7 +137,7 @@
 		</dict>
 	</dict>
 	<key>name</key>
-	<string>JavaScript</string>
+	<string>JavaScript (SubtleGradient Fork)</string>
 	<key>ordering</key>
 	<array>
 		<string>EB00F356-06C8-4267-8226-AA8F3943E5B1</string>
@@ -216,6 +216,6 @@
 		<string>5AE2BB5C-AF4F-4529-8FAE-5E0FCEE69872</string>
 	</array>
 	<key>uuid</key>
-	<string>AAB4FD74-73F9-11D9-B89A-000D93589AF6</string>
+	<string>5B49710E-9A49-4BE0-BD45-6A9CB683C191</string>
 </dict>
 </plist>
