@@ -7,7 +7,7 @@
 	<key>contactName</key>
 	<string>Thomas Aylott</string>
 	<key>description</key>
-	<string>Support for &lt;a href=&quot;http://developer.mozilla.org/en/docs/About_JavaScript&quot;&gt;JavaScript&lt;/a&gt;.</string>
+	<string>Support for &lt;a href="http://developer.mozilla.org/en/docs/About_JavaScript"&gt;JavaScript&lt;/a&gt;.</string>
 	<key>mainMenu</key>
 	<dict>
 		<key>items</key>
@@ -137,7 +137,7 @@
 		</dict>
 	</dict>
 	<key>name</key>
-	<string>JavaScript (SubtleGradient Fork)</string>
+	<string>JavaScript — SubtleGradient</string>
 	<key>ordering</key>
 	<array>
 		<string>EB00F356-06C8-4267-8226-AA8F3943E5B1</string>
