@@ -32,19 +32,7 @@
 	<array>
 		<dict>
 			<key>include</key>
-			<string>#comments</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#support</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#core</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#special</string>
+			<string>#everything</string>
 		</dict>
 	</array>
 	<key>repository</key>
@@ -130,6 +118,10 @@
 			<array>
 				<dict>
 					<key>include</key>
+					<string>#literal-function-constructor</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#literal-number</string>
 				</dict>
 				<dict>
@@ -150,10 +142,6 @@
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#literal-function-constructor</string>
-				</dict>
-				<dict>
-					<key>include</key>
 					<string>#literal-labels</string>
 				</dict>
 				<dict>
@@ -166,13 +154,975 @@
 				</dict>
 			</array>
 		</dict>
+		<key>es5-block</key>
+		<dict>
+			<key>begin</key>
+			<string>{</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.group.begin.es</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>12.1 Block http://es5.github.com/#x12.1</string>
+			<key>contentName</key>
+			<string>meta.block.es</string>
+			<key>end</key>
+			<string>}</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.section.group.end.es</string>
+				</dict>
+			</dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#everything</string>
+				</dict>
+			</array>
+		</dict>
+		<key>es5-comments</key>
+		<dict>
+			<key>comment</key>
+			<string>7.4 Comments http://es5.github.com/#x7.4</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>/\*</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.begin.es.ecmascript</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>\*/</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.end.es.ecmascript</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>comment.block.es.ecmascript</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>//</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.es.ecmascript</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>$</string>
+					<key>name</key>
+					<string>comment.line.double-slash.es.ecmascript</string>
+				</dict>
+			</array>
+		</dict>
+		<key>es5-expression-left-hand-side</key>
+		<dict>
+			<key>comment</key>
+			<string>11.2 Left-Hand-Side Expressions http://es5.github.com/#x11.2</string>
+		</dict>
+		<key>es5-expression-primary</key>
+		<dict>
+			<key>comment</key>
+			<string>11.1 Primary Expressions http://es5.github.com/#x11.1</string>
+		</dict>
+		<key>es5-expression-statement</key>
+		<dict>
+			<key>comment</key>
+			<string>12.4 Expression Statement http://es5.github.com/#x12.4</string>
+		</dict>
+		<key>es5-function-definition</key>
+		<dict>
+			<key>begin</key>
+			<string>\b(function)\b(?:\s+\b(?i)([_$a-z][_$a-z0-9]*)\b)?</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.def.es</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.$1.es</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>13 Function Definition http://es5.github.com/#x13</string>
+			<key>end</key>
+			<string>(?&lt;=})</string>
+			<key>name</key>
+			<string>meta.$1.${2:-unnamed}</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>\G</string>
+					<key>end</key>
+					<string>(?&lt;=\))</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>begin</key>
+							<string>\G(?!\()</string>
+							<key>comment</key>
+							<string>function name</string>
+							<key>end</key>
+							<string>(?=\()</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>#comments</string>
+								</dict>
+								<dict>
+									<key>match</key>
+									<string>\b(?i)[_$a-z][_$a-z0-9]*\b</string>
+									<key>name</key>
+									<string>entity.name.function.$1.es</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>\(</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.parameters.begin.function.es</string>
+								</dict>
+							</dict>
+							<key>comment</key>
+							<string>function parameters</string>
+							<key>contentName</key>
+							<string>meta.function.parameters</string>
+							<key>end</key>
+							<string>\)</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.parameters.end.function.es</string>
+								</dict>
+							</dict>
+							<key>name</key>
+							<string>meta.function.parameters</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>#comments</string>
+								</dict>
+								<dict>
+									<key>match</key>
+									<string>\b(?i)[_$a-z][_$a-z0-9]*\b</string>
+									<key>name</key>
+									<string>variable.parameter.function.es</string>
+								</dict>
+								<dict>
+									<key>match</key>
+									<string>,</string>
+									<key>name</key>
+									<string>punctuation.separator.parameters.function.es</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#comments</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>{</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.function.begin.es</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>function body</string>
+					<key>contentName</key>
+					<string>meta.function.body</string>
+					<key>end</key>
+					<string>}</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.function.end.es</string>
+						</dict>
+					</dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#everything</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<key>es5-identifiers</key>
+		<dict>
+			<key>comment</key>
+			<string>7.6 Identifier Names and Identifiers http://es5.github.com/#x7.6</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#identifiers-keywords</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#identifiers-future-reserved-words</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#identifiers-future-reserved-words-strict</string>
+				</dict>
+			</array>
+		</dict>
+		<key>es5-identifiers-future-reserved-words</key>
+		<dict>
+			<key>comment</key>
+			<string>7.6.1.2a Future Reserved Words http://es5.github.com/#x7.6.1.2</string>
+			<key>match</key>
+			<string>\b(super|c(onst|lass)|import|e(num|x(tends|port)))\b</string>
+			<key>name</key>
+			<string>invalid.illegal.reserved.keyword.$1.es.ecmascript</string>
+		</dict>
+		<key>es5-identifiers-future-reserved-words-strict</key>
+		<dict>
+			<key>comment</key>
+			<string>7.6.1.2b Future Reserved Words http://es5.github.com/#x7.6.1.2</string>
+			<key>match</key>
+			<string>\b(static|yield|i(nterface|mplements)|p(ublic|ackage|r(ivate|otected))|let)\b</string>
+			<key>name</key>
+			<string>invalid.illegal.reserved.keyword.$1.es.ecmascript.strict</string>
+		</dict>
+		<key>es5-identifiers-keywords</key>
+		<dict>
+			<key>comment</key>
+			<string>7.6.1.1 Keywords http://es5.github.com/#x7.6.1.1</string>
+			<key>match</key>
+			<string>\b(switch|new|c(ontinue|a(se|tch))|t(h(is|row)|ypeof|ry)|i(n(stanceof)?|f)|d(o|e(fault|lete|bugger))|else|v(oid|ar)|f(inally|or|unction)|w(hile|ith)|return|break)\b</string>
+			<key>name</key>
+			<string>keyword.other.$1.es.ecmascript</string>
+		</dict>
+		<key>es5-initialiser-array</key>
+		<dict>
+			<key>comment</key>
+			<string>11.1.4 Array Initialiser http://es5.github.com/#x11.1.4</string>
+		</dict>
+		<key>es5-initialiser-object</key>
+		<dict>
+			<key>comment</key>
+			<string>11.1.5 Object Initialiser http://es5.github.com/#x11.1.5</string>
+		</dict>
+		<key>es5-line-terminators</key>
+		<dict>
+			<key>comment</key>
+			<string>7.3 Line Terminators http://es5.github.com/#x7.3</string>
+		</dict>
+		<key>es5-literal-numeric</key>
+		<dict>
+			<key>comment</key>
+			<string>7.8.3 Numeric Literals http://es5.github.com/#x7.8.3</string>
+		</dict>
+		<key>es5-literal-string</key>
+		<dict>
+			<key>comment</key>
+			<string>7.8.4 String Literals http://es5.github.com/#x7.8.4</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>"</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.string.begin.es</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>"|(\n)</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.string.end.es</string>
+						</dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>invalid.illegal.character.newline.es</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>string.quoted.double.es</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#string-escape</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>'</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.string.begin.es</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>'|(\n)</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.string.begin.es</string>
+						</dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>invalid.illegal.character.newline.es</string>
+						</dict>
+					</dict>
+					<key>name</key>
+					<string>string.quoted.single.es</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#string-escape</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>repository</key>
+			<dict>
+				<key>string-escape</key>
+				<dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>(?i)\\u[0-9A-F]{4}</string>
+							<key>name</key>
+							<string>constant.character.escape.unicode.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>(?i)\\x[0-9A-F]{2}</string>
+							<key>name</key>
+							<string>constant.character.escape.hex.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>\\"</string>
+							<key>name</key>
+							<string>constant.character.escape.quote.double.newline.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>\\'</string>
+							<key>name</key>
+							<string>constant.character.escape.quote.single.newline.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>(?i)\\\n</string>
+							<key>name</key>
+							<string>punctuation.separator.continuation.string.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>(?i)\\['"\\bfnrtv]</string>
+							<key>name</key>
+							<string>constant.character.escape.es</string>
+						</dict>
+						<dict>
+							<key>captures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>invalid.deprecated.unnecessary.escape.es</string>
+								</dict>
+							</dict>
+							<key>match</key>
+							<string>\\.</string>
+							<key>name</key>
+							<string>constant.character.escape.es</string>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+		</dict>
+		<key>es5-literals</key>
+		<dict>
+			<key>comment</key>
+			<string>7.8 Literals http://es5.github.com/#x7.8</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>comment</key>
+					<string>7.8.1 Null Literals http://es5.github.com/#x7.8.1</string>
+					<key>match</key>
+					<string>\bnull\b</string>
+					<key>name</key>
+					<string>constant.language.null.es</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>7.8.2 Boolean Literals http://es5.github.com/#x7.8.2</string>
+					<key>match</key>
+					<string>\b(true|false)\b</string>
+					<key>name</key>
+					<string>constant.language.boolean.$1.es</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal-numeric</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#literal-string</string>
+				</dict>
+			</array>
+		</dict>
+		<key>es5-operator</key>
+		<dict>
+			<key>comment</key>
+			<string>11 Operators http://es5.github.com/#x11</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>comment</key>
+					<string>10.6 Arguments Object http://es5.github.com/#x10.6</string>
+					<key>match</key>
+					<string>\barguments\b</string>
+					<key>name</key>
+					<string>variable.language.arguments.es</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>11.1.1 The this Keyword http://es5.github.com/#x11.1.1</string>
+					<key>match</key>
+					<string>\bthis\b</string>
+					<key>name</key>
+					<string>variable.language.this.es</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>11.2.2 The new Operator http://es5.github.com/#x11.2.2</string>
+					<key>match</key>
+					<string>\bnew\b</string>
+					<key>name</key>
+					<string>keyword.operator.new.es</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.assignment.arithmetic.postfix.es</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>11.3 Postfix Expressions http://es5.github.com/#x11.3</string>
+					<key>match</key>
+					<string>\b\s*(\+\+|--)</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>11.9 Equality Operators http://es5.github.com/#x11.9</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>!==|!=|===|==</string>
+							<key>name</key>
+							<string>keyword.operator.equality.es</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>11.13 Assignment Operators http://es5.github.com/#x11.13</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>[-+*/%]=</string>
+							<key>name</key>
+							<string>keyword.operator.assignment.arithmetic.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>(&gt;&gt;&gt;|&gt;&gt;|&lt;&lt;|[&amp;^|])=</string>
+							<key>name</key>
+							<string>keyword.operator.assignment.bitwise.es</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>11.4 Unary Operators http://es5.github.com/#x11.4</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>\b(delete|void|typeof)\b</string>
+							<key>name</key>
+							<string>keyword.operator.$1.unary.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>(\+\+|--)</string>
+							<key>name</key>
+							<string>keyword.operator.assignment.arithmetic.prefix.unary.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>[-+~](?!\s)</string>
+							<key>name</key>
+							<string>keyword.operator.unary.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>!</string>
+							<key>name</key>
+							<string>keyword.operator.logical.not.unary.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>~</string>
+							<key>name</key>
+							<string>keyword.operator.bitwise.not.unary.es</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>11.5 Multiplicative Operators http://es5.github.com/#x11.5</string>
+					<key>match</key>
+					<string>[*/%]</string>
+					<key>name</key>
+					<string>keyword.operator.arithmetic.multiplicative.es</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>11.6 Additive Operators http://es5.github.com/#x11.6</string>
+					<key>match</key>
+					<string>[-+]</string>
+					<key>name</key>
+					<string>keyword.operator.arithmetic.additive.es</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>11.7 Bitwise Shift Operators http://es5.github.com/#x11.7</string>
+					<key>match</key>
+					<string>&gt;&gt;&gt;|&gt;&gt;|&lt;&lt;</string>
+					<key>name</key>
+					<string>keyword.operator.bitwise.shift.es</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>11.10 Binary Bitwise Operators http://es5.github.com/#x11.10</string>
+					<key>match</key>
+					<string>[&amp;^|]</string>
+					<key>name</key>
+					<string>keyword.operator.bitwise.binary.es</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>11.11 Binary Logical Operators http://es5.github.com/#x11.11</string>
+					<key>match</key>
+					<string></string>
+					<key>name</key>
+					<string>keyword.operator.logical.binary.es</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>11.12 Conditional Operator http://es5.github.com/#x11.12</string>
+					<key>match</key>
+					<string></string>
+					<key>name</key>
+					<string>keyword.operator.conditional.es</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>11.8 Relational Operators http://es5.github.com/#x11.8</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>\b(instanceof|in)\b</string>
+							<key>name</key>
+							<string>keyword.operator.comparison.$1.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>&gt;=|&lt;=|&gt;|&lt;</string>
+							<key>name</key>
+							<string>keyword.operator.comparison.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>=&gt;|=&lt;</string>
+							<key>name</key>
+							<string>invalid.illegal.operator.comparison.es</string>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>11.13 Assignment Operators http://es5.github.com/#x11.13</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>=</string>
+							<key>name</key>
+							<string>keyword.operator.assignment.simple.es</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<key>es5-program</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#es5-function-definition</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#es5-comments</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#es5-operator</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#es5-identifiers</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#es5-literals</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#es5-block</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>Not sure where else to put this, yet</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>match</key>
+							<string>;</string>
+							<key>name</key>
+							<string>punctuation.terminator.statement.es</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<key>es5-punctuators</key>
+		<dict>
+			<key>comment</key>
+			<string>7.7 Punctuators http://es5.github.com/#x7.7</string>
+		</dict>
+		<key>es5-statement</key>
+		<dict>
+			<key>comment</key>
+			<string>12 Statements http://es5.github.com/#x12</string>
+		</dict>
+		<key>es5-statement-break</key>
+		<dict>
+			<key>comment</key>
+			<string>12.8 The Break Statement http://es5.github.com/#x12.8</string>
+		</dict>
+		<key>es5-statement-continue</key>
+		<dict>
+			<key>comment</key>
+			<string>12.7 The Continue Statement http://es5.github.com/#x12.7</string>
+		</dict>
+		<key>es5-statement-debugger</key>
+		<dict>
+			<key>comment</key>
+			<string>12.15 The Debugger Statement http://es5.github.com/#x12.15</string>
+		</dict>
+		<key>es5-statement-empty</key>
+		<dict>
+			<key>comment</key>
+			<string>12.3 Empty Statement http://es5.github.com/#x12.3</string>
+		</dict>
+		<key>es5-statement-if</key>
+		<dict>
+			<key>comment</key>
+			<string>12.5 If Statement http://es5.github.com/#x12.5</string>
+		</dict>
+		<key>es5-statement-iteration</key>
+		<dict>
+			<key>comment</key>
+			<string>12.6 Iteration Statements http://es5.github.com/#x12.6</string>
+		</dict>
+		<key>es5-statement-labelled</key>
+		<dict>
+			<key>comment</key>
+			<string>12.12 Labelled Statements http://es5.github.com/#x12.12</string>
+		</dict>
+		<key>es5-statement-return</key>
+		<dict>
+			<key>comment</key>
+			<string>12.9 The Return Statement http://es5.github.com/#x12.9</string>
+		</dict>
+		<key>es5-statement-throw</key>
+		<dict>
+			<key>comment</key>
+			<string>12.13 The Throw Statement http://es5.github.com/#x12.13</string>
+		</dict>
+		<key>es5-statement-try</key>
+		<dict>
+			<key>comment</key>
+			<string>12.14 The try Statement http://es5.github.com/#x12.14</string>
+		</dict>
+		<key>es5-statement-variable</key>
+		<dict>
+			<key>comment</key>
+			<string>12.2 Variable Statement http://es5.github.com/#x12.2</string>
+		</dict>
+		<key>es5-statement-with</key>
+		<dict>
+			<key>comment</key>
+			<string>12.10 The With Statement http://es5.github.com/#x12.10</string>
+		</dict>
+		<key>es5-white-space</key>
+		<dict>
+			<key>comment</key>
+			<string>7.2 White Space http://es5.github.com/#x7.2</string>
+		</dict>
+		<key>everything</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#comments</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#es5-program</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#support</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#core</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#special</string>
+				</dict>
+			</array>
+		</dict>
+		<key>function-definition</key>
+		<dict>
+			<key>begin</key>
+			<string>\b(function)\b(?:\s+\b(?i)([_$a-z][_$a-z0-9]*)\b)?</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.def.js</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.$1.js</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>13 Function Definition http://es5.github.com/#x13</string>
+			<key>end</key>
+			<string>(?&lt;=})</string>
+			<key>name</key>
+			<string>meta.$1.${2:-unnamed}</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>\G</string>
+					<key>end</key>
+					<string>(?&lt;=\))</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>begin</key>
+							<string>\G(?!\()</string>
+							<key>comment</key>
+							<string>function name</string>
+							<key>end</key>
+							<string>(?=\()</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>#comments</string>
+								</dict>
+								<dict>
+									<key>match</key>
+									<string>\b(?i)[_$a-z][_$a-z0-9]*\b</string>
+									<key>name</key>
+									<string>entity.name.function.$1.js</string>
+								</dict>
+							</array>
+						</dict>
+						<dict>
+							<key>begin</key>
+							<string>\(</string>
+							<key>beginCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.parameters.begin.function.js</string>
+								</dict>
+							</dict>
+							<key>comment</key>
+							<string>function parameters</string>
+							<key>contentName</key>
+							<string>meta.function.parameters</string>
+							<key>end</key>
+							<string>\)</string>
+							<key>endCaptures</key>
+							<dict>
+								<key>0</key>
+								<dict>
+									<key>name</key>
+									<string>punctuation.definition.parameters.end.function.js</string>
+								</dict>
+							</dict>
+							<key>name</key>
+							<string>meta.function.parameters</string>
+							<key>patterns</key>
+							<array>
+								<dict>
+									<key>include</key>
+									<string>#comments</string>
+								</dict>
+								<dict>
+									<key>match</key>
+									<string>\b(?i)[_$a-z][_$a-z0-9]*\b</string>
+									<key>name</key>
+									<string>variable.parameter.function.js</string>
+								</dict>
+								<dict>
+									<key>match</key>
+									<string>,</string>
+									<key>name</key>
+									<string>punctuation.separator.parameters.function.js</string>
+								</dict>
+							</array>
+						</dict>
+					</array>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#comments</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>{</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.function.begin.js</string>
+						</dict>
+					</dict>
+					<key>comment</key>
+					<string>function body</string>
+					<key>contentName</key>
+					<string>meta.function.body</string>
+					<key>end</key>
+					<string>}</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.function.end.js</string>
+						</dict>
+					</dict>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#core</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
 		<key>literal-function-call</key>
 		<dict>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>(?=[_$a-zA-Z][_$\w]*\s*\()</string>
+					<string>(?&lt;!function )(?=[_$a-zA-Z][_$\w]*\s*\()</string>
 					<key>end</key>
 					<string>(?=\()</string>
 					<key>name</key>
@@ -193,42 +1143,6 @@
 		<dict>
 			<key>patterns</key>
 			<array>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>storage.type.function.js</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>entity.name.function.js</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.parameters.begin.js</string>
-						</dict>
-						<key>4</key>
-						<dict>
-							<key>name</key>
-							<string>variable.parameter.function.js</string>
-						</dict>
-						<key>5</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.parameters.end.js</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>match regular function like: function myFunc(arg) { … }</string>
-					<key>match</key>
-					<string>\b(function)(?:\s+([a-zA-Z_$]\w*))?\s*(\()(.*?)(\))</string>
-					<key>name</key>
-					<string>meta.function.js</string>
-				</dict>
 				<dict>
 					<key>captures</key>
 					<dict>
@@ -261,105 +1175,13 @@
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>support.constant.js</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
 							<string>entity.name.function.js</string>
-						</dict>
-						<key>4</key>
-						<dict>
-							<key>name</key>
-							<string>storage.type.function.js</string>
-						</dict>
-						<key>5</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.parameters.begin.js</string>
-						</dict>
-						<key>6</key>
-						<dict>
-							<key>name</key>
-							<string>variable.parameter.function.js</string>
-						</dict>
-						<key>7</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.parameters.end.js</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>match stuff like: Sound.prototype.play = function() { … }</string>
-					<key>match</key>
-					<string>([a-zA-Z_?.$][\w?.$]*)\.(prototype)\.([a-zA-Z_?.$][\w?.$]*)\s*=\s*(function)?\s*(\()(.*?)(\))</string>
-					<key>name</key>
-					<string>meta.function.prototype.js</string>
-				</dict>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>support.class.js</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>support.constant.js</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>entity.name.function.js</string>
-						</dict>
-					</dict>
-					<key>comment</key>
-					<string>match stuff like: Sound.prototype.play = myfunc</string>
-					<key>match</key>
-					<string>([a-zA-Z_?.$][\w?.$]*)\.(prototype)\.([a-zA-Z_?.$][\w?.$]*)\s*=\s*</string>
-					<key>name</key>
-					<string>meta.function.js</string>
-				</dict>
-				<dict>
-					<key>captures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>support.class.js</string>
-						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>entity.name.function.js</string>
-						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>storage.type.function.js</string>
-						</dict>
-						<key>4</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.parameters.begin.js</string>
-						</dict>
-						<key>5</key>
-						<dict>
-							<key>name</key>
-							<string>variable.parameter.function.js</string>
-						</dict>
-						<key>6</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.parameters.end.js</string>
 						</dict>
 					</dict>
 					<key>comment</key>
 					<string>match stuff like: Sound.play = function() { … }</string>
 					<key>match</key>
-					<string>([a-zA-Z_?.$][\w?.$]*)\.([a-zA-Z_?.$][\w?.$]*)\s*=\s*(function)\s*(\()(.*?)(\))</string>
+					<string>(?:([a-zA-Z_?.$][\w?.$]*)\.)?([a-zA-Z_?.$][\w?.$]*)\s*=\s*(?=function)</string>
 					<key>name</key>
 					<string>meta.function.js</string>
 				</dict>
@@ -376,31 +1198,11 @@
 							<key>name</key>
 							<string>punctuation.separator.key-value.js</string>
 						</dict>
-						<key>3</key>
-						<dict>
-							<key>name</key>
-							<string>storage.type.function.js</string>
-						</dict>
-						<key>4</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.parameters.begin.js</string>
-						</dict>
-						<key>5</key>
-						<dict>
-							<key>name</key>
-							<string>variable.parameter.function.js</string>
-						</dict>
-						<key>6</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.parameters.end.js</string>
-						</dict>
 					</dict>
 					<key>comment</key>
 					<string>match stuff like: foobar: function() { … }</string>
 					<key>match</key>
-					<string>\b([a-zA-Z_?.$][\w?.$]*)\s*(:)\s*\b(function)?\s*(\()(.*?)(\))</string>
+					<string>\b([a-zA-Z_?.$][\w?.$]*)\s*(:)(?=\s*function)</string>
 					<key>name</key>
 					<string>meta.function.json.js</string>
 				</dict>
@@ -411,26 +1213,6 @@
 						<dict>
 							<key>name</key>
 							<string>string.quoted.single.js</string>
-						</dict>
-						<key>10</key>
-						<dict>
-							<key>name</key>
-							<string>storage.type.function.js</string>
-						</dict>
-						<key>11</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.parameters.begin.js</string>
-						</dict>
-						<key>12</key>
-						<dict>
-							<key>name</key>
-							<string>variable.parameter.function.js</string>
-						</dict>
-						<key>13</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.definition.parameters.end.js</string>
 						</dict>
 						<key>2</key>
 						<dict>
@@ -476,7 +1258,7 @@
 					<key>comment</key>
 					<string>Attempt to match "foo": function</string>
 					<key>match</key>
-					<string>(?:((')(.*?)('))|((")(.*?)(")))\s*(:)\s*\b(function)?\s*(\()(.*?)(\))</string>
+					<string>(?:((')(.*?)('))|((")(.*?)(")))\s*(:)(?=\s*function)</string>
 					<key>name</key>
 					<string>meta.function.json.js</string>
 				</dict>
