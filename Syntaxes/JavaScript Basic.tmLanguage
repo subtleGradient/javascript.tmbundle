@@ -254,7 +254,7 @@
 		<key>es5-function-definition</key>
 		<dict>
 			<key>begin</key>
-			<string>\b(function)\b(?:\s+\b(?i)([_$a-z][_$a-z0-9]*)\b)?</string>
+			<string>\b(function)\b(?:\s+((?i)[_$a-z][_$a-z0-9]*))?</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -978,7 +978,7 @@
 		<key>function-definition</key>
 		<dict>
 			<key>begin</key>
-			<string>\b(function)\b(?:\s+\b(?i)([_$a-z][_$a-z0-9]*)\b)?</string>
+			<string>\b(function)(?:\s+((?i)[_$a-z][_$a-z0-9]*))?</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -1022,9 +1022,9 @@
 								</dict>
 								<dict>
 									<key>match</key>
-									<string>\b(?i)[_$a-z][_$a-z0-9]*\b</string>
+									<string>(?i)[_$a-z][_$a-z0-9]*</string>
 									<key>name</key>
-									<string>entity.name.function.$1.js</string>
+									<string>entity.name.function.$0.js</string>
 								</dict>
 							</array>
 						</dict>
