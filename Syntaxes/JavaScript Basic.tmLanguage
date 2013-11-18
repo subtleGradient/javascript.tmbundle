@@ -254,7 +254,7 @@
 		<key>es5-function-definition</key>
 		<dict>
 			<key>begin</key>
-			<string>\b(function)\b(?:\s+((?i)[_$a-z][_$a-z0-9]*))?</string>
+			<string>\b(function|(?:get|set)(?=\s+[_$a-zA-Z]))\b(?:\s+((?i)[_$a-z][_$a-z0-9]*))?</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
