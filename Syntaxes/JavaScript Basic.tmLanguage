@@ -959,6 +959,10 @@
 				</dict>
 				<dict>
 					<key>include</key>
+					<string>#literal-regex</string>
+				</dict>
+				<dict>
+					<key>include</key>
 					<string>#es5-program</string>
 				</dict>
 				<dict>
