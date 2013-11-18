@@ -5,24 +5,35 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>cat|pbcopy -pboard find
+	<string>#!/usr/bin/env bash
+[[ -f "${TM_SUPPORT_PATH}/lib/bash_init.sh" ]] &amp;&amp; . "${TM_SUPPORT_PATH}/lib/bash_init.sh"
+
+cat|pbcopy -pboard find
 
 . "$TM_SUPPORT_PATH/lib/html.sh"
-redirect "http://www.google.com/search?q="${TM_SELECTED_TEXT:-$TM_CURRENT_WORD}"%20site%3Aquirksmode.org%20OR%20site%3Adeveloper.mozilla.org%2FEn%20OR%20site%3Amsdn.microsoft.com%2Fen-us%2Flibrary%20OR%20site%3Awww.w3schools.com%20OR%20site%3Awww.devguru.com&amp;btnG=Search"
+redirect "http://www.google.com/search?q="${TM_SELECTED_TEXT:-$TM_CURRENT_WORD}"%20site%3Aquirksmode.org%20OR%20site%3Adeveloper.mozilla.org%2FEn%20OR%20site%3Amsdn.microsoft.com%2Fen-us%2Flibrary%20OR%20site%3Awww.devguru.com&amp;btnG=Search"
 </string>
 	<key>fallbackInput</key>
 	<string>word</string>
 	<key>input</key>
 	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>^h</string>
 	<key>name</key>
 	<string>Documentation for Word / Selection Google</string>
-	<key>output</key>
-	<string>showAsHTML</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>html</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
 	<key>scope</key>
 	<string>source.js</string>
 	<key>uuid</key>
 	<string>3DAB45A8-21C8-4581-809B-2D3C1E8FF1B0</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
