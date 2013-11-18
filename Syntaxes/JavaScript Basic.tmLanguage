@@ -1988,7 +1988,19 @@
 				</dict>
 				<dict>
 					<key>match</key>
+					<string>(?&lt;=\.)(h(space|idden|eight)|s(croll(Height|Top|Left|Width)|t(yle|andby)|pellcheck)|n(ode(Name|Type|Value)|ext(Sibling|ElementSibling)|ame(spaceURI)?)|c(hild(Nodes|ElementCount|ren)|o(ntent(Document|Editable)|de(Base|Type)?)|l(ient(Height|Top|Left|Width)|ass(Name|List)))|i(sContentEditable|nner(HTML|Text)|d)|t(ype|itle|extContent|a(gName|bIndex)|ranslate)|o(n(s(croll|ubmit|e(arch|lect(start)?))|c(hange|o(ntextmenu|py)|ut|lick)|in(put|valid)|d(r(op|ag(start|over|en(ter|d)|leave)?)|blclick)|error|paste|key(down|up|press)|focus|abort|load|webkitfullscreen(change|error)|reset|mouse(down|o(ut|ver)|up|wheel|move)|b(efore(c(opy|ut)|paste)|lur))|uter(HTML|Text)|ffset(Height|Top|Parent|Left|Width)|wnerDocument)|d(ir|eclare|ata(set)?|raggable)|useMap|p(arent(Node|Element)|re(vious(Sibling|ElementSibling)|fix))|v(space|alid(ity|ationMessage))|f(irst(Child|ElementChild)|orm)|l(ocalName|a(st(Child|ElementChild)|ng))|a(ccessKey|ttributes|lign|rchive)|w(i(dth|llValidate)|ebkit(ShadowRoot|dropzone|Pseudo))|b(order|aseURI))\b</string>
+					<key>name</key>
+					<string>support.variable.property.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
 					<string>(?&lt;=\.)(s(ystemLanguage|cr(ipts|ollbars|een(X|Y|Top|Left))|t(yle(Sheets)?|atus(Text|bar)?)|ibling(Below|Above)|ource|uffixes|e(curity(Policy)?|l(ection|f)))|h(istory|ost(name)?|as(h|Focus))|y|n(ext|ame(space(s|URI)|Prop))|c(haracterSet|o(ntrollers|okieEnabled|lorDepth|mp(onents|lete))|urrent|puClass|l(i(p(boardData)?|entInformation)|osed|asses)|alle(e|r)|rypto)|X(MLDocument|SLDocument)|M(IN_VALUE|AX_VALUE)|t(o(olbar|p)|ext(Transform|Indent|Decoration|Align)|ags)|i(n(ner(Height|Width)|put)|ds|gnoreCase)|SQRT(1_2|2)|zIndex|o(scpu|n(readystatechange|Line)|uter(Height|Width)|p(sProfile|ener)|ffscreenBuffering)|d(i(splay|alog(Height|Top|Width|Left|Arguments)|rectories)|e(scription|fault(Status|Ch(ecked|arset)|View)))|NEGATIVE_INFINITY|u(ser(Profile|Language|Agent)|niqueID|pdateInterval)|_content|p(ixelDepth|ort|ersonalbar|kcs11|l(ugins|atform)|a(thname|dding(Right|Bottom|Top|Left)|rent(Window|Layer)?|ge(X(Offset)?|Y(Offset)?))|r(o(tocol|duct(Sub)?|mpter)|e(vious|fix)))|e(n(coding|abledPlugin)|x(ternal|pando)|mbeds)|v(isibility|endor(Sub)?|Linkcolor)|URLUnencoded|f(ilename|o(nt(Size|Family|Weight)|rmName)|rame(s|Element)|gColor)|P(I|OSITIVE_INFINITY)|E|whiteSpace|l(i(stStyleType|n(eHeight|kColor))|o(ca(tion(bar)?|lName)|wsrc)|e(ngth|ft(Context)?)|a(st(M(odified|atch)|Index|Paren)|yer(s|X)|nguage))|a(pp(MinorVersion|Name|Co(deName|re)|Version)|vail(Height|Top|Width|Left)|ll|rity|bove|Linkcolor)|r(ight(Context)?|e(sponse(XML|Text)|adyState))|global|x|m(imeTypes|ultiline|enubar|argin(Right|Bottom|Top|Left))|b(o(ttom|rder(RightWidth|BottomWidth|Style|Color|TopWidth|LeftWidth))|ufferDepth|elow|ackground(Color|Image))|L(N(10|2)|OG(10E|2E)))\b</string>
+					<key>name</key>
+					<string>support.variable.property.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>(?&lt;=\.)on(s(croll|ubmit|e(lect(start)?|arch))|c(hange|o(ntextmenu|py)|ut|lick)|touch(start|cancel|end|move)|in(put|valid)|d(r(op|ag(start|over|en(ter|d)|leave)?)|blclick)|paste|error|key(down|up|press)|focus|load|abort|reset|mouse(o(ut|ver)|down|up|enter|wheel|leave|move)|b(efore(c(opy|ut)|paste)|lur))\b</string>
 					<key>name</key>
 					<string>support.variable.property.js</string>
 				</dict>
