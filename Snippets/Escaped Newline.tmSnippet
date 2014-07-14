@@ -10,7 +10,7 @@
 	<key>name</key>
 	<string>Escaped Literal Newline</string>
 	<key>scope</key>
-	<string>source.js string.quoted -punctuation.definition.string.begin</string>
+	<string>source.js string.quoted -string.quoted.other.es6 -punctuation.definition.string.begin</string>
 	<key>uuid</key>
 	<string>0EC93ADD-A849-4951-9235-B51E720E31FE</string>
 </dict>

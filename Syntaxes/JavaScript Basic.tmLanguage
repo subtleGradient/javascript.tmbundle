@@ -254,7 +254,7 @@
 		<key>es5-function-definition</key>
 		<dict>
 			<key>begin</key>
-			<string>\b(function|(?:get|set)(?=\s+[_$a-zA-Z]))\b(?:\s+((?i)[_$a-z][_$a-z0-9]*))?</string>
+			<string>\b(function|(?:get|set|static)(?=\s+[_$a-zA-Z]))\b(?:\s+((?i)[_$a-z][_$a-z0-9]*))?</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -810,9 +810,21 @@
 						</dict>
 						<dict>
 							<key>match</key>
+							<string>=&gt;</string>
+							<key>name</key>
+							<string>keyword.operator.assignment.function.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
 							<string>=&gt;|=&lt;</string>
 							<key>name</key>
 							<string>invalid.illegal.operator.comparison.es</string>
+						</dict>
+						<dict>
+							<key>match</key>
+							<string>\.\.\.\s*(?=[_$a-z])</string>
+							<key>name</key>
+							<string>keyword.other.rest-args.es</string>
 						</dict>
 					</array>
 				</dict>
@@ -1979,6 +1991,12 @@
 					<string>\b(s(h(ift|ow(Mod(elessDialog|alDialog)|Help))|croll(X|By(Pages|Lines)?|Y|To)?|t(op|rike)|i(n|zeToContent|debar|gnText)|ort|u(p|b(str(ing)?)?)|pli(ce|t)|e(nd|t(Re(sizable|questHeader)|M(i(nutes|lliseconds)|onth)|Seconds|Ho(tKeys|urs)|Year|Cursor|Time(out)?|Interval|ZOptions|Date|UTC(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Date|FullYear)|FullYear|Active)|arch)|qrt|lice|avePreferences|mall)|h(ome|andleEvent)|navigate|c(har(CodeAt|At)|o(s|n(cat|textual|firm)|mpile)|eil|lear(Timeout|Interval)?|a(ptureEvents|ll)|reate(StyleSheet|Popup|EventObject))|t(o(GMTString|S(tring|ource)|U(TCString|pperCase)|Lo(caleString|werCase))|est|a(n|int(Enabled)?))|i(s(NaN|Finite)|ndexOf|talics)|d(isableExternalCapture|ump|etachEvent)|u(n(shift|taint|escape|watch)|pdateCommands)|j(oin|avaEnabled)|p(o(p|w)|ush|lugins.refresh|a(ddings|rse(Int|Float)?)|r(int|ompt|eference))|e(scape|nableExternalCapture|val|lementFromPoint|x(p|ec(Script|Command)?))|valueOf|UTC|queryCommand(State|Indeterm|Enabled|Value)|f(i(nd|le(ModifiedDate|Size|CreatedDate|UpdatedDate)|xed)|o(nt(size|color)|rward)|loor|romCharCode)|watch|l(ink|o(ad|g)|astIndexOf)|a(sin|nchor|cos|t(tachEvent|ob|an(2)?)|pply|lert|b(s|ort))|r(ou(nd|teEvents)|e(size(By|To)|calc|turnValue|place|verse|l(oad|ease(Capture|Events)))|andom)|g(o|et(ResponseHeader|M(i(nutes|lliseconds)|onth)|Se(conds|lection)|Hours|Year|Time(zoneOffset)?|Da(y|te)|UTC(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Da(y|te)|FullYear)|FullYear|A(ttention|llResponseHeaders)))|m(in|ove(B(y|elow)|To(Absolute)?|Above)|ergeAttributes|a(tch|rgins|x))|b(toa|ig|o(ld|rderWidths)|link|ack))\b(?=\()</string>
 					<key>name</key>
 					<string>entity.name.function.js</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b(is(NaN|Finite)|decodeURI(Component)?|unescape|parse(Int|Float)|e(scape|ncodeURI(Component)?|val))\b</string>
+					<key>name</key>
+					<string>support.function.other.js</string>
 				</dict>
 				<dict>
 					<key>match</key>
